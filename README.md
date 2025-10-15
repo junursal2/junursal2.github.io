@@ -1,2 +1,2 @@
 # junursal2.basahon
-Webpages
+Basahon in Bisaya means reading materials or to read.
