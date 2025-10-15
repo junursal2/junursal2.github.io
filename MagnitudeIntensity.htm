@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html  lang="en-US">
+<head>
+    <title>Earthquake Magnitude &amp; Intensity</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Earthquake magnitude and intensity" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="earthquake, magniture, intensity" />
+
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+    in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+    * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+    header, section, footer, aside, nav, main, article, figure {display:block;}
+
+    a:hover {color: blue;}
+    article, section {
+      overflow-x:auto;
+      color: #003300;
+      font-family: Verdana, sans-serif;
+      font-size: 12px; 
+      text-align: justify;
+    }
+    .fa-home {position: relative; float: right; top: 15px; font-size: 24px;}
+    footer {background: linear-gradient(to right, #9e4624 0%, #999966 100%); color: white; font: Consolas, monospace;}
+    foot {font-size: 8px;}
+    header {background: linear-gradient(to right, #9e4624 0%, #999966 100%);}
+    h2 {font-family: Georgia, serif; text-align: left; color: white; text-shadow:1px 1px black;}
+    .figLeft {float: left; margin: 5px 15px 10px 0px;}
+    .figRight {float: right; margin: 5px 0px 10px 15px;}
+    #imgEarthquake {max-width: 350px; width: 100%;}
+    #imgIntensity {max-width: 500px; width: 100%;}
+    #imgMagnitude {max-width: 400px; width: 100%;}
+    #imgMagInt {max-width: 500px; width: 100%;}
+    #imgSeismogram {max-width: 200px; width: 100%;}
+    #imgSeismograph {max-width: 250px; width: 100%;}
+    #posted {float: right;}
+    pre {font-family: Verdana, sans-serif;font-size: 12px;}
+    #myTopBtn {
+       display: none;
+       position: fixed;
+       bottom: 30px;
+       right: 20px;
+       z-index: 99;
+       border: none;
+       outline: none;
+       background-color: #DC143C;
+       color: white;
+       cursor: pointer;
+       padding: 3px 5px;
+       border-radius: 5px;
+       font-size: 10px;
+    }
+    #sources {font-size: 10px;}
+    #myTopBtn:hover {background-color:#555;}
+    table {border-collapse: collapse; width: 100%;}
+    th, td {text-align: left;}
+    #tabPEIS td:first-child {text-align: center; vertical-align: middle;}
+    #tabPEIS td:nth-child(2) {text-align: center; vertical-align: middle}
+    #tabPEIS td:nth-child(3) {text-align: justify; font-size: 11px;}
+    </style>
+</head>
+
+<body>
+<header class="w3-container">
+    <button id="myTopBtn" title="Go to top" onclick="topFunction()">Top of page</button> 
+    <h2><b>Earthquake magnitude &amp; intensity</b>
+        <a id="home" title="Go to Basahon page" href="basahon.html#goDisasters"><i class="fa fa-home"></i></a>
+    </h2>
+</header>
+
+<article class="w3-container">
+    <p>A <b>seismic scale</b> is used to describe the strength or "size" of an earthquake. 
+    There are two types of scales: <i>intensity</i> scales that describe the intensity or severity of ground shaking (quaking) 
+    at a given location, and <i>magnitude</i> scales that measure the strength of the seismic event itself, 
+    usually based on an instrumental record. The intensity and nature of ground shaking depends on the local geology;
+    at a given locality the intensity of shaking depends on the magnitude and distance of the seismic event.</p>
+
+    <figure class="figRight">
+        <img id="imgMagInt" class="w3-card-4" src="../_images/earthquake/magnitudeVSintensity.jpg" alt="magnitude vs intensity">
+    </figure>
+
+    <p><i>Magnitude</i> and <i>Intensity</i> measure different characteristics of earthquakes.</p>
+
+    <p><b>Magnitude</b> measures the energy released at the source of the earthquake.
+       A quantitative measure of the actual size of the earthquake.
+       It is determined from measurements on <a href="#ng" onclick="showPic('kinemetrics_seismograph')">seismographs</a>.
+       It is denoted by M(number) e.g. M8 or M6.5.</p>
+    <p><b>Intensity</b> measures the strength of shaking produced by the earthquake at a certain location.
+       An indicator of the severity of shaking generated at a given location.
+       It is determined from effects on people, human structure and the natural environment.
+       Severity of shaking is much higher near the epicenter than farther away.
+       It varies at each and every place. It is represented by Roman numerals (e.g. II, IV, IX).</p>
+    <p>They are not positively correlated.  Greater magnitude does not necessarily means greater
+       intensity.</p>
+    <p>Unlike magnitude scales, intensity scales do not have a mathematical basis; 
+       instead they are an arbitrary ranking based on observed effects. 
+       Most seismic intensity scales have twelve degrees of intensity 
+       and are roughly equivalent to one another in values but vary 
+       in the degree of sophistication employed in their formulation.</p>
+
+    <h3 class="subtitle" id="Magnitude">Magnitude scale</h3>
+    <figure class="figLeft">
+        <img id="imgSeismogram" src="../_images/earthquake/seismogram.jpg" alt="seismogram">
+    </figure>
+    <p>The <i>magnitude</i> is a number that characterizes the relative size of an earthquake. 
+       Magnitude is based on measurement of the maximum motion recorded by a 
+       <a href="#ng" onclick="showPic('kinemetrics_seismograph')">seismograph</a>. 
+       Several scales have been defined, but the most commonly used are:</p>
+    <pre>
+    1. <b>local magnitude</b> (M<sub>L</sub>), commonly referred to as "Richter magnitude",
+    2. <b>surface-wave magnitude</b> (M<sub>s</sub>),
+    3. <b>body-wave magnitude</b> (M<sub>b</sub>),
+    4. <b>moment magnitude</b> (M<sub>w</sub> or M).
+    </pre>
+    <p>Most seismological authorities, such as the United States Geological Survey (USGS), 
+    report earthquake magnitudes as <i>moment magnitude</i>, which the press describes as "Richter magnitude".</p>
+    <p>Below are the tables for the effects of earthquakes and the class names:</p>
+
+    <div class="w3-cell-row">
+    <div class="w3-container w3-cell">
+        <table class="w3-table-all w3-hoverable w3-small">
+            <tr class="w3-brown">
+              <th>Magnitude</th>
+              <th>Effects</th>
+            </tr>
+            <tr>
+              <td>2.5 or less</td>
+              <td>Usually not felt, but can be recorded by seismograph</td>
+            </tr>
+            <tr>
+              <td>2.5 to 5.4</td>
+              <td>Often felt, but only causes minor damage</td>
+            </tr>
+            <tr>
+              <td>5.5 to 6.0</td>
+              <td>Sligth damage to buildings or structures</td>
+            </tr>
+            <tr>
+              <td>6.1 to 6.9</td>
+              <td>May cause a lot of damage in very populated areas</td>   
+            </tr>
+            <tr>
+              <td>7.0 to 7.9</td>
+              <td>Major earthquake.  Serious damage.</td>
+            </tr>
+            <tr>
+              <td>8.0 or greater</td>
+              <td>Great earthquake.  Can totally destroy communities near the epicenter.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="w3-container w3-cell">
+        <table class="w3-table-all w3-hoverable w3-small">
+            <tr class="w3-khaki">
+              <th>Class</th>
+              <th>Magnitude</th>
+            </tr>
+            <tr>
+              <td>Minor</td>
+              <td>3 to 3.9</td>    
+            </tr>
+            <tr>
+              <td>Light</td>
+              <td>4 to 4.9</td>    
+            </tr>
+            <tr>
+              <td>Moderate</td>
+              <td>5 to 5.9</td>    
+            </tr>
+            <tr>
+              <td>Strong</td>
+              <td>6 to 6.9</td>    
+            </tr>
+            <tr>
+              <td>Major</td>
+              <td>7 to 7.9</td>    
+            </tr>
+            <tr>
+              <td>Great</td>
+              <td>8 or greater</td>    
+            </tr>
+        </table>
+    </div>
+    </div>
+    <br />
+    
+    <h3 class="subtitle" id="Intensity">Intensity scale</h3>
+    <figure class="figRight">
+        <img id="imgIntensity" src="../_images/earthquake/intensity.jpg" alt="intensity">
+    </figure>
+    <p>The PHIVOLCS Earthquake Intensity Scale (<b>PEIS</b>) is a seismic scale used and developed 
+        by the Philippine Institute of Volcanology and Seismology (PHILVOLCS) to measure the intensity of an earthquake.</p>
+    <p>PHILVOLCS cites seismic scale specifically developed for the Philippine setting, the different geography of each country 
+        and other "geological considerations" led to the development of PEIS.</p>
+    <p>The <b>PEIS</b> was adopted in the Philippines in 1996 replacing the <i>Rossi-Forel</i> scale.</p>
+    <p>The PEIS has ten intensity scales represented in Roman numerals with Intensity <b>I</b> being the weakest 
+        and Intensity <b>X</b> being the strongest.</p>
+
+    <table id="tabPEIS" class="w3-table-all w3-hoverable w3-small">
+        <tr class="w3-amber">
+          <th>Intensity scale</th>
+          <th>Description</th>
+          <th>&nbsp;</th>
+        </tr>
+        <tr>
+          <td>I</td>
+          <td>Scarcely Perceptible</td>
+          <td>Perceptible to people under favorable circumstances. 
+          Delicately balanced objects are disturbed slightly. Still water in containers oscillates slowly.</td>    
+        </tr>
+        <tr>
+          <td>II</td>
+          <td>Slightly Felt</td>
+          <td>Felt by few individuals at rest indoors. Hanging objects swing slightly. 
+          Still Water in containers oscillates noticeably.</td>    
+        </tr>
+        <tr>
+          <td>III</td>
+          <td>Weak</td>
+          <td>Felt by many people indoors especially in upper floors of buildings. 
+          Vibration is felt like one passing of a light truck. Dizziness and nausea are experienced by some people. 
+          Hanging objects swing moderately. Still water in containers oscillates moderately.</td>    
+        </tr>
+        <tr>
+          <td>IV</td>
+          <td>Moderately Strong</td>
+          <td>Felt generally by people indoors and by some people outdoors. 
+          Light sleepers are awakened. Vibration is felt like a passing of heavy truck. 
+          Hanging objectsswing considerably. Dinner, plates, glasses, windows and doors rattle. 
+          Floors and walls of wood framed buildings creak. Standing motor cars may rock slightly. 
+          Liquids in containers are slightly disturbed. Water in containers oscillate strongly. 
+          Rumbling sound may sometimes be heard.</td>    
+        </tr>
+        <tr>
+          <td>V</td>
+          <td>Strong</td>
+          <td>Generally felt by most people indoors and outdoors. Many sleeping people are awakened. 
+          Some are frightened, some run outdoors. Strong shaking and rocking felt throughout building. 
+          Hanging objects swing violently. Dining utensils clatter and clink; some are broken. 
+          Small, light and unstable objects may fall or overturn. Liquids spill from filled open containers. 
+          Standing vehicles rock noticeably. Shaking of leaves and twigs of trees are noticeable.</td>    
+        </tr>
+        <tr>
+          <td>VI</td>
+          <td>Very Strong</td>
+          <td>Many people are frightened; many run outdoors. Some people lose their balance. 
+          Very Strong - Many people are frightened; many run outdoors. Some people lose their balance. 
+          Motorists feel like driving in flat tires. Heavy objects or furniture move or may be shifted. 
+          Small church bells may ring. Wall plaster may crack. 
+          Very old or poorly built houses and man-made structures are slightly damaged though well-built structures 
+          are not affected. Limited rockfalls and rolling boulders occur in hilly to mountainous areas and escarpments. 
+          Trees are noticeably shakenmotorists feel like driving in flat tires. 
+          Heavy objects or furniture move or may be shifted. Small church bells may ring. Wall plaster may crack. 
+          Very old or poorly built houses and man-made structures are slightly damaged though well-built structures 
+          are not affected. Limited rockfalls and rolling boulders occur in hilly to mountainous areas and escarpments. 
+          Trees are noticeably shaken.</td>    
+        </tr>
+        <tr>
+          <td>VII</td>
+          <td>Destructive</td>
+          <td>Most people are frightened and run outdoors. People find it difficult to stand in upper floors. 
+          Heavy objects and furniture overturn or topple. Big church bells may ring. 
+          Old or poorly-built structures suffer considerably damage. Some well-built structures are slightly damaged. 
+          Some cracks may appear on dikes, fish ponds, road surface, or concrete hollow block walls. 
+          Limited liquefaction, lateral spreading and landslides are observed. Trees are shaken strongly. 
+          (Liquefaction is a process by which loose saturated sand lose strength during an earthquake and behave like liquid).</td>
+        </tr>
+        <tr>
+          <td>VIII</td>
+          <td>Very Destructive</td>
+          <td>People panicky. People find it difficult to stand even outdoors. 
+          Many well-built buildings are considerably damaged. Concrete dikes and foundation of bridges are destroyed 
+          by ground settling or toppling. Railway tracks are bent or broken. Tombstones may be displaced, twisted 
+          or overturned. Utility posts, towers and monuments mat tilt or topple. 
+          Water and sewer pipes may be bent, twisted or broken. Liquefaction 
+          and lateral spreading cause man- made structure to sink, tilt or topple. 
+          Numerous landslides and rockfalls occur in mountainous and hilly areas. 
+          Boulders are thrown out from their positions particularly near the epicenter. 
+          Fissures and faults rapture may be observed. Trees are violently shaken. 
+          Water splash or stop over dikes or banks of rivers.</td>
+        </tr>
+        <tr>
+          <td>IX</td>
+          <td>Devastating</td>
+          <td>People are forcibly thrown to ground. Many cry and shake with fear. Most buildings are totally damaged. 
+          Bridges and elevated concrete structures are toppled or destroyed. 
+          Numerous utility posts, towers and monument are tilted, toppled or broken. 
+          Water sewer pipes are bent, twisted or broken. Landslides and liquefaction with lateral spreadings 
+          and sandboils are widespread. the ground is distorted into undulations. 
+          Trees are shaken very violently with some toppled or broken. Boulders are commonly thrown out. 
+          River water splashes violently on slops over dikes and banks.</td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>Completely Devastating</td>
+          <td>Practically all man-made structures are destroyed. Massive landslides and liquefaction, 
+          large scale subsidence and uplifting of land forms and many ground fissures are observed. 
+          Changes in river courses and destructive seiches in large lakes occur. 
+          Many trees are toppled, broken and uprooted.</td>
+        </tr>
+    </table>
+    <figure class="figRight">
+        <img id="imgEarthquake" src="../_images/earthquake/earthquake.jpg" alt="earthquake">
+    </figure>
+    <br />
+    <p>Click a link below to show or display:</p>
+    <pre>
+       <a href="#ng" onclick="showPic('PEIS')">PEIS poster</a> (jpg file, display in a modal window)
+       <a href="../_images/earthquake/PEIS-Filipino.pdf" target="_blank">PEIS in Filipino</a> (pdf file, open a new tab)
+       <a href="../_images/earthquake/PEIS-English.pdf" target="_blank">PEIS in English</a> (pdf file, open a new tab)
+       <a href="#ng" onclick="showPic('earthquake_alert')">Example of an earthquake alert</a> (jpg file, display in a modal window)
+    </pre>
+    <hr />
+    <pre id="sources">
+    Sources:
+         <a href="https://en.wikipedia.org/wiki/Seismic_scale" target="_blank">https://en.wikipedia.org/wiki/Seismic_scale</a>
+         <a href="https://en.wikipedia.org/wiki/PHIVOLCS_Earthquake_Intensity_Scale" target="_blank">https://en.wikipedia.org/wiki/PHIVOLCS_Earthquake_Intensity_Scale</a>
+         <a href="http://www.phivolcs.dost.gov.ph/" target="_blank">www.philvocs.dost.gov.ph</a>
+    </pre>
+</article>
+
+<!-- modal -->
+<div id="modalDiv" class="w3-modal" onclick="this.style.display='none'">
+    <div id="modalContent" class="w3-modal-content w3-animate-zoom w3-card w3-padding w3-margin-top w3-display-center">
+        <span class="w3-button w3-yellow w3-display-topright">&times;</span>
+        <h5 id="showItm">&nbsp;</h5>
+        <img id="showImg" style="max-width:100%" src="" alt="">
+    </div>
+</div>
+
+<footer class="w3-container w3-tiny">
+    <p id="foot">C. Ursal Jr. <span id="posted">2017 August 14</span></p>
+</footer>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction();};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myTopBtn").style.display = "block";
+    } else {
+        document.getElementById("myTopBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+var n;
+var showImg="";
+//Traditional
+function showPic(n) {
+    showImg="../_images/earthquake/" + n + ".jpg";
+    document.getElementById("showImg").src = showImg;
+    document.getElementById("modalDiv").style.display = "block"; 
+}
+function showPdf(n) {
+    filePdf="../_images/earthquake/" + n + ".pdf";
+    document.getElementById("showImg").src = filePdf;
+    document.getElementById("modalDiv").style.display = "block"; 
+}
+// Get the modal
+var modal = document.getElementById('modalDiv');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+</script>
+</body>
+</html> 
