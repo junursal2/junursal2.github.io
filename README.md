@@ -1,2 +1,2 @@
-# junursal2.basahon
+# Basahon
 In the Visayan language (Bisaya) "basahon" means reading materials or to read.
