@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <title>Calendar months and days origin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  
+  <meta name="description" content="The origin of days and months in the calendar" />
+  <meta name="author" content="Jun Ursal II" />
+  <meta name="keywords" content="origin, days, months, calendar" />
+  <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+  <link rel="stylesheet" href="css/w3.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/w3-colors-flat.css">
+  <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  <style>
+    * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+    header, section, footer, aside, nav, main, article, figure {display:block;}
+    /*body*/
+    section {overflow-x:auto; text-align:justify;}
+    body {font-family: Verdana, Helvetica, sans-serif; font-size:12px; }
+    h1 {font-family: Georgia, serif; text-align:center;}
+    sup {font-size: 10px;}
+    #posted {float: right;}
+    /*header*/
+    a#home {text-decoration: none;}
+    a#home:hover {color: cyan;}
+    #home {float: right; font-size: 24px; margin-top: 16px;}
+    #menu {float: left; font-size: 24px; margin-top: 16px;}
+    #menu:hover {color: cyan;}
+	/*images*/
+	img#days {float:right; max-width:100%;}
+	img#months {float:right; width:50%;}
+    /*sidebar*/
+    #mySidebar {background-color: #c0392b;}
+    /*top button*/
+    #myTopBtn {
+    font-size: 18px;
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      z-index: 99;
+      border: 1px solid;
+      outline: none;
+      background-color: #c0392b;
+      color: white;
+      cursor: pointer;
+      padding: 1px 3px 1px 3px;
+      border-radius: 3px;
+      }
+    #myTopBtn:hover {background-color:cyan; color:#c0392b;}
+    /*Tables*/
+    #tabMonths {border-collapse:collapse; width: auto; float: right; margin-left:16px;}
+    #tabMonths td, #tabMonths th {border:1px solid #ddd; padding-left:4px; padding-right:4px;}
+    #tabMonths tr:nth-child(odd){background-color: #f2f2f2;}
+    #tabMonths tr:hover {background-color: #ddd;}
+    #tabMonths th {text-align:center; padding-left:4px; padding-right:4px; color:white; background-color:#e74c3c;}
+    #tabMoOrig {border-collapse:collapse; width: auto;}
+    #tabMoOrig td, #tabMoOrig th {border:1px solid #ddd;}
+    #tabMoOrig tr:nth-child(even){background-color: #f2f2f2;}
+    #tabMoOrig tr:hover {background-color: #ddd;}
+	#tabMoOrig th {text-align:center; color:white; background-color:#e74c3c;}
+	#tabMoOrig td {text-align:left; padding-left:4px; padding-right:4px;}
+    #tabDays {border-collapse:collapse; width: auto;}
+    #tabDays td, #tabDays th {border:1px solid #ddd;}
+    #tabDays tr:nth-child(odd){background-color: #f2f2f2;}
+    #tabDays tr:hover {background-color: #ddd;}
+	#tabDays th {text-align:center; color:white; background-color:#e74c3c;}
+	#tabDays td {text-align:left; height:80px; padding-left:8px; padding-right:8px;}
+    /*Notes*/
+    .notes {font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-size: 12px;}
+    a.notes, a.anotes {text-decoration:none;}
+    a.notes:hover, a.anotes:hover {text-decoration:underline;}
+    /*References*/
+    .reference {font-size: 11px;}
+    a.ref, a.source {color: blue; text-decoration:none;}
+    a.ref:hover, a.source:hover {text-decoration:underline;}
+  </style>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <nav id="mySidebar" class="w3-sidebar w3-bar-block w3-border-right w3-flat-pomegranate" style="display:none">
+    <button onclick="w3_close()" class="w3-bar-item w3-large w3-hover-cyan">Close menu &times;</button>
+    <a href="#menu_Desc" class="w3-bar-item w3-button">Description</a>
+    <a href="#menu_Months" class="w3-bar-item w3-button">Months</a>
+    <a href="#menu_Days" class="w3-bar-item w3-button">Days</a>
+    <a href="#menu_notes" class="w3-bar-item w3-button">Notes</a>
+    <a href="#menu_refs" class="w3-bar-item w3-button">References</a>
+  </nav>
+  
+  <main id="main">
+    <button id="myTopBtn" title="Jump to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>  
+ 
+    <header class="w3-container w3-flat-pomegranate">
+      <a id="menu" title="Open menu" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  	  <a id="home" title="Go to Basahon page" href="basahon.html#goLifehacks"><i class="fa fa-home"></i></a>
+  	  <h1>Calendar months and days origin</h1>
+    </header>
+  
+    <section class="w3-container">
+       <h3 id="menu_Desc">Description<a id="ref01" class="ref" href="#ref-01"><sup>[1]</sup></a></h3>
+       <aside>
+          <table id="tabMonths">
+           <caption>A year is divided into twelve months</caption>
+           <tr>
+             <th>No.</th>
+             <th>Name</th>
+             <th>Length in days</th>
+           </tr>
+           <tr>
+             <td>1</td>
+             <td>January</td>
+             <td>31</td>
+           </tr>
+           <tr>
+             <td>2</td>
+             <td>February</td>
+             <td>28 (29 in <em>leap years</em>)</td>
+           </tr>
+           <tr>
+             <td>3</td>
+             <td>March</td>
+             <td>31</td>
+           </tr>
+           <tr>
+             <td>4</td>
+             <td>April</td>
+             <td>30</td>
+           </tr>
+           <tr>
+             <td>5</td>
+             <td>May</td>
+             <td>31</td>
+           </tr>
+           <tr>
+             <td>6</td>
+             <td>June</td>
+             <td>30</td>
+           </tr>
+           <tr>
+             <td>7</td>
+             <td>July</td>
+             <td>31</td>
+           </tr>
+           <tr>
+             <td>8</td>
+             <td>August</td>
+             <td>31</td>
+           </tr>
+           <tr>
+             <td>9</td>
+             <td>September</td>
+             <td>30</td>
+           </tr>
+           <tr>
+             <td>10</td>
+             <td>October</td>
+             <td>31</td>
+           </tr>
+           <tr>
+             <td>11</td>
+             <td>November</td>
+             <td>30</td>
+           </tr>
+           <tr>
+             <td>12</td>
+             <td>December</td>
+             <td>31</td>
+          </table>
+       </aside>
+	   <p>Calendar from Middle English <em>calender</em>, Latin <em>calendarium</em> (account book). 
+	      The Romans called the first day of each month <em>Kalendae</em>, or <em>calends</em>. 
+		  Debts were due on this day, so books to track payments were called <em>calendarium</em> from which we get our modern day calendar.</p>   
+       <p>The <strong>Gregorian calendar</strong> is the most widely used <em>civil calendar</em> in the world.
+          It is named after <b><em>Pope Gregory XIII</em></b>, who introduced it in October 1582. 
+          The calendar spaces leap years to make the average year 365.2425 days long, 
+          approximating the 365.2422 day <em>tropical year</em> that is determined by the Earth's revolution around the Sun.</p>
+       <p>The calendar was developed as a refinement of the <b>Julian calendar</b>,
+          shortening the average year by 0.0075 days to stop the drift of the calendar with respect to the <em>equinoxes</em>.
+          To deal with the 10 days of accumulated drift, the date was advanced so that 4 October 1582 
+          was followed by 15 October 1582. 
+          There was no discontinuity in the cycle of weekdays or of the <em>Anno Domini calendar era</em> .</p>
+       <p>The Gregorian calendar is a <em>solar calendar</em> with 12 months of 28-31 days each. 
+          A regular Gregorian year consists of 365 days, but in certain years known as <em>leap years</em>, 
+          a <em>leap day</em> is added to February. Gregorian years are identified by consecutive year numbers.
+          A calendar date is fully specified by the year (numbered according to a <em>calendar era</em>, 
+          in this case <em>Anno Domini</em> or <em>Common Era</em>), the month (identified by name or number), 
+          and the day of the month (numbered sequentially starting from 1).</p>
+       <p>Due to globalization in the 20th century, the calendar has also been adopted 
+          by most non-European countries for civil purposes.</p>
+    </section>
+
+    <section class="w3-container">
+      <h3 id="menu_Months">Months<a id="ref02" class="ref" href="#ref-02"><sup>[2]</sup></a></h3>
+      <p>The original Roman year had 10 named months:
+	  <img id="months" src="../_images/Calendar/months3lines.png" alt="Months of the year">
+      <ol>
+        <li><em>Martius</em> "March"</li>
+        <li><em>Aprilis</em> "April"</li>
+        <li><em>Maius</em> "May"</li>
+        <li><em>Junius</em> "June"</li>
+        <li><em>Quintilis</em> "July"</li>
+        <li><em>Sextilis</em> "August"</li>
+        <li><em>September</em> "September"</li>
+        <li><em>October</em> "October"</li>
+        <li><em>November</em> "November"</li>
+        <li><em>December</em> "December"</li>
+      </ol>
+      and probably two unnamed months in the dead of winter when not much happened in agriculture. 
+      The year began with <em>Martius</em> "March". <b><em>Numa Pompilius</em></b>, the second king of Rome circa 700 BC,
+      added the two months <em>Januarius</em> "January" and <em>Februarius</em> "February". 
+      He also moved the beginning of the year from <em>Marius</em> to <em>Januarius</em> 
+      and changed the number of days in several months to be odd, a lucky number.
+      After <em>Februarius</em> there was occasionally an additional month of <em>Intercalaris</em> "intercalendar".
+      This is the origin of the leap-year day being in February. 
+      In 46 BC, <b><em>Julius Caesar</em></b> reformed the Roman calendar (hence the <em>Julian calendar</em>) 
+      changing the number of days in many months and removing <em>Intercalaris</em>.</p>
+      <table id="tabMoOrig">
+       <tr>
+         <th>Month</th>
+         <th>Name</th>
+         <th>Etymology</th>
+         <th>Eponynm</th>
+         <th>Days</th>
+       </tr>
+       <tr>
+         <td>January</td>
+         <td>Janus' month</td>
+         <td>Middle English <em>Januarie</em><br>
+		 	 Latin <em>Januarius</em> "of Janus"<br>
+			 Latin <em>Janu(s)</em> "Janus" + <em>-arius</em> "ary (pertaining to)"<br>
+			 Latin <em>Januarius mensis</em> "month of Janus"</td>
+		 <td><em>Janus</em> is the Roman god of gates and doorways,<br> 
+		     depicted with two faces looking in opposite directions.<br>
+			 His festival month is January.</td>
+		 <td><em>Januarius</em> had 29 days,<br>
+		     until Julius when it became 31 days long.</td>
+       </tr>
+       <tr>
+         <td>February</td>
+         <td>month of Februa</td>
+         <td>Middle English <em>Februarius</em><br>
+		 	 Latin <em>Februarius</em> "of Februa"<br>
+			 Latin <em>Februa(s)</em> "Februa" + <em>-arius</em> "ary (pertaining to)"<br>
+			 Latin <em>Februarius mensis</em> "month of Februa"<br>
+			 Latin <em>dies februatus</em> "day of purification"</td>
+		 <td><em>Februa</em> is the Roman festival of purification,<br> 
+		     held on February fifteenth.<br> 
+		     It is possibly of Sabine origin.</td>
+		 <td><em>Februarius</em> had 28 days,<br> 
+		     until circa 450 BC when it had 23<br> 
+		     or 24 days on some of every second year,<br> 
+		     until Julius when it had 29 days<br> 
+			 on every fourth year and 28 days otherwise.</td>
+       </tr>
+       <tr>
+         <td>March</td>
+         <td>Mars' month</td>
+         <td>Middle English <em>March(e)</em><br>
+             Anglo-French <em>March(e)</em><br>
+             Old English <em>Martius</em><br>
+             Latin <em>Martius</em> "of Mars"<br>
+             Latin <em>Marti(s)</em> "Mars" + <em>-us</em> (adj. suffix)<br>
+             Latin <em>Martius mensis</em> "month of Mars"</td>
+		 <td><em>Mars</em> is the Roman god of war.<br> 
+		     He is identified with the Greek god <em>Ares</em>.</td>
+		 <td><em>Martius</em> has always had 31 days.<br>
+		 	 March was the original beginning of the year,<br> 
+			 and the time for the resumption of war.</td>
+       </tr>
+       <tr>
+         <td>April</td>
+         <td>Aphrodite's month</td>
+         <td>Old English <em>April(is)</em><br>
+             Latin <em>Aprilis</em><br>
+             Etruscan <em>Apru</em><br>
+             Greek <em>Aphro</em>, short for <em>Aphrodite</em>.</td>
+		 <td><em>Aphrodite</em> is the Greek goddess of love and beauty.<br> 
+		     She is identified with the Roman goddess Venus.</td>
+		 <td><em>Aprilis</em> had 30 days,<br> 
+		     until Numa when it had 29 days,<br> 
+		     until Julius when it became 30 days long.</td>
+       </tr>
+       <tr>
+         <td>May</td>
+         <td>Maia's month</td>
+         <td>Old French <em>Mai</em><br>
+             Old English <em>Maius</em><br>
+             Latin <em>Maius</em> "of Maia"<br>
+             Latin <em>Maius mensis</em> "month of Maia" </td>
+		 <td><em>Maia</em> (meaning "the great one")<br> 
+		     is the Italic goddess of spring,<br> 
+		     the daughter of <em>Faunus</em>,<br> 
+			 and wife of <em>Vulcan</em>.</td>
+		 <td><em>Maius</em> has always had 31 days.</td>
+       </tr>
+       <tr>
+         <td>June</td>
+         <td>Juno's month</td>
+         <td>Middle English <em>jun(e)</em><br>
+             Old French <em>juin</em><br>
+             Old English <em>junius</em><br>
+             Latin <em>Junius</em> "of Juno"<br>
+             Latin <em>Junius mensis</em> "month of Juno"</td>
+		 <td><em>Juno</em> is the principle goddess of the Roman Pantheon.<br> 
+		     She is the goddess of marriage<br> 
+			 and the well-being of women.<br> 
+		     She is the wife and sister of <em>Jupiter</em>.<br> 
+			 She is identified with the Greek goddess <em>Hera</em>.</td>
+		 <td><em>Junius</em> had 30 days,<br> 
+		     until Numa when it had 29 days,<br> 
+		     until Julius when it became 30 days long.</td>
+       </tr>
+       <tr>
+         <td>July</td>
+         <td>Julius Caesar's month</td>
+         <td>Middle English <em>Julie</em><br>
+             Latin <em>Julius</em> "Julius"<br>
+             Latin <em>Julius mensis</em> "month of Julius"<br>
+             Latin <em>quintilis mensis</em> "fifth month" </td>
+		 <td><em>Julius Caesar</em> reformed the Roman calendar<br>
+		     (hence the Julian calendar) in 46 BC.<br> 
+		     In the process, he renamed this month after himself.</td>
+		 <td><em>Quintilis</em> (and later <em>Julius</em>)<br> 
+		     has always had 31 days.</td>
+       </tr>
+       <tr>
+         <td>August</td>
+         <td>Augustus Caesar's month</td>
+         <td>Latin <em>Augustus</em> "Augustus"<br>
+             Latin <em>Augustus mensis</em> "month of Augustus"<br>
+             Latin <em>sextilis mensis</em> "sixth month" </td>
+		 <td><em>Augustus Caesar</em> clarified<br> 
+		     and completed the calendar reform of <em>Julius Caesar</em>.<br> 
+		     In the process, he also renamed this month after himself.</td>
+		 <td><em>Sextilis</em> had 30 days,<br> 
+		     until Numa when it had 29 days,<br> 
+		     until Julius when it became 31 days long.</td>
+       </tr>
+       <tr>
+         <td>September</td>
+         <td>the seventh month</td>
+         <td>Middle English <em>septembre</em><br>
+             Latin <em>September</em><br>
+             Latin <em>septem</em> "seven" + <em>-ber</em> (adj. suffix)<br>
+             Latin <em>september mensis</em> "seventh month"</td>
+		 <td></td>
+		 <td><em>September</em> had 30 days,<br> 
+		     until Numa when it had 29 days,<br> 
+		     until Julius when it became 30 days long.</td>
+       </tr>
+       <tr>
+         <td>October</td>
+         <td>the eighth month</td>
+         <td>Middle English <em>octobre</em><br>
+             Latin <em>October</em><br>
+             Latin <em>octo</em> "eight" + <em>-ber</em> (adj. suffix)<br>
+             Latin <em>october mensis</em> "eighth month"</td>
+		 <td></td>
+		 <td><em>October</em> has always had 31 days.</td>
+       </tr>
+       <tr>
+         <td>November</td>
+         <td>the nineth month</td>
+         <td>Middle English <em>Novembre</em><br>
+             Latin <em>November</em><br>
+             Latin <em>Novembris mensis</em> "nineth month"</td>
+		 <td></td>
+		 <td><em>Novembris</em> had 30 days,<br> 
+		     until Numa when it had 29 days,<br> 
+		     until Julius when it became 30 days long.</td>
+       </tr>
+       <tr>
+         <td>December</td>
+         <td>the tenth month</td>
+         <td>Middle English <em>decembre</em><br>
+             Old French <em>decembre</em><br>
+             Latin <em>december</em> "tenth month"<br>
+             Latin <em>decem</em> "ten" + <em>-ber</em> (adj. suffix)</td>
+		 <td></td>
+		 <td><em>December</em> had 30 days,<br> 
+		     until Numa when it had 29 days,<br>
+		     until Julius when it became 31 days long.</td>
+       </tr>
+      </table>
+    </section>
+    
+	<section class="w3-container">
+      <h3 id="menu_Days">Days<a id="ref03" class="ref" href="#ref-03"><sup>[3]</sup></a></h3>
+	  <p>The English words for each day bear remnants of Roman tradition, but they have been filtered through centuries of Germanic and Norse mythos.<br>
+	     The Germanic people adapted the Roman system by identifying Roman gods with their own deities.</p>
+	  <img id="days" src="../_images/Calendar/weekdays2lines.png" alt="Week days origin">
+      <table id="tabDays">
+       <tr>
+         <th>Day</th>
+		 <th>Eponym</th>
+         <th>Etymology</th>
+       </tr>
+       <tr>
+         <td>Sunday</td>
+		 <td>Sun's day</td>
+         <td>Old English "Sunnand&aelig;g," which is derived from a Germanic interpretation of the Latin <em>dies solis</em>, "sun's day."<br> 
+		     Germanic and Norse mythology personify the sun as a goddess named <em>Sunna</em> or <em>S&oacute;l</em>.</td>
+       </tr>
+	   <tr>
+	   	 <td>Monday</td>
+		 <td>Moon's day</td>
+		 <td>Old English "M&omacr;nand&aelig;g," named after <em>Mani</em>, the Norse personification of the moon (and <em>S&oacute;l's</em> brother).</td>
+	   </tr>
+       <tr>
+	   	 <td>Tuesday</td>
+		 <td>Tyr's day</td>
+		 <td>Old English "T&imacr;wesd&aelig;g," after <em>Tiw</em>, or <em>Tyr</em>, a one-handed Norse god of dueling.<br>
+		     He is equated with <em>Mars</em>, the Roman war god.</td>
+	   </tr>
+       <tr>
+	   	 <td>Wednesday</td>
+		 <td>Odin's day</td>
+		 <td>"W&omacr;den's day." <em>W&omacr;den</em>, or <em>Odin</em>, was the ruler of the Norse gods' realm and associated with wisdom, magic, victory and death.<br> 
+		     The Romans connected <em>W&omacr;den</em> to <em>Mercury</em> because they were both guides of souls after death.<br> 
+			 "Wednesday" comes from Old English "W&omacr;dnesd&aelig;g."</td>
+	   </tr>
+       <tr>
+	   	 <td>Thursday</td>
+		 <td>Thor's day</td>
+		 <td>"Thor's day," gets its English name after the hammer-wielding Norse god of thunder, strength and protection.<br> 
+		     The Roman god <em>Jupiter</em>, as well as being the king of gods, was the god of the sky and thunder.<br>
+			 "Thursday" comes from Old English "&thorn;&umacr;nresd&aelig;g."</td>
+	   </tr>
+       <tr>
+	   	 <td>Friday</td>
+		 <td>Frigga's day</td>
+		 <td>Named after the wife of <em>Odin</em>. Some scholars say her name was <em>Frigg</em>; others say it was <em>Freya</em>;<br> 
+		     other scholars say <em>Frigg</em> and <em>Freya</em> were two separate goddesses.<br> 
+			 Whatever her name, she was often associated with <em>Venus</em>, the Roman goddess of love, beauty and fertility.<br>
+			 "Friday" comes from Old English "Fr&imacr;ged&aelig;g."</td>
+	   </tr>
+       <tr>
+	   	 <td>Saturday</td>
+		 <td>Saturn's day</td>
+	     <td>Germanic and Norse traditions didn't assign any of their gods to this day of the week.<br> 
+		     They retained the Roman name instead.<br>
+			 The English word "Saturday" comes from the Anglo-Saxon word "S&aelig;turnesd&aelig;g," which translates to "Saturn's day."</td>
+	   </tr>
+	  </table>
+	</section>
+	  
+    <section class="w3-container">
+      <h3 id="menu_refs">References</h3>
+      <ol>
+         <li id="ref-01" class="reference"><a class="source" href="#ref01">^</a>&nbsp;Gregorian calendar.&nbsp;
+		    <a class="source" href="https://en.wikipedia.org/wiki/Gregorian_calendar" target="_blank">https://en.wikipedia.org/wiki/Gregorian_calendar</a></li>
+         <li id="ref-02" class="reference"><a class="source" href="#ref02">^</a>&nbsp;Months.&nbsp;
+		    <a class="source" href="https://www.crowl.org/Lawrence/time/months.html" target="_blank">https://www.crowl.org/Lawrence/time/months.html</a></li>
+         <li id="ref-03" class="reference"><a class="source" href="#ref03">^</a>&nbsp;Days.&nbsp;
+		    <a class="source" href="https://www.livescience.com/45432-days-of-the-week.html" target="_blank">https://www.livescience.com/45432-days-of-the-week.html</a></li>
+      </ol>
+    </section>
+
+    <footer class="w3-container w3-tiny w3-flat-pomegranate">
+      <p>C. Ursal Jr. <span id="posted">2018 October 22</span></p>
+    </footer>
+  </main>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myTopBtn").style.display = "block";
+    } else {
+        document.getElementById("myTopBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+// Get the modal
+var modal = document.getElementById('modalID');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "12%";
+  document.getElementById("mySidebar").style.width = "12%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("menu").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("menu").style.display = "inline-block";
+}
+</script>  
+  
+</body>
+</html> 
