@@ -361,12 +361,12 @@ var n;
 var showImg="";
 //Traditional
 function showPic(n) {
-    showImg="../_images/earthquake/" + n + ".jpg";
+    showImg="./" + n + ".jpg";
     document.getElementById("showImg").src = showImg;
     document.getElementById("modalDiv").style.display = "block"; 
 }
 function showPdf(n) {
-    filePdf="../_images/earthquake/" + n + ".pdf";
+    filePdf="./" + n + ".pdf";
     document.getElementById("showImg").src = filePdf;
     document.getElementById("modalDiv").style.display = "block"; 
 }
@@ -382,6 +382,7 @@ window.onclick = function(event) {
 </body>
 
 </html> 
+
 
 
 
