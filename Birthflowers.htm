@@ -157,7 +157,7 @@
     <div class="w3-container" id="locOrigin">
         <p><span>Origin</span></p>
         <a href="../_images/birthflowers/suntory blue rose-applause.jpg" target="_blank">
-            <img id="imgOrigin" src="../_images/birthflowers/suntory blue rose,applause.jpg" alt="Suntory blue rose" 
+            <img id="imgOrigin" src="files/birthflowers/suntory blue rose,applause.jpg" alt="Suntory blue rose" 
             title="A rose containing the blue pigment was created in 2004 by genetic engineering of a white rose.  It is as a blue rose, but it is lavender or pale mauve in color.">
         </a>
         <p>The first flowers appeared on our Planet over 130 million years ago creating beauty, color and wonderful scents. 
@@ -168,7 +168,7 @@
         The gifts included flowers - the first traditions and origins of Birth Month Flowers.</p>
         <p id="locBritish">Enumerated below are flowers of the month and their special meanings which are associated with specific months.
         It would be a helpful guide for gifting flowers for someone's birthday.</p>
-		<img id="imgOrigin2" src="../_images/birthflowers/flowersgrasses.png" alt="flowers in grasses">
+		<img id="imgOrigin2" src="files/birthflowers/flowersgrasses.png" alt="flowers in grasses">
 	</div>
     
     <div class="w3-container">
@@ -258,7 +258,7 @@
     <div class="w3-container">
         <p style="padding-left:16px"><span>U.S. style</span>
             <br />Click a flower to show some images.</p> 
-        <img id="imgUS" src="../_images/birthflowers/roses3.jpg" alt="3 roses">
+        <img id="imgUS" src="files/birthflowers/roses3.jpg" alt="3 roses">
         <table id="flowers_us">
         <caption>Source: <a href="https://en.wikipedia.org/wiki/Birth_flower" target="_blank">https://en.wikipedia.org/wiki/Birth_flower</caption>
           <tr>
@@ -358,7 +358,7 @@
 	<br />
 	
     <div class="w3-container" id="list">
- 		<img id="imgList" src="../_images/birthflowers/flowersbirth.png" alt="birth flowers">
+ 		<img id="imgList" src="files/birthflowers/flowersbirth.png" alt="birth flowers">
         <p style="padding-left:16px"><span>Alphabetical list</span>
             <br />Click a flower to show some images.</p> 
         <table id="flowers_list">
@@ -474,12 +474,12 @@ function showImg(n) {
     } else {
         m = n;
     }
-    imgBunch="../_images/birthflowers/flower-" + n + " bunch.jpg";
-    imgSide="../_images/birthflowers/flower-" + n + " side.jpg";
-    imgTop="../_images/birthflowers/flower-" + n + " top.jpg";
-    imgClip="../_images/birthflowers/flower-" + n + " clipart.jpg";
+    imgBunch="files/birthflowers/flower-" + n + " bunch.jpg";
+    imgSide="files/birthflowers/flower-" + n + " side.jpg";
+    imgTop="files/birthflowers/flower-" + n + " top.jpg";
+    imgClip="files/birthflowers/flower-" + n + " clipart.jpg";
     if (n == "morning glory" || n == "peony") {
-       imgClip="../_images/birthflowers/flower-" + n + " clipart.png";
+       imgClip="files/birthflowers/flower-" + n + " clipart.png";
     }
     document.getElementById("flower").innerHTML = m;
     document.getElementById("bunch").innerHTML = "bunch";
@@ -519,6 +519,3 @@ window.onclick = function(event) {
 
 </body>
 </html>
-
-
-
