@@ -48,25 +48,25 @@ a:hover {
     text-decoration: none;
 }
 .divBiblical {
-    background: url("images/basahon/biblical.png") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
     background-size: 150px;  
     background-color: #ffffb3;
     padding-bottom: 1px;
 }
 .divComputers {
-    background: url("images/basahon/computer.png") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/computer.png") right bottom no-repeat;
     background-size: 75px;
     background-color: #b3ffb3;
     padding-bottom: 1px;
 }
 .divDisasters {
-    background: url("images/basahon/disaster.jpg") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
     background-size: 100px;
     background-color: #ffedcc;
     padding-bottom: 1px;
 }
 .divExcel {
-    background: url("images/basahon/excel2.png") right center no-repeat, url("../_images/basahon/excel.png") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/excel2.png") right center no-repeat, url("https://junursal2.github.io/junursal2.basahon/images/basahon/excel.png") right bottom no-repeat;
     background-size: 75px, 100px;
     background-color: #D6F5D6;
     padding-bottom: 1px;
@@ -75,13 +75,13 @@ a:hover {
     padding-left: 30px;
 }
 .divFinances {
-    background: url("images/basahon/coins.png") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/coins.png") right bottom no-repeat;
     background-size: 80px;
     background-color: #eaccff;
     padding-bottom: 1px;    
 }
 .divFun {
-    background: url("images/basahon/fun-stuff.gif") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
     background-size: 125px;
     background-color: #DCDCDC;
     padding-bottom: 1px;
@@ -94,13 +94,13 @@ a:hover {
     padding-bottom: 1px;
 }
 .divLifehacks {
-    background: url("images/basahon/lifehacks.jpg") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffffcc;
     padding-bottom: 1px;
 }
 .divLMS {
-    background: url("images/basahon/love-marriage-sex.jpg") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/love-marriage-sex.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffcccc;
     padding-bottom: 1px;		
@@ -112,13 +112,13 @@ a:hover {
     padding-bottom: 1px;
 }
 .divOptics {
-    background: url("images/basahon/optics.gif") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/optics.gif") right bottom no-repeat;
     background-size: 100px;
     background-color: #f9d2f9;
     padding-bottom: 1px;  
 }
 .divQuality {
-    background: url("images/basahon/quality.png") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/quality.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #99ffcc;
     padding-bottom: 1px; 
@@ -319,6 +319,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
