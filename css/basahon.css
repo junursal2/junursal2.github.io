@@ -90,13 +90,14 @@ a:hover {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #F0E68C;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 1px;
 }
 .divLifehacks {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffffcc;
+    padding-top: 5px;
     padding-bottom: 1px;
 }
 .divLMS {
@@ -109,7 +110,7 @@ a:hover {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/nature.png") right bottom no-repeat;
     background-size: 150px;
     background-color: #ffe6e6;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 1px;
 }
 .divOptics {
@@ -320,6 +321,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
