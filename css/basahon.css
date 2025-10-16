@@ -82,7 +82,7 @@ a:hover {
 }
 .divFun {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
-    background-size: 125px;
+    background-size: 100px;
     background-color: #DCDCDC;
     padding-bottom: 1px;
 }
@@ -319,7 +319,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
-
-
