@@ -48,25 +48,25 @@ a:hover {
     text-decoration: none;
 }
 .divBiblical {
-    background: url("../_images/basahon/biblical.png") right bottom no-repeat;
+    background: url("images/basahon/biblical.png") right bottom no-repeat;
     background-size: 150px;  
     background-color: #ffffb3;
     padding-bottom: 1px;
 }
 .divComputers {
-    background: url("../_images/basahon/computer.png") right bottom no-repeat;
+    background: url("images/basahon/computer.png") right bottom no-repeat;
     background-size: 75px;
     background-color: #b3ffb3;
     padding-bottom: 1px;
 }
 .divDisasters {
-    background: url("../_images/basahon/disaster.jpg") right bottom no-repeat;
+    background: url("images/basahon/disaster.jpg") right bottom no-repeat;
     background-size: 100px;
     background-color: #ffedcc;
     padding-bottom: 1px;
 }
 .divExcel {
-    background: url("../_images/basahon/excel2.png") right center no-repeat, url("../_images/basahon/excel.png") right bottom no-repeat;
+    background: url("images/basahon/excel2.png") right center no-repeat, url("../_images/basahon/excel.png") right bottom no-repeat;
     background-size: 75px, 100px;
     background-color: #D6F5D6;
     padding-bottom: 1px;
@@ -75,55 +75,55 @@ a:hover {
     padding-left: 30px;
 }
 .divFinances {
-    background: url("../_images/basahon/coins.png") right bottom no-repeat;
+    background: url("images/basahon/coins.png") right bottom no-repeat;
     background-size: 80px;
     background-color: #eaccff;
     padding-bottom: 1px;    
 }
 .divFun {
-    background: url("../_images/basahon/fun-stuff.gif") right bottom no-repeat;
+    background: url("images/basahon/fun-stuff.gif") right bottom no-repeat;
     background-size: 125px;
     background-color: #DCDCDC;
     padding-bottom: 1px;
 }
 .divHPOI{
-    background: url("../_images/basahon/hpoilogo2.png") right bottom no-repeat;
+    background: url("images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #F0E68C;
     padding-bottom: 1px;
 }
 .divLifehacks {
-    background: url("../_images/basahon/lifehacks.jpg") right bottom no-repeat;
+    background: url("images/basahon/lifehacks.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffffcc;
     padding-bottom: 1px;
 }
 .divLMS {
-    background: url("../_images/basahon/love-marriage-sex.jpg") right bottom no-repeat;
+    background: url("images/basahon/love-marriage-sex.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffcccc;
     padding-bottom: 1px;		
 }
 .divNature {
-    background: url("../_images/basahon/nature.png") right bottom no-repeat;
+    background: url("images/basahon/nature.png") right bottom no-repeat;
     background-size: 150px;
     background-color: #ffe6e6;
     padding-bottom: 1px;
 }
 .divOptics {
-    background: url("../_images/basahon/optics.gif") right bottom no-repeat;
+    background: url("images/basahon/optics.gif") right bottom no-repeat;
     background-size: 100px;
     background-color: #f9d2f9;
     padding-bottom: 1px;  
 }
 .divQuality {
-    background: url("../_images/basahon/quality.png") right bottom no-repeat;
+    background: url("images/basahon/quality.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #99ffcc;
     padding-bottom: 1px; 
 }
 .divVirtues {
-    background: url("../_images/basahon/virtue.jpg") right bottom no-repeat;
+    background: url("images/basahon/virtue.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffdb99;
     padding-bottom: 1px;
@@ -315,3 +315,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
