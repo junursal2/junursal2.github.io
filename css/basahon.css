@@ -90,7 +90,7 @@ a:hover {
     background: url("images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #F0E68C;
-    padding-top: 1px;
+    padding-top: 10px;
     padding-bottom: 1px;
 }
 .divLifehacks {
@@ -320,5 +320,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
