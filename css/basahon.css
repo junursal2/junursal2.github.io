@@ -140,12 +140,12 @@ a:hover {
 }
 .col-1 {
     width: 50%; 
-    padding-top: 4px; 
+    padding-top: 2px; 
     padding-right: 4px;
 }
 .col-2 {
     width: 50%;
-    padding-top: 4px;
+    padding-top: 2px;
     padding-left: 4px;
 }
 h4 {
@@ -319,3 +319,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
