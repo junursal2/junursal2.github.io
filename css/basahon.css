@@ -1,0 +1,317 @@
+/* side navigation */
+.sidenav {
+    background-color: #696969;
+    display: none;
+    font-size: 11px;
+    font-family: Verdana, serif;
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+.sidenav a {
+    padding: 4px 8px 4px 16px;
+    text-decoration: none;
+    font-size: 11px;
+    color: white;
+    display: block;
+}
+.sidenav a:hover {
+    color: yellow;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    text-align: center;
+    width: 180px;
+}
+.sidenav p {
+    font-size: 12px;
+    font-weight: normal;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 12px;}
+}
+
+/* body */
+a {
+    text-decoration: none;
+}
+a:hover {
+    background-color: orange;
+    text-decoration: none;
+}
+.divBiblical {
+    background: url("../_images/basahon/biblical.png") right bottom no-repeat;
+    background-size: 150px;  
+    background-color: #ffffb3;
+    padding-bottom: 1px;
+}
+.divComputers {
+    background: url("../_images/basahon/computer.png") right bottom no-repeat;
+    background-size: 75px;
+    background-color: #b3ffb3;
+    padding-bottom: 1px;
+}
+.divDisasters {
+    background: url("../_images/basahon/disaster.jpg") right bottom no-repeat;
+    background-size: 100px;
+    background-color: #ffedcc;
+    padding-bottom: 1px;
+}
+.divExcel {
+    background: url("../_images/basahon/excel2.png") right center no-repeat, url("../_images/basahon/excel.png") right bottom no-repeat;
+    background-size: 75px, 100px;
+    background-color: #D6F5D6;
+    padding-bottom: 1px;
+}
+.divExcel > p {
+    padding-left: 30px;
+}
+.divFinances {
+    background: url("../_images/basahon/coins.png") right bottom no-repeat;
+    background-size: 80px;
+    background-color: #eaccff;
+    padding-bottom: 1px;    
+}
+.divFun {
+    background: url("../_images/basahon/fun-stuff.gif") right bottom no-repeat;
+    background-size: 125px;
+    background-color: #DCDCDC;
+    padding-bottom: 1px;
+}
+.divHPOI{
+    background: url("../_images/basahon/hpoilogo2.png") right bottom no-repeat;
+    background-size: 100px;
+    background-color: #F0E68C;
+    padding-bottom: 1px;
+}
+.divLifehacks {
+    background: url("../_images/basahon/lifehacks.jpg") right bottom no-repeat;
+    background-size: 125px;
+    background-color: #ffffcc;
+    padding-bottom: 1px;
+}
+.divLMS {
+    background: url("../_images/basahon/love-marriage-sex.jpg") right bottom no-repeat;
+    background-size: 125px;
+    background-color: #ffcccc;
+    padding-bottom: 1px;		
+}
+.divNature {
+    background: url("../_images/basahon/nature.png") right bottom no-repeat;
+    background-size: 150px;
+    background-color: #ffe6e6;
+    padding-bottom: 1px;
+}
+.divOptics {
+    background: url("../_images/basahon/optics.gif") right bottom no-repeat;
+    background-size: 100px;
+    background-color: #f9d2f9;
+    padding-bottom: 1px;  
+}
+.divQuality {
+    background: url("../_images/basahon/quality.png") right bottom no-repeat;
+    background-size: 100px;
+    background-color: #99ffcc;
+    padding-bottom: 1px; 
+}
+.divVirtues {
+    background: url("../_images/basahon/virtue.jpg") right bottom no-repeat;
+    background-size: 125px;
+    background-color: #ffdb99;
+    padding-bottom: 1px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+}
+.col-1 {
+    width: 50%; 
+    padding-top: 4px; 
+    padding-right: 4px;
+}
+.col-2 {
+    width: 50%;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+h3 {
+    font-family: Verdana, sans-serif;
+    padding-left: 10px;
+}
+.new {
+    color: red;
+}
+p {
+    font-weight: bold;
+}
+li {
+    font:12px Verdana, sans-serif;
+}
+sup {
+    color: black;
+    font-size: 8px;
+}
+
+/* header */
+#header {
+    position: fixed;
+    height: 8%;
+    width: 100%;
+    top: 0px;
+    margin-left: -8px;
+    background-color: crimson;/* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
+}
+#main {
+    position: relative;
+    font: 36px Georgia, serif;
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 0 0 3px red, 0 0 5px red;
+    text-align: center;
+    top: -20px;
+}
+#basahon {
+    text-decoration: none;
+}
+#basahon:hover {
+    background-color: transparent;
+}
+#menu {
+    color: white;
+    cursor: pointer;
+    font-size: 48px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: -4px;
+    float: left;
+    text-shadow: 1px 1px 4px #000000;
+}
+#supscript {
+    color: white;
+    cursor: pointer;
+    font-family: Verdana, serif;
+    font-size: 24px;
+    margin-right: 8px;
+    margin-top: 8px;
+    float: right;
+    text-shadow: 1px 1px 4px #000000;
+}
+#suptxt {
+    color: white;
+    font-family: Verdana, serif;
+    font-size: 12px;
+    text-shadow: 1px 1px 4px #000000;
+}
+.header2 {
+    position:fixed;
+    width: 100%;
+    background-color: dimgray;
+    font-family: "Trebuchet MS",sans-serif;
+    font-size: 10.5px;
+    float: left;
+    margin-top: 21px;
+    margin-left: -8px;
+    padding-left: 10px;
+}
+#newinred {
+    color: red;
+    background-color: white;
+}
+#noteNew {
+    color: yellow;
+    float: left
+}
+#noteNew:hover {
+    background-color: transparent;
+    cursor: default;
+}
+#noteUpdate {
+    background-color: transparent;
+    color: yellow;
+    cursor: default;	
+    float: right;
+    margin-right: 8px;
+}
+
+/* footer */
+footer {
+    font: 12px "Trebuchet MS", serif;
+    line-height: 150%;
+    background: lightgreen;
+    background-size: cover;
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* table */
+table {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    background-color: gray;
+    border: 1px solid #dddddd;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
