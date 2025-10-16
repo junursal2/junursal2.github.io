@@ -7,5 +7,5 @@ In the Visayan dialect (Cebuano/Bisaya) "basahon" means reading materials (as a 
   <a href="https://junursal2.github.io/junursal2.basahon/Calendar.htm">Calendar months and days origin</a>
 </p>
 <p>
-  <a href="https://junursal2.github.io/junursal2.basahon/OneSolitaryLife.htm">Calendar months and days origin</a>
+  <a href="https://junursal2.github.io/junursal2.basahon/OneSolitaryLife.htm">One Solitary Life</a>
 </p>
