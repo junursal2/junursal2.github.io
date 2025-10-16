@@ -126,7 +126,7 @@ a:hover {
 }
 .divVirtues {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
-    background-size: 125px;
+    background-size: 100px;
     background-color: #ffdb99;
     padding-top: 1px;
     padding-bottom: 1px;
@@ -320,6 +320,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
