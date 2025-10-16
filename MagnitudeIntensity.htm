@@ -86,7 +86,7 @@
     at a given locality the intensity of shaking depends on the magnitude and distance of the seismic event.</p>
 
     <figure class="figRight">
-        <img id="imgMagInt" class="w3-card-4" src="images/magnitudeVSintensity.jpg" alt="magnitude vs intensity">
+        <img id="imgMagInt" class="w3-card-4" src="files/earthquake/magnitudeVSintensity.jpg" alt="magnitude vs intensity">
     </figure>
 
     <p><i>Magnitude</i> and <i>Intensity</i> measure different characteristics of earthquakes.</p>
@@ -110,7 +110,7 @@
 
     <h3 class="subtitle" id="Magnitude">Magnitude scale</h3>
     <figure class="figLeft">
-        <img id="imgSeismogram" src="images/seismogram.jpg" alt="seismogram">
+        <img id="imgSeismogram" src="files/earthquake/seismogram.jpg" alt="seismogram">
     </figure>
     <p>The <i>magnitude</i> is a number that characterizes the relative size of an earthquake. 
        Magnitude is based on measurement of the maximum motion recorded by a 
@@ -197,7 +197,7 @@
     
     <h3 class="subtitle" id="Intensity">Intensity scale</h3>
     <figure class="figRight">
-        <img id="imgIntensity" src="images/intensity.jpg" alt="intensity">
+        <img id="imgIntensity" src="files/earthquake/intensity.jpg" alt="intensity">
     </figure>
     <p>The PHIVOLCS Earthquake Intensity Scale (<b>PEIS</b>) is a seismic scale used and developed 
         by the Philippine Institute of Volcanology and Seismology (PHILVOLCS) to measure the intensity of an earthquake.</p>
@@ -311,14 +311,14 @@
         </tr>
     </table>
     <figure class="figRight">
-        <img id="imgEarthquake" src="images/earthquake.jpg" alt="earthquake">
+        <img id="imgEarthquake" src="files/earthquake/earthquake.jpg" alt="earthquake">
     </figure>
     <br />
     <p>Click a link below to show or display:</p>
     <pre>
        <a href="#ng" onclick="showPic('PEIS')">PEIS poster</a> (jpg file, display in a modal window)
-       <a href="images/PEIS-Filipino.pdf" target="_blank">PEIS in Filipino</a> (pdf file, open a new tab)
-       <a href="images/PEIS-English.pdf" target="_blank">PEIS in English</a> (pdf file, open a new tab)
+       <a href="files/earthquake/PEIS-Filipino.pdf" target="_blank">PEIS in Filipino</a> (pdf file, open a new tab)
+       <a href="files/earthquake/PEIS-English.pdf" target="_blank">PEIS in English</a> (pdf file, open a new tab)
        <a href="#ng" onclick="showPic('earthquake_alert')">Example of an earthquake alert</a> (jpg file, display in a modal window)
     </pre>
     <hr />
@@ -361,12 +361,12 @@ var n;
 var showImg="";
 //Traditional
 function showPic(n) {
-    showImg="images/" + n + ".jpg";
+    showImg="files/earthquake/" + n + ".jpg";
     document.getElementById("showImg").src = showImg;
     document.getElementById("modalDiv").style.display = "block"; 
 }
 function showPdf(n) {
-    filePdf="images/" + n + ".pdf";
+    filePdf="files/earthquake/" + n + ".pdf";
     document.getElementById("showImg").src = filePdf;
     document.getElementById("modalDiv").style.display = "block"; 
 }
@@ -382,6 +382,7 @@ window.onclick = function(event) {
 </body>
 
 </html> 
+
 
 
 
