@@ -106,7 +106,7 @@ a:hover {
     padding-bottom: 1px;		
 }
 .divNature {
-    background: url("images/basahon/nature.png") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/nature.png") right bottom no-repeat;
     background-size: 150px;
     background-color: #ffe6e6;
     padding-bottom: 1px;
@@ -319,6 +319,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
