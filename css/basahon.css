@@ -157,6 +157,7 @@ p {
     color: blue;
     font-size: 12px;
     font-weight: normal;
+    font-family: "Trebuchet MS",sans-serif;
 }
 li {
     font:12px Verdana, sans-serif;
@@ -317,6 +318,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
-
