@@ -49,8 +49,9 @@ a:hover {
 }
 .divBiblical {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 150px;  
+    background-size: 75px;  
     background-color: #ffffb3;
+    padding-top: 5px;
     padding-bottom: 1px;
 }
 .divComputers {
@@ -61,8 +62,9 @@ a:hover {
 }
 .divDisasters {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
-    background-size: 100px;
+    background-size: 75px;
     background-color: #ffedcc;
+    padding-top: 5px;
     padding-bottom: 1px;
 }
 .divExcel {
@@ -95,7 +97,7 @@ a:hover {
 }
 .divLifehacks {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
-    background-size: 125px;
+    background-size: 75px;
     background-color: #ffffcc;
     padding-top: 5px;
     padding-bottom: 1px;
@@ -321,6 +323,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
