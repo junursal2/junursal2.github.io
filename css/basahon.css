@@ -156,7 +156,6 @@ h3 {
     color: red;
 }
 p {
-    color: blue;
     font-size: 12px;
     font-weight: normal;
     font-family: "Trebuchet MS",sans-serif;
@@ -320,4 +319,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
