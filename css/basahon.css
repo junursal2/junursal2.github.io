@@ -86,10 +86,11 @@ a:hover {
     background-color: #DCDCDC;
     padding-bottom: 1px;
 }
-.divHPOI{
+.divHPOI {
     background: url("images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #F0E68C;
+    padding-top: 1px;
     padding-bottom: 1px;
 }
 .divLifehacks {
@@ -126,6 +127,7 @@ a:hover {
     background: url("images/basahon/virtue.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffdb99;
+    padding-top: 1px;
     padding-bottom: 1px;
 }
 .row::after {
@@ -318,3 +320,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
