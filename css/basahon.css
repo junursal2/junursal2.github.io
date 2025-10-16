@@ -87,7 +87,7 @@ a:hover {
     padding-bottom: 1px;
 }
 .divHPOI {
-    background: url("images/basahon/hpoilogo2.png") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #F0E68C;
     padding-top: 10px;
@@ -124,7 +124,7 @@ a:hover {
     padding-bottom: 1px; 
 }
 .divVirtues {
-    background: url("./images/basahon/virtue.jpg") right bottom no-repeat;
+    background: url("images/basahon/virtue.jpg") right bottom no-repeat;
     background-size: 125px;
     background-color: #ffdb99;
     padding-top: 1px;
@@ -320,3 +320,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
