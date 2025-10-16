@@ -154,7 +154,7 @@ h3 {
     color: red;
 }
 p {
-    font-weight: bold;
+    font-weight: normal;
 }
 li {
     font:12px Verdana, sans-serif;
@@ -315,4 +315,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
