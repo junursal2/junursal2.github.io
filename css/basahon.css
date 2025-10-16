@@ -154,6 +154,8 @@ h3 {
     color: red;
 }
 p {
+    color: blue;
+    font-size: 12px;
     font-weight: normal;
 }
 li {
@@ -315,5 +317,6 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
