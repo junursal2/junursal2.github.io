@@ -1,0 +1,692 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+    <title>Birthstones</title>    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Birth stones" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Basahon,URrsoft,SirURsoft,birth stones" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <style>
+        a {color:blue;}
+        a:link {text-decoration:none;}
+        a:hover {text-decoration:underline;}
+        .fa {font-size:16px;}
+        footer {color:#fff !important; background-color:#20295b !important; font-size:10px; text-align:left; padding-left:10px;}
+        h1 {font-family:Verdana;font-weight:bold; color:yellow; font-style:italic;}
+        header {color:#fff !important; background-color:#20295b !important}
+        img {max-width:100%;height:auto;}
+        #imgAbout {
+            float: right;
+            height:auto; 
+            margin:0px 0px 5px 15px;;
+            width:50%;
+        }
+        #imgWeek {
+            float: right;
+            height:auto; 
+            width:auto;    
+        }
+        #about {
+            font-size: 12px;
+            text-align: justify;
+        }
+        p.img {color:#20295b; font-weight:bold;}
+        #myTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #DC143C;
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        #myTopBtn:hover {background-color:#555;}
+        #grad1 {
+            background: #20295b; /* For browsers that do not support gradients */    
+            background: -webkit-linear-gradient(left, #20295b , #6495ED); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #20295b, #6495ED); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #20295b, #6495ED); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #20295b , #6495ED); /* Standard syntax (must be last) */
+        }
+        #article {
+            display: none;
+        }
+        #article_head {
+            padding: 16px;
+        }
+        #main {
+            display: none;
+        }
+        .w3-modal-content {top: -25px;} 
+        caption {
+            caption-side: bottom;
+            text-align: left;
+            font-size: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            display: none;
+            margin: 25px;
+            width: auto;
+        }
+        th, td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            font-size: 12px;
+            height: 25px;
+        }
+        th {background-color: powderblue;}
+        th, td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+     </style>
+</head>
+
+<body>
+    <button id="myTopBtn" title="Go to top" onclick="topFunction()">Go to top</button>  
+    <header id="grad1" class="w3-container" >
+        <h1 class="w3-text-shadow">Birthstones</h1>
+    </header>
+ 
+    <div class="w3-bar w3-border w3-small">
+        <a id="home" title="Go to basahon articles main page" href="basahon.html#goFunstuff" class="w3-bar-item w3-button w3-border-right w3-hover-yellow"><i class="fa fa-home"></i></a>
+        <a href="#" title="Show intro page" class="w3-bar-item w3-button w3-border-right w3-hover-yellow w3-mobile" onclick="showTopic('about')">About</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-border-right w3-hover-yellow">Lists</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4" style="width:20%">
+                <a href="#" title="Display birthstones by month" class="w3-bar-item w3-button w3-hover-yellow w3-mobile" onclick="showTopic('stonesMonth')">by month</a>
+                <a href="#" title="Display birthstones by Zodiac" class="w3-bar-item w3-button w3-hover-yellow w3-mobile" onclick="showTopic('stonesZodiac')">by Zodiac signs</a>
+                <a href="#" title="Display birthstones by week" class="w3-bar-item w3-button w3-hover-yellow w3-mobile" onclick="showTopic('stonesWeek')">by week</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-border-right w3-hover-yellow">References</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4" style="width:20%">
+                <a href="#" title="Display birthstones alphabetical" class="w3-bar-item w3-button w3-hover-yellow w3-mobile" onclick="showTopic('stonesAlpha')">Alphabetical list</a>
+                <a href="#" title="Display modern & traditional birthstones images" class="w3-bar-item w3-button w3-hover-yellow w3-mobile" onclick="showTopic('birthstones')">Birtstones</a>
+                <a href="#" title="Show various shapes & cuts" class="w3-bar-item w3-button w3-hover-yellow w3-mobile" onclick="showTopic('shapescuts')">Shapes&amp;Cuts</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about" class="w3-container">
+        <p>A <span style="color:red">birthstone</span> is a gemstone that represents a person's month of birth. 
+        They are often used in personal jewelry like rings or pendants.</p>
+        <p><b>Origin</b></p>
+        <img id="imgAbout" src="../_images/birthstones/gemstones.jpg" alt="gems">
+        <p>How did certain gemstones become associated with the months of the year? 
+        Experts believe that birthstones can be traced back to the Bible. 
+        In Exodus 28, Moses sets forth directions for making special garments for Aaron, the High Priest of the Hebrews. 
+        Specifically, the breastplate was to contain twelve precious gemstones, representing the twelve tribes of Israel.</p>
+        <p>Later, these twelve stones were likely also linked to the twelve signs of the zodiac. 
+        Eventually, they also became associated with the twelve months of the calendar year.</p>
+        <p>Throughout history, there have been many myths and legends associated with birthstones. 
+        Many cultures have believed that birthstones have magical healing powers or bring good luck. 
+        Not all cultures have agreed on which stones correspond to which months, though, 
+        so you can find different lists of birthstones over the course of time.</p>
+        <p><b>Wearing Birthstones</b></p>
+        <p>The history of birthstones and how they are worn stretches back over many centuries. 
+        The idea of a person wearing their birthstone became popular during the fifteenth 
+        or sixteenth century in Poland.</p>
+        <p>The traditional belief was that everyone wears the specific birthstone assigned for each month 
+        since the powers of the gemstone were heightened during its month. 
+        To get the total effect, it was thought that individuals needed to own an entire set of twelve gemstones 
+        and rotate them monthly.</p>
+        <p>Gemstones are worn today for beauty and are often chosen for aesthetic reasons. 
+        It is still common to wear your own birthstone or one of someone significant to you. 
+        Birthstone jewelry also makes a great personal gift for someone special. 
+        There are endless jewelry options available whether it is a necklace, bracelet, earrings, a ring 
+        or even worry stones.</p>
+    </div>
+
+    <div id="article" class="w3-container">
+        <p id="article_head" style="font-size: 12px"></p>
+        <img id="article_img" alt="">
+        <a id="article_foot" style="font-size: 10px" href=""></a>
+    </div>
+    
+<div�style="overflow-x:auto;">
+    <table id="table_alpha">
+	  <tr>
+        <td><a href="#" onclick="showImage('agate')">agate</a></td>
+        <td><a href="#" onclick="showImage('citrine')">citrine</a></td>
+        <td><a href="#" onclick="showImage('onyx')">onyx</a></td>
+        <td><a href="#" onclick="showImage('topaz')">topaz</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('aquamarine')">aquamarine</a></td>
+        <td><a href="#" onclick="showImage('rock crystal')">crystal (quartz)</a></td>
+        <td><a href="#" onclick="showImage('opal')">opal</a></td>
+        <td><a href="#" onclick="showImage('tourmaline')">tourmaline</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('alexandrite')">alexandrite</a></td>
+        <td><a href="#" onclick="showImage('diamond')">diamond</a></td>
+        <td><a href="#" onclick="showImage('pearl')">pearl</a></td>
+        <td><a href="#" onclick="showImage('turquoise')">turquoise</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('amethyst')">amethyst</a></td>
+        <td><a href="#" onclick="showImage('emerald')">emerald</a></td>
+        <td><a href="#" onclick="showImage('peridot')">peridot</a></td>
+        <td><a href="#" onclick="showImage('zircon')">zircon</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('beryl')">beryl</a></td>
+        <td><a href="#" onclick="showImage('garnet')">garnet</a></td>
+        <td><a href="#" onclick="showImage('rock crystal')">rock crystal</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('bloodstone')">bloodstone</a></td>
+        <td><a href="#" onclick="showImage('hyacinth')">hyacinth</a></td>
+        <td><a href="#" onclick="showImage('ruby')">ruby</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('carnelian')">carnelian</a></td>
+        <td><a href="#" onclick="showImage('jasper')">jasper</a></td>
+        <td><a href="#" onclick="showImage('sapphire')">sapphire</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('cats eye')">cat's eye</a></td>
+        <td><a href="#" onclick="showImage('lapis lazuli')">lapis lazuli</a></td>
+        <td><a href="#" onclick="showImage('sardonyx')">sardonyx</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('chrysolite')">chrysolite</a></td>
+        <td><a href="#" onclick="showImage('lodestone')">lodestone</a></td>
+        <td><a href="#" onclick="showImage('spinel')">spinel</a></td>
+	  </tr>
+	  <tr>
+        <td><a href="#" onclick="showImage('chrysoprase')">chrysoprase</a></td>
+        <td><a href="#" onclick="showImage('moonstone')">moonstone</a></td>
+        <td><a href="#" onclick="showImage('tanzanite')">tanzanite</a></td>
+	  </tr>
+    </table> 
+</div>
+
+<div�style="overflow-x:auto;">
+    <table id="table_month">
+    <caption>Source: <a href="https://en.wikipedia.org/wiki/Birthstone" target="_blank">https://en.wikipedia.org/wiki/Birthstone</caption>
+      <tr>
+        <th>Month</th>
+        <th>15th-20th century</th>
+        <th>U.S. (1912)</th>
+        <th>U.S. (2016)</th>
+        <th>Britain (2013)</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td><a href="#" onclick="showImage('garnet')">garnet</a></td>
+        <td><a href="#" onclick="showImage('garnet')">garnet</a></td>
+        <td><a href="#" onclick="showImage('garnet')">garnet</a></td>
+        <td><a href="#" onclick="showImage('garnet')">garnet</a></td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>
+            <a href="#" onclick="showImage('amethyst')">amethyst</a>, 
+            <a href="#" onclick="showImage('hyacinth')">hyacinth</a>, 
+            <a href="#" onclick="showImage('pearl')">pearl</a>
+        </td>
+        <td><a href="#" onclick="showImage('amethyst')">amethyst</a></td>
+        <td><a href="#" onclick="showImage('amethyst')">amethyst</a></td>
+        <td><a href="#" onclick="showImage('amethyst')">amethyst</a></td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>
+            <a href="#" onclick="showImage('bloodstone')">bloodstone</a>, 
+            <a href="#" onclick="showImage('jasper')">jasper</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('bloodstone')">bloodstone</a>, 
+            <a href="#" onclick="showImage('aquamarine')">aquamarine</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('aquamarine')">aquamarine</a>,
+            <a href="#" onclick="showImage('bloodstone')">bloodstone</a>       
+        </td>
+        <td>
+            <a href="#" onclick="showImage('aquamarine')">aquamarine</a>,
+            <a href="#" onclick="showImage('bloodstone')">bloodstone</a>       
+        </td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>
+            <a href="#" onclick="showImage('diamond')">diamond</a>, 
+            <a href="#" onclick="showImage('sapphire')">sapphire</a>
+        </td>
+        <td><a href="#" onclick="showImage('diamond')">diamond</a></td>
+        <td><a href="#" onclick="showImage('diamond')">diamond</a></td>
+        <td>
+            <a href="#" onclick="showImage('diamond')">diamond</a>, 
+            <a href="#" onclick="showImage('rock crystal')">rock crystal</a>
+        </td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>
+            <a href="#" onclick="showImage('emerald')">emerald</a>, 
+            <a href="#" onclick="showImage('agate')">agate</a>
+        </td>
+        <td><a href="#" onclick="showImage('emerald')">emerald</a></td>
+        <td><a href="#" onclick="showImage('emerald')">emerald</a></td>
+        <td>
+            <a href="#" onclick="showImage('emerald')">emerald</a>, 
+            <a href="#" onclick="showImage('chrysoprase')">chrysoprase</a>
+        </td>
+      </tr>
+      <tr>
+        <td>June</td>
+        <td>
+            <a href="#" onclick="showImage('cats eye')">cat's eye</a>, 
+            <a href="#" onclick="showImage('turquoise')">turquoise</a>, 
+            <a href="#" onclick="showImage('agate')">agate</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('pearl')">pearl</a>, 
+            <a href="#" onclick="showImage('moonstone')">moonstone</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('pearl')">pearl</a>, 
+            <a href="#" onclick="showImage('moonstone')">moonstone</a>, 
+            <a href="#" onclick="showImage('alexandrite')">alexandrite</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('pearl')">pearl</a>, 
+            <a href="#" onclick="showImage('moonstone')">moonstone</a>
+        </td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>
+            <a href="#" onclick="showImage('turquoise')">turquoise</a>, 
+            <a href="#" onclick="showImage('onyx')">onyx</a>
+        </td>
+        <td><a href="#" onclick="showImage('ruby')">ruby</a></td>
+        <td><a href="#" onclick="showImage('ruby')">ruby</a></td>
+        <td>
+            <a href="#" onclick="showImage('ruby')">ruby</a>, 
+            <a href="#" onclick="showImage('carnelian')">carnelian</a>
+        </td>
+      </tr>
+      <tr>
+        <td>August</td>
+        <td>
+            <a href="#" onclick="showImage('sardonyx')">sardonyx</a>, 
+            <a href="#" onclick="showImage('carnelian')">carnelian</a>, 
+            <a href="#" onclick="showImage('moonstone')">moonstone</a>, 
+            <a href="#" onclick="showImage('topaz')">topaz</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('sardonyx')">sardonyx</a>, 
+            <a href="#" onclick="showImage('peridot')">peridot</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('peridot')">peridot</a>, 
+            <a href="#" onclick="showImage('spinel')">spinel</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('peridot')">peridot</a>, 
+            <a href="#" onclick="showImage('sardonyx')">sardonyx</a>
+        </td>
+      </tr>
+      <tr>
+        <td>September</td>
+        <td><a href="#" onclick="showImage('chrysolite')">chrysolite</a></td>
+        <td><a href="#" onclick="showImage('sapphire')">sapphire</a></td>
+        <td><a href="#" onclick="showImage('sapphire')">sapphire</a></td>
+        <td>
+            <a href="#" onclick="showImage('sapphire')">sapphire</a>, 
+            <a href="#" onclick="showImage('lapis lazuli')">lapis lazuli</a>
+        </td>
+      </tr>
+      <tr>
+        <td>October</td>
+        <td>
+            <a href="#" onclick="showImage('opal')">opal</a>, 
+            <a href="#" onclick="showImage('aquamarine')">aquamarine</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('opal')">opal</a>, 
+            <a href="#" onclick="showImage('tourmaline')">tourmaline</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('opal')">opal</a>, 
+            <a href="#" onclick="showImage('tourmaline')">tourmaline</a>
+        </td>
+        <td><a href="#" onclick="showImage('opal')">opal</a></td>
+      </tr>
+      <tr>
+        <td>November</td>
+        <td>
+            <a href="#" onclick="showImage('topaz')">topaz</a>, 
+            <a href="#" onclick="showImage('pearl')">pearl</a>
+        </td>
+        <td><a href="#" onclick="showImage('topaz')">topaz</a></td>
+        <td>
+            <a href="#" onclick="showImage('topaz')">topaz</a>, 
+            <a href="#" onclick="showImage('citrine')">citrine</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('topaz')">topaz</a>, 
+            <a href="#" onclick="showImage('citrine')">citrine</a>
+        </td>
+      </tr>
+      <tr>
+        <td>December</td>
+        <td>
+            <a href="#" onclick="showImage('bloodstone')">bloodstone</a>, 
+            <a href="#" onclick="showImage('ruby')">ruby</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('turquoise')">turquoise</a>, 
+            <a href="#" onclick="showImage('lapis lazuli')">lapis lazuli</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('turquoise')">turquoise</a>, 
+            <a href="#" onclick="showImage('zircon')">zircon</a>, 
+            <a href="#" onclick="showImage('tanzanite')">tanzanite</a>
+        </td>
+        <td>
+            <a href="#" onclick="showImage('tanzanite')">tanzanite</a>, 
+            <a href="#" onclick="showImage('turquoise')">turquoise</a>
+        </td>
+      </tr>
+    </table> 
+</div>
+
+<div�style="overflow-x:auto;">
+    <table id="table_zodiac">
+    <caption>Source: <a href="https://en.wikipedia.org/wiki/Birthstone" target="_blank">https://en.wikipedia.org/wiki/Birthstone</caption>
+      <tr>
+        <th>Zodiac sign</th>
+        <th>Dates</th>
+        <th>Gemstones</th>
+      </tr>
+      <tr>
+        <td>Aquarius</td>
+        <td>21 January - 18 February</td> 
+        <td><a href="#" onclick="showImage('garnet')">garnet</a></td>
+      </tr>
+      <tr>
+        <td>Pisces</td>
+        <td>19 February - 20 March</td> 
+        <td><a href="#" onclick="showImage('amethyst')">amethyst</a></td>
+      </tr>
+      <tr>
+        <td>Aries</td>
+        <td>21 March - 20 April</td>
+        <td><a href="#" onclick="showImage('bloodstone')">bloodstone</a></td>
+      </tr>
+      <tr>
+        <td>Taurus</td>
+        <td>21 April - 21 May</td>
+        <td><a href="#" onclick="showImage('sapphire')">sapphire</a></td>
+      </tr>
+      <tr>
+        <td>Gemini</td>
+        <td>22 April - 21 June</td>
+        <td><a href="#" onclick="showImage('agate')">agate</a></td>
+      </tr>
+      <tr>
+        <td>Cancer</td>
+        <td>21 April - 22 July</td>
+        <td><a href="#" onclick="showImage('emerald')">emerald</a></td>
+      </tr>
+      <tr>
+        <td>Leo</td>
+        <td>23 July - 22 August</td>
+        <td><a href="#" onclick="showImage('onyx')">onyx</a></td>
+      </tr>
+      <tr>
+        <td>Virgo</td>
+        <td>23 August - 22 September</td>
+        <td>
+            <a href="#" onclick="showImage('carnelian')">carnelian</a> 
+      </tr>
+      <tr>
+        <td>Libra</td>
+        <td>23 September - 23 October</td>
+        <td>
+            <a href="#" onclick="showImage('chrysolite')">chrysolite
+            <a href="#" onclick="showImage('peridot')">(peridot)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Scorpio</td>
+        <td>24 October - 21 November</td>
+        <td><a href="#" onclick="showImage('beryl')">beryl</a>
+      </tr>
+      <tr>
+        <td>Sagittarius</td>
+        <td>22 November - 21 December</td>
+        <td><a href="#" onclick="showImage('topaz')">topaz</a></td>
+      </tr>
+      <tr>
+        <td>Capricorn</td>
+        <td>22 December - 21 January</td>
+        <td><a href="#" onclick="showImage('ruby')">ruby</a></td>
+      </tr>
+    </table> 
+</div>
+<div�style="overflow-x:auto;">
+    <table id="table_week">
+    <caption>Source: <a href="https://en.wikipedia.org/wiki/Birthstone" target="_blank">https://en.wikipedia.org/wiki/Birthstone</caption>
+      <tr>
+        <th>Day of the Week</th>
+        <th>Stone(s)</th>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td><a href="#" onclick="showImage('topaz')">topaz</a>, <a href="#" onclick="showImage('diamond')">diamond</a></td> 
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td><a href="#" onclick="showImage('pearl')">pearl</a>, <a href="#" onclick="showImage('quartz')">crystal</a> (quartz)</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td><a href="#" onclick="showImage('ruby')">ruby</a>, <a href="#" onclick="showImage('emerald')">emerald</a></td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td><a href="#" onclick="showImage('amethyst')">amethyst</a>, <a href="#" onclick="showImage('lodestone')">lodestone</a></td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td><a href="#" onclick="showImage('sapphire')">sapphire</a>, <a href="#" onclick="showImage('carnelian')">carnelian</a></td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td><a href="#" onclick="showImage('emerald')">emerald</a>, <a href="#" onclick="showImage('cats eye')">cat's eye</a></td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td><a href="#" onclick="showImage('turquoise')">turquoise</a>, <a href="#" onclick="showImage('diamond')">diamond</a></td>
+      </tr>
+    </table>
+</div>
+
+    <div id="main" class="w3-modal">
+      <div class="w3-modal-content w3-card w3-animate-zoom w3-padding">
+        <span onclick="document.getElementById('main').style.display='none'" class="w3-button w3-display-topright w3-yellow">&times;</span>
+        <p class="img" id="Description"></p>
+        <img id="imgDesc" alt="">
+        <p class="img" id="Photos"></p>
+        <img id="imgGems" alt="">
+        <p class="img" id="Rough" title="Photos of the gemstones in its original natural crystal or non-faceted form."></p>
+        <img id="imgRough" alt="">
+        <p class="img" id="Jewel"></p>
+        <img id="imgJewel" alt="">
+      </div>
+    </div>
+    <br />
+    
+    <footer id="grad1" class="w3-container">
+        <p>Posted by Jun Ursal II <span style="float:right;">First posted: 2017 March 18,&nbsp;Last updated: 2018 August 8</span></p>
+    </footer>
+    
+<script>
+var n,t;
+function showTopic(t) {
+    document.getElementById("about").style.display = "none";
+    document.getElementById("article").style.display = "none";
+    document.getElementById("article_head").style.display = "none";
+    document.getElementById("article_img").style.display = "none";
+    document.getElementById("article_foot").style.display = "none";
+    document.getElementById("table_alpha").style.display = "none";	
+    document.getElementById("table_month").style.display = "none";
+    document.getElementById("table_week").style.display = "none";
+    document.getElementById("table_zodiac").style.display = "none";
+    switch(t){
+        case "about":
+            document.getElementById("about").style.display = "block";
+            break;
+        case "birthstones":
+            document.getElementById("article").style.display = "block";
+            document.getElementById("article_img").style.display = "block";
+            document.getElementById("article_foot").style.display = "block";
+            document.getElementById("article_img").src = "../_images/birthstones/birthstones-modern&traditional.jpg";
+            document.getElementById("article_foot").innerHTML = "Source:"+"<a href='http://www.minerals.net/resource/Birthstones.aspx' target='_blank'>www.minerals.net</a>";      
+            break;
+        case "shapescuts":
+            document.getElementById("article").style.display = "block";
+            document.getElementById("article_head").style.display = "block";
+            document.getElementById("article_img").style.display = "block";
+            document.getElementById("article_foot").style.display = "block";
+            document.getElementById("article_head").innerHTML = "When a gemstone is desired to be used in jewelry, it is cut depending on the size and shape of the rough stone," +
+                " as well as the desired piece of jewelry to be made. <br> Below are some sample shapes and cuts:";
+            document.getElementById("article_img").src = "../_images/birthstones/gems,shapes&cuts.jpg";
+            document.getElementById("article_foot").innerHTML = "";
+            break;
+		case "stonesAlpha":
+            document.getElementById("table_alpha").style.display = "block";
+            document.getElementById("article").style.display = "inline";
+            document.getElementById("article_head").style.display = "inline";
+            document.getElementById("article_head").innerHTML = "Click an item in the list below.";
+			break; 
+        case "stonesMonth":
+            document.getElementById("table_month").style.display = "block";
+            document.getElementById("article").style.display = "inline";
+            document.getElementById("article_head").style.display = "inline";
+            document.getElementById("article_head").innerHTML = "Click an item in the list below.";
+            break;
+        case "stonesWeek":
+            document.getElementById("table_week").style.display = "block";
+            document.getElementById("article").style.display = "inline";
+            document.getElementById("article_head").style.display = "inline";
+            document.getElementById("article_head").innerHTML = "Click an item in the list below.";
+            break;
+        case "stonesZodiac":
+            document.getElementById("table_zodiac").style.display = "block";
+            document.getElementById("article").style.display = "inline";
+            document.getElementById("article_head").style.display = "inline";
+            document.getElementById("article_head").innerHTML = "Click an item in the list below.";
+            break;
+        default:
+    }    
+}
+function showImage(n) {
+    var txtDesc="", txtGems="", txtRough="", txtJewel="";
+    var imgDesc="", imgGems="", imgRough="", imgJewel="";
+    txtDesc="Description:", txtGems="Photos:", txtRough="In the rough:", txtJewel="Jewelry photos:";
+
+    imgDesc="../_images/birthstones/stone-" + n + ",desc.jpg";
+    imgGems="../_images/birthstones/stone-" + n + ",gem.jpg";
+    imgRough="../_images/birthstones/stone-" + n + ",rough.jpg";
+    imgJewel="../_images/birthstones/stone-" + n + ",jewelry.jpg";
+       
+    if (txtDesc == "") {
+        document.getElementById("Description").style.display = "none";
+    } else {
+        document.getElementById("Description").style.display = "block";
+    }    
+    if (txtGems == "") {
+        document.getElementById("Photos").style.display = "none";
+    } else {
+        document.getElementById("Photos").style.display = "block";
+    }
+    if (txtRough == "") {
+        document.getElementById("Rough").style.display = "none"; 
+    } else {
+        document.getElementById("Rough").style.display = "block";  
+    }
+    if (txtJewel == "") {
+        document.getElementById("Jewel").style.display = "none";        
+    } else {
+        document.getElementById("Jewel").style.display = "block";        
+    }
+
+    if (imgDesc == "") {
+        document.getElementById("imgGems").style.display = "none";
+    } else {
+        document.getElementById("imgGems").style.display = "block";
+    }    
+    if (imgGems == "") {
+        document.getElementById("imgGems").style.display = "none";
+    } else {
+        document.getElementById("imgGems").style.display = "block";
+    }
+    if (imgRough == "") {
+        document.getElementById("imgRough").style.display = "none";
+    } else {
+        document.getElementById("imgRough").style.display = "block"; 
+    }
+    if (imgJewel == "") {
+        document.getElementById("imgJewel").style.display = "none";
+    } else {
+        document.getElementById("imgJewel").style.display = "block";
+    }
+   
+    document.getElementById("Description").innerHTML = txtDesc;
+    document.getElementById("Photos").innerHTML = txtGems;
+    document.getElementById("Rough").innerHTML = txtRough;
+    document.getElementById("Jewel").innerHTML = txtJewel;
+    document.getElementById("imgDesc").src = imgDesc;
+    document.getElementById("imgGems").src = imgGems;
+    document.getElementById("imgRough").src = imgRough;
+    document.getElementById("imgJewel").src = imgJewel;
+    document.getElementById("main").style.display = "block";
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myTopBtn").style.display = "block";
+    } else {
+        document.getElementById("myTopBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+// Get the modal
+var modal = document.getElementById('main');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
