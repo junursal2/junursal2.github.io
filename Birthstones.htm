@@ -11,9 +11,14 @@
     <meta name="description" content="Birth stones" />
     <meta name="author" content="Jun Ursal II" />
     <meta name="keywords" content="Basahon,URrsoft,SirURsoft,birth stones" />
-    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
-    <link rel="stylesheet" href="css/w3.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="icon" type="image/png" href="images/ursoft.ico" />
+    <!-- <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
+	<!-- W3.CSS from W3Schools CDN -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!-- Font Awesome 4.7 from CDNJS -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         a {color:blue;}
         a:link {text-decoration:none;}
@@ -127,7 +132,7 @@
         <p>A <span style="color:red">birthstone</span> is a gemstone that represents a person's month of birth. 
         They are often used in personal jewelry like rings or pendants.</p>
         <p><b>Origin</b></p>
-        <img id="imgAbout" src="../_images/birthstones/gemstones.jpg" alt="gems">
+        <img id="imgAbout" src="files/birthstones/gemstones.jpg" alt="gems">
         <p>How did certain gemstones become associated with the months of the year? 
         Experts believe that birthstones can be traced back to the Bible. 
         In Exodus 28, Moses sets forth directions for making special garments for Aaron, the High Priest of the Hebrews. 
@@ -562,7 +567,7 @@ function showTopic(t) {
             document.getElementById("article").style.display = "block";
             document.getElementById("article_img").style.display = "block";
             document.getElementById("article_foot").style.display = "block";
-            document.getElementById("article_img").src = "../_images/birthstones/birthstones-modern&traditional.jpg";
+            document.getElementById("article_img").src = "files/birthstones/birthstones-modern&traditional.jpg";
             document.getElementById("article_foot").innerHTML = "Source:"+"<a href='http://www.minerals.net/resource/Birthstones.aspx' target='_blank'>www.minerals.net</a>";      
             break;
         case "shapescuts":
@@ -572,7 +577,7 @@ function showTopic(t) {
             document.getElementById("article_foot").style.display = "block";
             document.getElementById("article_head").innerHTML = "When a gemstone is desired to be used in jewelry, it is cut depending on the size and shape of the rough stone," +
                 " as well as the desired piece of jewelry to be made. <br> Below are some sample shapes and cuts:";
-            document.getElementById("article_img").src = "../_images/birthstones/gems,shapes&cuts.jpg";
+            document.getElementById("article_img").src = "files/birthstones/gems,shapes&cuts.jpg";
             document.getElementById("article_foot").innerHTML = "";
             break;
 		case "stonesAlpha":
@@ -607,10 +612,10 @@ function showImage(n) {
     var imgDesc="", imgGems="", imgRough="", imgJewel="";
     txtDesc="Description:", txtGems="Photos:", txtRough="In the rough:", txtJewel="Jewelry photos:";
 
-    imgDesc="../_images/birthstones/stone-" + n + ",desc.jpg";
-    imgGems="../_images/birthstones/stone-" + n + ",gem.jpg";
-    imgRough="../_images/birthstones/stone-" + n + ",rough.jpg";
-    imgJewel="../_images/birthstones/stone-" + n + ",jewelry.jpg";
+    imgDesc="files/birthstones/stone-" + n + ",desc.jpg";
+    imgGems="files/birthstones/stone-" + n + ",gem.jpg";
+    imgRough="files/birthstones/stone-" + n + ",rough.jpg";
+    imgJewel="files/birthstones/stone-" + n + ",jewelry.jpg";
        
     if (txtDesc == "") {
         document.getElementById("Description").style.display = "none";
