@@ -49,9 +49,8 @@ a:hover {
 }
 .divBiblical {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 50px;  
+    background-size: 100px;  
     background-color: #ffffb3;
-    padding-top: 3px;
     padding-bottom: 1px;
 }
 .divComputers {
@@ -62,9 +61,8 @@ a:hover {
 }
 .divDisasters {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
-    background-size: 50px;
+    background-size: 75px;
     background-color: #ffedcc;
-    padding-top: 3px;
     padding-bottom: 1px;
 }
 .divExcel {
@@ -92,14 +90,12 @@ a:hover {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px;
     background-color: #F0E68C;
-    padding-top: 5px;
     padding-bottom: 1px;
 }
 .divLifehacks {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
-    background-size: 50px;
+    background-size: 100px;
     background-color: #ffffcc;
-    padding-top: 3px;
     padding-bottom: 1px;
 }
 .divLMS {
@@ -323,6 +319,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
