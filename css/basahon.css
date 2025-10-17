@@ -255,6 +255,9 @@ sup {
     float: right;
     margin-right: 8px;
 }
+#owner {
+    font-size: 10px;
+}
 
 /* footer */
 footer {
@@ -322,6 +325,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
