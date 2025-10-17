@@ -258,7 +258,7 @@ sup {
 
 /* footer */
 footer {
-    font: 12px "Trebuchet MS", serif;
+    font: 10px "Trebuchet MS", serif;
     line-height: 150%;
     background: lightgreen;
     background-size: cover;
@@ -322,6 +322,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
