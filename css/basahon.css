@@ -256,13 +256,13 @@ sup {
     margin-right: 8px;
 }
 #bottom {
-    font-size: 10px;
+    font-size: 10.5px;
 }
 #emdates {
-    font-size: 10px;
+    font-size: 10.5px;
 }
 #owner {
-    font-size: 10px;
+    font-size: 10.5px;
 }
 
 /* footer */
@@ -331,3 +331,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
