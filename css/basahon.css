@@ -255,6 +255,12 @@ sup {
     float: right;
     margin-right: 8px;
 }
+#bottom {
+    font-size: 10px;
+}
+#emdates {
+    font-size: 10px;
+}
 #owner {
     font-size: 10px;
 }
@@ -325,9 +331,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
-
-
-
-
