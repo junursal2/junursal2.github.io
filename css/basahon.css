@@ -63,7 +63,7 @@ a:hover {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
     background-size: 75px;
     background-color: #ffedcc;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
 }
 .divDisasters > p {
     padding-left: 30px;
@@ -159,7 +159,7 @@ h4 {
     color: red;
 }
 p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     font-family: "Trebuchet MS",sans-serif;
 }
@@ -322,3 +322,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
