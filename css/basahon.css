@@ -160,7 +160,7 @@ h4 {
 }
 p {
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
     font-family: "Trebuchet MS",sans-serif;
 }
 li {
@@ -322,4 +322,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
