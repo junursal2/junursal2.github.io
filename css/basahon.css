@@ -64,6 +64,7 @@ a:hover {
     background-size: 75px; */
     background-color: #ffedcc;
     margin-bottom: 10px;
+    padding-top: 1px;
     padding-bottom: 1px;
 }
 .divDisasters > p {
@@ -334,12 +335,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
-
-
-
-
-
-
-
