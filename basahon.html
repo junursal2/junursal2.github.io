@@ -21,6 +21,9 @@
 	#basahon {cursor: help;}
 	#owner {color: blue; cursor: help;}
     #emdates {font-size: 10px;}
+	.responsive-bg {aspect-ratio: 16 / 9;}
+	/* Hide when screen width is 768px or less (typical mobile size) */
+	@media (max-width: 768px) {.responsive-bg {display: none;}}
     </style>
 </head>
 
@@ -68,7 +71,7 @@
 	-->
     <div id="body" class="row">
 		
-		<div class="col-1">		
+		<div class="col-1 responsive-bg">		
 			<div class="divDisasters">
 				<h4>Disaster &amp; Safety</h4>
 				<p>Earthquakes</p>
@@ -921,6 +924,7 @@ $(document).ready(function() {
 </body>
 
 </html>
+
 
 
 
