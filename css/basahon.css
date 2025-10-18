@@ -49,8 +49,8 @@ a:hover {
 }
 .divBiblical {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 110px;  
-    background-color: #ffffb3; */
+    background-size: 110px; */
+    background-color: #ffffb3;
     padding-bottom: 1px;
 }
 .divComputers {
@@ -332,6 +332,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
