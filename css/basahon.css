@@ -174,7 +174,7 @@ sup {
 /* header */
 #header {
     position: fixed;
-    /* height:50px; */
+    height:50px;
     /* height: 8vh; /* fixed relative to screen height */
     /* height: 8%; */
     width: 100%;
@@ -333,6 +333,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
