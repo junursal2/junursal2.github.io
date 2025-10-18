@@ -48,8 +48,8 @@ a:hover {
     text-decoration: none;
 }
 .divBiblical {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 110px;
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
+    background-size: 110px; */
     background-color: #ffffb3;
     padding-bottom: 1px;
 }
@@ -84,8 +84,8 @@ a:hover {
     padding-bottom: 1px;    
 }
 .divFun {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
-    background-size: 100px;
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
+    background-size: 100px; */
     background-color: #DCDCDC;
     padding-bottom: 1px;
 }
@@ -96,8 +96,8 @@ a:hover {
     padding-bottom: 1px;
 }
 .divLifehacks {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
-    background-size: 90px;
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
+    background-size: 90px; */
     background-color: #ffffcc;
     padding-bottom: 1px;
 }
@@ -127,8 +127,8 @@ a:hover {
     padding-bottom: 1px; 
 }
 .divVirtues {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
-    background-size: 80px;
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
+    background-size: 80px; */
     background-color: #ffdb99;
     padding-top: 0px;
     padding-bottom: 1px;
@@ -174,7 +174,7 @@ sup {
 /* header */
 #header {
     position: fixed;
-    height:50px;
+    /* height:50px; */
     /* height: 8vh; /* fixed relative to screen height */
     width: 100%;
     top: 0px;
@@ -332,3 +332,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
