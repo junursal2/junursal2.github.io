@@ -51,7 +51,8 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
     background-size: 75px; */
     background-color: #ffedcc;
-    padding-top: 0.5px;
+    margin-top: 1px;
+    /* padding-top: 0.5px; */
     padding-bottom: 1px;
 }
 .divDisasters > p {
@@ -337,6 +338,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
