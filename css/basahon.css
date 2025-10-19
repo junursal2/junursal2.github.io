@@ -51,7 +51,7 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
     background-size: 75px; */
     background-color: #ffedcc;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-bottom: 1px;
 }
 .divDisasters > p {
@@ -74,7 +74,7 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
     background-size: 80px; */
     background-color: #ffdb99;
-    padding-top: 0;
+    /* padding-top: 0; */
     padding-bottom: 1px;
 }
 .divLifehacks {
@@ -338,6 +338,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
