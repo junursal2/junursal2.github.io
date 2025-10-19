@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-       a {color: white;}
+       /* a {color: white;}
 	   div {width: 85%;}
        footer {color: black; font-size: 10px; text-align: left; padding-left: 10px;}
        h1 {font-family: Verdana, sans-serif; font-weight: bold; color: cyan; font-style: italic;}
@@ -29,12 +29,94 @@
        #home {text-align: center; position: relative;}
        #home:hover {color: yellow; background-color:#223a5e;}
 	   #myTies {display: block; margin-left: auto; margin-right: auto; max-width: 100%;}
-	   #posted {font-size: 11px;}
+	   #posted {font-size: 11px;} */
+  body {
+	    margin: 0;
+	    font-family: Verdana, sans-serif;
+	  }
+	  a { color: white; text-decoration: none; }
+	  a:hover { color: yellow; }
+	  header {
+	    background-color: #223a5e;
+	    color: cyan;
+	    text-align: center;
+	    padding: 12px 0;
+	    font-style: italic;
+	    font-weight: bold;
+	  }
+	  /* Right-side nav (desktop view) */
+	  nav {
+	    position: fixed;
+	    right: 0;
+	    top: 0;
+	    height: 100%;
+	    width: 200px;
+	    background-color: #223a5e;
+	    overflow-y: auto;
+	    padding-top: 50px;
+	    transition: 0.3s;
+	    z-index: 10;
+	  }
+	  nav a {
+	    display: block;
+	    padding: 8px 16px;
+	    font-size: 14px;
+	  }
+	  nav p {
+	    color: cyan;
+	    padding: 8px 16px;
+	    margin: 0;
+	  }
+	  #home {
+	    display: block;
+	    color: white;
+	    text-align: center;
+	    padding: 10px 0;
+	    font-size: 24px;
+	  }
+	  #home:hover {
+	    background-color: #1a2e4a;
+	    color: yellow;
+	  }
+	  /* Main content area */
+	  .content {
+	    margin-right: 200px; /* leave space for right nav */
+	    padding: 20px;
+	  }
+	  #myTies {
+	    display: block;
+	    margin: 0 auto;
+	    max-width: 100%;
+	  }
+	  /* Footer */
+	  footer {
+	    color: black;
+	    font-size: 10px;
+	    text-align: left;
+	    padding-left: 10px;
+	  }
+	  /* 📱 Responsive adjustments */
+	  @media screen and (max-width: 768px) {
+	    nav {
+	      width: 100%;
+	      height: auto;
+	      position: relative;
+	      padding-top: 0;
+	    }
+	    .content {
+	      margin-right: 0;
+	    }
+	    nav a {
+	      text-align: center;
+	      border-bottom: 1px solid #1a2e4a;
+	    }
+	  }	
      </style>
 </head>
 
 <body>
-    <nav class="w3-slim w3-small w3-sidenav w3-card-2" style="width:15%;right:0">
+	
+    <!-- <nav class="w3-slim w3-small w3-sidenav w3-card-2" style="width:15%;right:0">
         <a id="home" title="Go to Basahon page" href="basahon.html#goLifehacks"><i class="fa fa-home"></i></a>
         <p style="padding-left:10px; color:cyan;">Click a list below:</p>
 		<a href="#" onclick="showImg(99)">&nbsp;&nbsp;Intro</a>
@@ -59,7 +141,36 @@
     </nav>
     <header class="w3-container">
         <h1 class="w3-text-shadow">18 Ways To Tie a Necktie</h1>
-    </header>
+    </header> -->
+  <header>
+    <h1>18 Ways To Tie a Necktie</h1>
+  </header>
+
+  <nav class="w3-card-2">
+    <a id="home" href="basahon.html#goLifehacks" title="Go to Basahon page"><i class="fa fa-home"></i></a>
+    <p>Click a list below:</p>
+    <a href="#" onclick="showImg(99)">Intro</a>
+    <a href="#" onclick="showImg(1)">1. Four in hand knot</a>
+    <a href="#" onclick="showImg(2)">2. Half Windsor knot</a>
+    <a href="#" onclick="showImg(3)">3. Full Windsor knot</a>
+    <a href="#" onclick="showImg(4)">4. Nicky knot</a>
+    <a href="#" onclick="showImg(5)">5. Bow tie</a>
+    <a href="#" onclick="showImg(6)">6. Kelvin knot</a>
+    <a href="#" onclick="showImg(7)">7. Oriental knot</a>
+    <a href="#" onclick="showImg(8)">8. Pratt knot</a>
+    <a href="#" onclick="showImg(9)">9. St. Andrew knot</a>
+    <a href="#" onclick="showImg(10)">10. Balthus knot</a>
+    <a href="#" onclick="showImg(11)">11. Hanover knot</a>
+    <a href="#" onclick="showImg(12)">12. Plattsburgh knot</a>
+    <a href="#" onclick="showImg(13)">13. Grantchester knot</a>
+    <a href="#" onclick="showImg(14)">14. Victoria knot</a>
+    <a href="#" onclick="showImg(15)">15. Cafe knot</a>
+    <a href="#" onclick="showImg(16)">16. Eldredge knot</a>
+    <a href="#" onclick="showImg(17)">17. Trinity knot</a>
+    <a href="#" onclick="showImg(18)">18. Christensen knot</a>
+  </nav>
+
+	
     <div id="knots" class="w3-container">
 	    <br />
        	<img id="myTies" src="files/neckties/necktie, 18 ways.jpg">
@@ -449,4 +560,5 @@ function showImg(n) {
 
 </body>
 </html>
+
 
