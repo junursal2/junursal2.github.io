@@ -46,15 +46,17 @@
         text-align: center;
     }
     h1 {
-        color: white;
-        font-family: "Georgia",serif;
-        font-weight: bold;
-        font-size: 36px;
-        height: 56px;
-        padding-left: 16px;
-        text-align: center;
-        text-shadow: 1px 1px 1px crimson, 0 0 5px red, 2px 2px 2px darkred;
-        vertical-align: 50px;
+      display: flex;
+      align-items: center;        /* vertical alignment */
+      justify-content: center;    /* centers everything horizontally */
+      gap: 12px;                  /* space between text and icon */
+      color: white;
+      font-family: "Georgia", serif;
+      font-weight: bold;
+      font-size: 36px;
+      height: 56px;
+      text-shadow: 1px 1px 1px crimson, 0 0 5px red, 2px 2px 2px darkred;
+      margin: 0;
     }
     img {
         float: center;
@@ -78,14 +80,13 @@
     </style>
 </head>
 <body class="container-fluid text-justify">
-    <header class="row">
-        <div class="col-12"
-            <h1>Unconditional Love 
-                <a href="basahon.html" class="btn btn-lg" title="Go to basahon main page">
-                    <span class="glyphicon glyphicon-home"></span>
-                </a>
-            </h1>
-        </div>
+    <header>
+      <h1>
+        <span class="title-text">Unconditional Love</span>
+        <a href="basahon.html" class="btn btn-lg home-btn" title="Go to basahon main page">
+          <span class="glyphicon glyphicon-home"></span>
+        </a>
+      </h1>
     </header>
     <div class="row">
         <div class="col-sm-6">
@@ -140,3 +141,4 @@
 
 </body>
 </html>
+
