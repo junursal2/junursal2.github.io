@@ -589,6 +589,25 @@
     </div>
         
 <script>
+function toggleMenu() {
+  const nav = document.getElementById("sideNav");
+  const overlay = document.getElementById("overlay");
+  const content = document.getElementById("mainContent");
+
+  nav.classList.toggle("show");
+  overlay.classList.toggle("show");
+  content.classList.toggle("shift");
+}
+
+// Optional: close nav if window is resized larger
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1000) {
+	document.getElementById("sideNav").classList.remove("show");
+	document.getElementById("overlay").classList.remove("show");
+	document.getElementById("mainContent").classList.remove("shift");
+  }
+});
+	
 var n
 function showImg(n) {
     var srcimg="";srctxt="";
@@ -681,6 +700,3 @@ function showImg(n) {
 
 </body>
 </html>
-
-
-
