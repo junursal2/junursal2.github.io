@@ -108,7 +108,7 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/love-marriage-sex.jpg") right bottom no-repeat;
     background-size: 125px; */
     background-color: #ffcccc;
-    padding-top: 0.5px;
+    padding-top: 0.1px;
     padding-bottom: 1px;		
 }
 .divNature {
@@ -337,6 +337,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
