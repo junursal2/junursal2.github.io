@@ -51,7 +51,6 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
     background-size: 110px; */
     background-color: #ffffb3;
-    margin-bottom: -10px;
     padding-bottom: 1px;
 }
 .divComputers {
@@ -64,8 +63,6 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
     background-size: 75px; */
     background-color: #ffedcc;
-    margin-top: 10px;
-    /* margin-bottom: -10px; */
     padding-top: 0.5px;
     padding-bottom: 1px;
 }
@@ -340,6 +337,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
