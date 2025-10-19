@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <title>Find Words Challenge</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />  
+    <meta name="description" content="find words challenge" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="word, find, challenge" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/w3-colors-flat.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+        header, section, footer, aside, nav, main, article, figure {display:block;}
+        a {text-decoration: none;}
+        article {
+            overflow-x:auto;
+            font-family: Verdana, sans-serif;
+            font-size: 12px; 
+            text-align: justify;
+            }
+        body {font-family: Arial, Helvetica, sans-serif;}
+        h1 {font-family: "Comic Sans MS", cursive, sans-serif; font-weight: bold; color: #091534; text-align: center;}
+        h3 {color: white;}
+        footer {text-align: center;}
+        footer > p {color: #091534; font-weight: bold;}
+        input {font-weight: bold;}
+        img {max-width: 100%; width: 100%;}
+        /*classes*/
+        .dspCongrats {display: none; font-weight: bold; text-align: center;}
+        .farmFound, .snowFound, .playFound, .pizzaFound, .familyFound, .sledgeFound, 
+        .skateFound, .fishingFound, .schoolFound, .rainFound, .poolFound, .appleFound
+            {display: inline; font-style: italic;}
+        .notice {font-size: 12px;}
+        /* Ids */
+        #butClose {color: #FC600A;}
+        #farmClrAll, #snowClrAll, #playClrAll, #pizzaClrAll, #familyClrAll, #sledgeClrAll, 
+        #skateClrAll, #fishingClrAll, #schoolClrAll, #rainClrAll, #poolClrAll, #appleClrAll
+            {background-color: #FC600A; box-shadow: 1px 2px 2px 1px #202020; float: right; position: relative; top: -80px;}
+        #home {color: #FC600A; float: right; font-size: 24px; margin-top: 16px;}
+        #imgFamily {padding-bottom: 56px;}
+        #menu {color: #FC600A; float: left; font-size: 24px; margin-top: 16px;}
+        #menu:hover, #home:hover {color: #0247FE;}
+        #mySidebar {display:none; width:180px;}
+        #myTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: 1px solid;
+            outline: none;
+            background-color: #FC600A;
+            color: #091534;
+            cursor: pointer;
+            padding: 2px 5px;
+            border-radius: 5px;
+            }
+        #myTopBtn:hover {background-color: #0247FE; color: white;}
+    </style>
+</head>
+
+<body>
+    <button id="myTopBtn" title="Go to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>
+
+    <header class="w3-container w3-flat-emerald">
+        <a id="menu" class="w3-text-shadow" title="Open menu" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <a id="home" class="w3-text-shadow" title="Go to Basahon page" href="basahon.html#goFunstuff"><i class="fa fa-home"></i></a>
+        <h1>Find 6 Hidden Words Challenge</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div  id="mySidebar" class="w3-sidebar w3-bar-block w3-border-right w3-flat-nephritis w3-small">
+        <button id="butClose" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-text-shadow">Close &times;</button>
+        <a href="#farm" class="w3-bar-item w3-button">1. Farming</a>
+        <a href="#snow" class="w3-bar-item w3-button">2. Snow in the community</a>
+        <a href="#playhouse" class="w3-bar-item w3-button">3. Playing in the house</a>
+        <a href="#pizza" class="w3-bar-item w3-button">4. At the pizza house</a>
+        <a href="#family" class="w3-bar-item w3-button">5. Family at home</a>
+        <a href="#sledge" class="w3-bar-item w3-button">6. Snow sledges</a>
+        <a href="#skate" class="w3-bar-item w3-button">7. Skating</a>
+        <a href="#fishing" class="w3-bar-item w3-button">8. Fishing</a>
+        <a href="#school" class="w3-bar-item w3-button">9. At school</a>
+        <a href="#rain" class="w3-bar-item w3-button">10. Raining</a>
+        <a href="#pool" class="w3-bar-item w3-button">11. Swimming pool</a>
+        <a href="#apple" class="w3-bar-item w3-button">12. Apple farm</a>
+    </div>
+    
+<div id="mainbody">
+    <p id="farm"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-1.jpg" alt="Farming">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">1. Farming</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="farmClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('farm')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="farm1Found" class="farmFound"><i>&nbsp;</i></span>
+                <form id="frmfarm1" action="/#xxx" autocomplete="off" oninput="myWordsFarm()"><input id="farm1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="farm2Found" class="farmFound"><i>&nbsp;</i></span>
+                <form id="frmfarm2" action="/#xxx" autocomplete="off" oninput="myWordsFarm()"><input id="farm2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="farm3Found" class="farmFound"><i>&nbsp;</i></span>
+                <form id="frmfarm3" action="/#xxx" autocomplete="off" oninput="myWordsFarm()"><input id="farm3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="farm4Found" class="farmFound"><i>&nbsp;</i></span>
+                <form id="frmfarm4" action="/#xxx" autocomplete="off" oninput="myWordsFarm()"><input id="farm4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="farm5Found" class="farmFound"><i>&nbsp;</i></span>
+                <form id="frmfarm5" action="/#xxx" autocomplete="off" oninput="myWordsFarm()"><input id="farm5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="farm6Found" class="farmFound"><i>&nbsp;</i></span>
+                <form id="frmfarm6" action="/#xxx" autocomplete="off" oninput="myWordsFarm()"><input id="farm6" class="w3-input" type="text"></form>
+
+                <p id="farmCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="snow"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-2.jpg" alt="Snow in the community">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">2. Snow in the community</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="snowClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('snow')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="snow1Found" class="snowFound"><i>&nbsp;</i></span>
+                <form id="frmsnow1" action="/#xxx" autocomplete="off" oninput="myWordsSnow()"><input id="snow1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="snow2Found" class="snowFound"><i>&nbsp;</i></span>
+                <form id="frmsnow2" action="/#xxx" autocomplete="off" oninput="myWordsSnow()"><input id="snow2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="snow3Found" class="snowFound"><i>&nbsp;</i></span>
+                <form id="frmsnow3" action="/#xxx" autocomplete="off" oninput="myWordsSnow()"><input id="snow3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="snow4Found" class="snowFound"><i>&nbsp;</i></span>
+                <form id="frmsnow4" action="/#xxx" autocomplete="off" oninput="myWordsSnow()"><input id="snow4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="snow5Found" class="snowFound"><i>&nbsp;</i></span>
+                <form id="frmsnow5" action="/#xxx" autocomplete="off" oninput="myWordsSnow()"><input id="snow5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="snow6Found" class="snowFound"><i>&nbsp;</i></span>
+                <form id="frmsnow6" action="/#xxx" autocomplete="off" oninput="myWordsSnow()"><input id="snow6" class="w3-input" type="text"></form>
+                
+                <p id="snowCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="playhouse"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-3.jpg" alt="Playing in the house">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">3. Playing in the house</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="playClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('play')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="play1Found" class="playFound"><i>&nbsp;</i></span>
+                <form id="frmplay1" action="/#xxx" autocomplete="off" oninput="myWordsPlay()"><input id="play1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="play2Found" class="playFound"><i>&nbsp;</i></span>
+                <form id="frmplay2" action="/#xxx" autocomplete="off" oninput="myWordsPlay()"><input id="play2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="play3Found" class="playFound"><i>&nbsp;</i></span>
+                <form id="frmplay3" action="/#xxx" autocomplete="off" oninput="myWordsPlay()"><input id="play3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="play4Found" class="playFound"><i>&nbsp;</i></span>
+                <form id="frmplay4" action="/#xxx" autocomplete="off" oninput="myWordsPlay()"><input id="play4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="play5Found" class="playFound"><i>&nbsp;</i></span>
+                <form id="frmplay5" action="/#xxx" autocomplete="off" oninput="myWordsPlay()"><input id="play5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="play6Found" class="playFound"><i>&nbsp;</i></span>
+                <form id="frmplay6" action="/#xxx" autocomplete="off" oninput="myWordsPlay()"><input id="play6" class="w3-input" type="text"></form>
+                
+                <p id="playCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="pizza"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-4.jpg" alt="At the Pizza house">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">4. At the Pizza house</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="pizzaClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('pizza')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="pizza1Found" class="pizzaFound"><i>&nbsp;</i></span>
+                <form id="frmpizza1" action="/#xxx" autocomplete="off" oninput="myWordsPizza()"><input id="pizza1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="pizza2Found" class="pizzaFound"><i>&nbsp;</i></span>
+                <form id="frmpizza2" action="/#xxx" autocomplete="off" oninput="myWordsPizza()"><input id="pizza2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="pizza3Found" class="pizzaFound"><i>&nbsp;</i></span>
+                <form id="frmpizza3" action="/#xxx" autocomplete="off" oninput="myWordsPizza()"><input id="pizza3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="pizza4Found" class="pizzaFound"><i>&nbsp;</i></span>
+                <form id="frmpizza4" action="/#xxx" autocomplete="off" oninput="myWordsPizza()"><input id="pizza4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="pizza5Found" class="pizzaFound"><i>&nbsp;</i></span>
+                <form id="frmpizza5" action="/#xxx" autocomplete="off" oninput="myWordsPizza()"><input id="pizza5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="pizza6Found" class="pizzaFound"><i>&nbsp;</i></span>
+                <form id="frmpizza6" action="/#xxx" autocomplete="off" oninput="myWordsPizza()"><input id="pizza6" class="w3-input" type="text"></form>
+                
+                <p id="pizzaCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="family"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img id="imgFamily" class="w3-border" src="../fun/puzzles/find-words-challenge-5.jpg" alt="Family at home">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">5. Family at home</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="familyClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('family')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="family1Found" class="familyFound"><i>&nbsp;</i></span>
+                <form id="frmfamily1" action="/#xxx" autocomplete="off" oninput="myWordsFamily()"><input id="family1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="family2Found" class="familyFound"><i>&nbsp;</i></span>
+                <form id="frmfamily2" action="/#xxx" autocomplete="off" oninput="myWordsFamily()"><input id="family2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="family3Found" class="familyFound"><i>&nbsp;</i></span>
+                <form id="frmfamily3" action="/#xxx" autocomplete="off" oninput="myWordsFamily()"><input id="family3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="family4Found" class="familyFound"><i>&nbsp;</i></span>
+                <form id="frmfamily4" action="/#xxx" autocomplete="off" oninput="myWordsFamily()"><input id="family4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="family5Found" class="familyFound"><i>&nbsp;</i></span>
+                <form id="frmfamily5" action="/#xxx" autocomplete="off" oninput="myWordsFamily()"><input id="family5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="family6Found" class="familyFound"><i>&nbsp;</i></span>
+                <form id="frmfamily6" action="/#xxx" autocomplete="off" oninput="myWordsFamily()"><input id="family6" class="w3-input" type="text"></form>
+                
+                <p id="familyCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="sledge"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-6.jpg" alt="Snow sledges">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">6. Snow sledges</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="sledgeClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('sledge')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="sledge1Found" class="sledgeFound"><i>&nbsp;</i></span>
+                <form id="frmsledge1" action="/#xxx" autocomplete="off" oninput="myWordsSledge()"><input id="sledge1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="sledge2Found" class="sledgeFound"><i>&nbsp;</i></span>
+                <form id="frmsledge2" action="/#xxx" autocomplete="off" oninput="myWordsSledge()"><input id="sledge2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="sledge3Found" class="sledgeFound"><i>&nbsp;</i></span>
+                <form id="frmsledge3" action="/#xxx" autocomplete="off" oninput="myWordsSledge()"><input id="sledge3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="sledge4Found" class="sledgeFound"><i>&nbsp;</i></span>
+                <form id="frmsledge4" action="/#xxx" autocomplete="off" oninput="myWordsSledge()"><input id="sledge4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="sledge5Found" class="sledgeFound"><i>&nbsp;</i></span>
+                <form id="frmsledge5" action="/#xxx" autocomplete="off" oninput="myWordsSledge()"><input id="sledge5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="sledge6Found" class="sledgeFound"><i>&nbsp;</i></span>
+                <form id="frmsledge6" action="/#xxx" autocomplete="off" oninput="myWordsSledge()"><input id="sledge6" class="w3-input" type="text"></form>
+                
+                <p id="sledgeCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="skate"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-7.jpg" alt="Skating">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">7. Skating</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="skateClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('skate')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="skate1Found" class="skateFound"><i>&nbsp;</i></span>
+                <form id="frmskate1" action="/#xxx" autocomplete="off" oninput="myWordsSkate()"><input id="skate1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="skate2Found" class="skateFound"><i>&nbsp;</i></span>
+                <form id="frmskate2" action="/#xxx" autocomplete="off" oninput="myWordsSkate()"><input id="skate2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="skate3Found" class="skateFound"><i>&nbsp;</i></span>
+                <form id="frmskate3" action="/#xxx" autocomplete="off" oninput="myWordsSkate()"><input id="skate3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="skate4Found" class="skateFound"><i>&nbsp;</i></span>
+                <form id="frmskate4" action="/#xxx" autocomplete="off" oninput="myWordsSkate()"><input id="skate4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="skate5Found" class="skateFound"><i>&nbsp;</i></span>
+                <form id="frmskate5" action="/#xxx" autocomplete="off" oninput="myWordsSkate()"><input id="skate5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="skate6Found" class="skateFound"><i>&nbsp;</i></span>
+                <form id="frmskate6" action="/#xxx" autocomplete="off" oninput="myWordsSkate()"><input id="skate6" class="w3-input" type="text"></form>
+                
+                <p id="skateCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="fishing"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-8.jpg" alt="Fishing">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">8. Fishing</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="fishingClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('fishing')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="fishing1Found" class="fishingFound"><i>&nbsp;</i></span>
+                <form id="frmfishing1" action="/#xxx" autocomplete="off" oninput="myWordsFishing()"><input id="fishing1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="fishing2Found" class="fishingFound"><i>&nbsp;</i></span>
+                <form id="frmfishing2" action="/#xxx" autocomplete="off" oninput="myWordsFishing()"><input id="fishing2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="fishing3Found" class="fishingFound"><i>&nbsp;</i></span>
+                <form id="frmfishing3" action="/#xxx" autocomplete="off" oninput="myWordsFishing()"><input id="fishing3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="fishing4Found" class="fishingFound"><i>&nbsp;</i></span>
+                <form id="frmfishing4" action="/#xxx" autocomplete="off" oninput="myWordsFishing()"><input id="fishing4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="fishing5Found" class="fishingFound"><i>&nbsp;</i></span>
+                <form id="frmfishing5" action="/#xxx" autocomplete="off" oninput="myWordsFishing()"><input id="fishing5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="fishing6Found" class="fishingFound"><i>&nbsp;</i></span>
+                <form id="frmfishing6" action="/#xxx" autocomplete="off" oninput="myWordsFishing()"><input id="fishing6" class="w3-input" type="text"></form>
+                
+                <p id="fishingCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="school"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-9.jpg" alt="At school">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">9. At school</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="schoolClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('school')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="school1Found" class="schoolFound"><i>&nbsp;</i></span>
+                <form id="frmschool1" action="/#xxx" autocomplete="off" oninput="myWordsSchool()"><input id="school1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="school2Found" class="schoolFound"><i>&nbsp;</i></span>
+                <form id="frmschool2" action="/#xxx" autocomplete="off" oninput="myWordsSchool()"><input id="school2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="school3Found" class="schoolFound"><i>&nbsp;</i></span>
+                <form id="frmschool3" action="/#xxx" autocomplete="off" oninput="myWordsSchool()"><input id="school3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="school4Found" class="schoolFound"><i>&nbsp;</i></span>
+                <form id="frmschool4" action="/#xxx" autocomplete="off" oninput="myWordsSchool()"><input id="school4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="school5Found" class="schoolFound"><i>&nbsp;</i></span>
+                <form id="frmschool5" action="/#xxx" autocomplete="off" oninput="myWordsSchool()"><input id="school5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="school6Found" class="schoolFound"><i>&nbsp;</i></span>
+                <form id="frmschool6" action="/#xxx" autocomplete="off" oninput="myWordsSchool()"><input id="school6" class="w3-input" type="text"></form>
+                
+                <p id="schoolCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="rain"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-10.jpg" alt="Raining">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">10. Raining</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="rainClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('rain')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="rain1Found" class="rainFound"><i>&nbsp;</i></span>
+                <form id="frmrain1" action="/#xxx" autocomplete="off" oninput="myWordsRain()"><input id="rain1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="rain2Found" class="rainFound"><i>&nbsp;</i></span>
+                <form id="frmrain2" action="/#xxx" autocomplete="off" oninput="myWordsRain()"><input id="rain2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="rain3Found" class="rainFound"><i>&nbsp;</i></span>
+                <form id="frmrain3" action="/#xxx" autocomplete="off" oninput="myWordsRain()"><input id="rain3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="rain4Found" class="rainFound"><i>&nbsp;</i></span>
+                <form id="frmrain4" action="/#xxx" autocomplete="off" oninput="myWordsRain()"><input id="rain4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="rain5Found" class="rainFound"><i>&nbsp;</i></span>
+                <form id="frmrain5" action="/#xxx" autocomplete="off" oninput="myWordsRain()"><input id="rain5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="rain6Found" class="rainFound"><i>&nbsp;</i></span>
+                <form id="frmrain6" action="/#xxx" autocomplete="off" oninput="myWordsRain()"><input id="rain6" class="w3-input" type="text"></form>
+                
+                <p id="rainCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="pool"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-11.png" alt="Swimming pool">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">11. Swimming pool</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="poolClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('pool')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="pool1Found" class="poolFound"><i>&nbsp;</i></span>
+                <form id="frmpool1" action="/#xxx" autocomplete="off" oninput="myWordsPool()"><input id="pool1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="pool2Found" class="poolFound"><i>&nbsp;</i></span>
+                <form id="frmpool2" action="/#xxx" autocomplete="off" oninput="myWordsPool()"><input id="pool2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="pool3Found" class="poolFound"><i>&nbsp;</i></span>
+                <form id="frmpool3" action="/#xxx" autocomplete="off" oninput="myWordsPool()"><input id="pool3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="pool4Found" class="poolFound"><i>&nbsp;</i></span>
+                <form id="frmpool4" action="/#xxx" autocomplete="off" oninput="myWordsPool()"><input id="pool4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="pool5Found" class="poolFound"><i>&nbsp;</i></span>
+                <form id="frmpool5" action="/#xxx" autocomplete="off" oninput="myWordsPool()"><input id="pool5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="pool6Found" class="poolFound"><i>&nbsp;</i></span>
+                <form id="frmpool6" action="/#xxx" autocomplete="off" oninput="myWordsPool()"><input id="pool6" class="w3-input" type="text"></form>
+                
+                <p id="poolCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    <p id="apple"></p>
+    <div class="w3-container w3-cell-row w3-margin-top">
+        <div class="w3-container w3-cell" style="width:50%">
+            <img class="w3-border" src="../fun/puzzles/find-words-challenge-12.png" alt="Apple farm">
+        </div>
+        <div class="w3-container w3-flat-nephritis w3-cell">
+            <h3 class="w3-text-shadow">12. Apple farm</h3>
+            <p class="notice">Look at the picture on the left and find the words.<br />
+                Please input the word. One unique word per input box. Not case sensitive.</p>
+            <div class="w3-container">
+                <a id="appleClrAll" class="w3-button w3-tiny w3-hover-blue w3-padding-small w3-round-large" onclick="myClearAll('apple')">Clear all entries</a>                
+
+                <label>Word 1</label>&nbsp;&nbsp;<span id="apple1Found" class="appleFound"><i>&nbsp;</i></span>
+                <form id="frmapple1" action="/#xxx" autocomplete="off" oninput="myWordsApple()"><input id="apple1" class="w3-input" type="text"></form>
+                
+                <label>Word 2</label>&nbsp;&nbsp;<span id="apple2Found" class="appleFound"><i>&nbsp;</i></span>
+                <form id="frmapple2" action="/#xxx" autocomplete="off" oninput="myWordsApple()"><input id="apple2" class="w3-input" type="text"></form>
+
+                <label>Word 3</label>&nbsp;&nbsp;<span id="apple3Found" class="appleFound"><i>&nbsp;</i></span>
+                <form id="frmapple3" action="/#xxx" autocomplete="off" oninput="myWordsApple()"><input id="apple3" class="w3-input" type="text"></form>
+
+                <label>Word 4</label>&nbsp;&nbsp;<span id="apple4Found" class="appleFound"><i>&nbsp;</i></span>
+                <form id="frmapple4" action="/#xxx" autocomplete="off" oninput="myWordsApple()"><input id="apple4" class="w3-input" type="text"></form>
+
+                <label>Word 5</label>&nbsp;&nbsp;<span id="apple5Found" class="appleFound"><i>&nbsp;</i></span>
+                <form id="frmapple5" action="/#xxx" autocomplete="off" oninput="myWordsApple()"><input id="apple5" class="w3-input" type="text"></form>
+
+                <label>Word 6</label>&nbsp;&nbsp;<span id="apple6Found" class="appleFound"><i>&nbsp;</i></span>
+                <form id="frmapple6" action="/#xxx" autocomplete="off" oninput="myWordsApple()"><input id="apple6" class="w3-input" type="text"></form>
+                
+                <p id="appleCongrats" class="dspCongrats">CONGRATULATIONS!</p>
+            </div>
+        </div>
+    </div>
+    
+    <p></p>
+    <footer class="w3-container w3-flat-emerald w3-small">
+        <p>C. Ursal Jr., <span id="posted">2020 April 11</span></p>
+    </footer>
+</div>
+    
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction();};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myTopBtn").style.display = "block";
+    } else {
+        document.getElementById("myTopBtn").style.display = "none";
+    }
+};
+// When the user clicks on the button, scroll to the top of the document 
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+};
+    
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+};
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+};
+
+// Menu
+var cl = document.getElementById("mainbody");
+cl.addEventListener("click", w3_close);
+
+//puzzles
+var puzzle;
+function myClearAll(puzzle) {
+    switch (puzzle) {
+        case "apple":
+            document.getElementById("frmapple1").reset();
+            document.getElementById("frmapple2").reset();
+            document.getElementById("frmapple3").reset();
+            document.getElementById("frmapple4").reset();
+            document.getElementById("frmapple5").reset();
+            document.getElementById("frmapple6").reset();
+            document.getElementById("apple1Found").innerHTML = "&nbsp;";
+            document.getElementById("apple2Found").innerHTML = "&nbsp;";
+            document.getElementById("apple3Found").innerHTML = "&nbsp;";
+            document.getElementById("apple4Found").innerHTML = "&nbsp;";
+            document.getElementById("apple5Found").innerHTML = "&nbsp;";
+            document.getElementById("apple6Found").innerHTML = "&nbsp;";
+            break;
+        case "family":
+            document.getElementById("frmfamily1").reset();
+            document.getElementById("frmfamily2").reset();
+            document.getElementById("frmfamily3").reset();
+            document.getElementById("frmfamily4").reset();
+            document.getElementById("frmfamily5").reset();
+            document.getElementById("frmfamily6").reset();
+            document.getElementById("family1Found").innerHTML = "&nbsp;";
+            document.getElementById("family2Found").innerHTML = "&nbsp;";
+            document.getElementById("family3Found").innerHTML = "&nbsp;";
+            document.getElementById("family4Found").innerHTML = "&nbsp;";
+            document.getElementById("family5Found").innerHTML = "&nbsp;";
+            document.getElementById("family6Found").innerHTML = "&nbsp;";
+            break;
+        case "farm":
+            document.getElementById("frmfarm1").reset();
+            document.getElementById("frmfarm2").reset();
+            document.getElementById("frmfarm3").reset();
+            document.getElementById("frmfarm4").reset();
+            document.getElementById("frmfarm5").reset();
+            document.getElementById("frmfarm6").reset();
+            document.getElementById("farm1Found").innerHTML = "&nbsp;";
+            document.getElementById("farm2Found").innerHTML = "&nbsp;";
+            document.getElementById("farm3Found").innerHTML = "&nbsp;";
+            document.getElementById("farm4Found").innerHTML = "&nbsp;";
+            document.getElementById("farm5Found").innerHTML = "&nbsp;";
+            document.getElementById("farm6Found").innerHTML = "&nbsp;";
+            break;
+        case "fishing":
+            document.getElementById("frmfishing1").reset();
+            document.getElementById("frmfishing2").reset();
+            document.getElementById("frmfishing3").reset();
+            document.getElementById("frmfishing4").reset();
+            document.getElementById("frmfishing5").reset();
+            document.getElementById("frmfishing6").reset();
+            document.getElementById("fishing1Found").innerHTML = "&nbsp;";
+            document.getElementById("fishing2Found").innerHTML = "&nbsp;";
+            document.getElementById("fishing3Found").innerHTML = "&nbsp;";
+            document.getElementById("fishing4Found").innerHTML = "&nbsp;";
+            document.getElementById("fishing5Found").innerHTML = "&nbsp;";
+            document.getElementById("fishing6Found").innerHTML = "&nbsp;";
+            break;
+        case "pizza":
+            document.getElementById("frmpizza1").reset();
+            document.getElementById("frmpizza2").reset();
+            document.getElementById("frmpizza3").reset();
+            document.getElementById("frmpizza4").reset();
+            document.getElementById("frmpizza5").reset();
+            document.getElementById("frmpizza6").reset();            
+            document.getElementById("pizza1Found").innerHTML = "&nbsp;";
+            document.getElementById("pizza2Found").innerHTML = "&nbsp;";
+            document.getElementById("pizza3Found").innerHTML = "&nbsp;";
+            document.getElementById("pizza4Found").innerHTML = "&nbsp;";
+            document.getElementById("pizza5Found").innerHTML = "&nbsp;";
+            document.getElementById("pizza6Found").innerHTML = "&nbsp;";
+            break;
+        case "play":
+            document.getElementById("frmplay1").reset();
+            document.getElementById("frmplay2").reset();
+            document.getElementById("frmplay3").reset();
+            document.getElementById("frmplay4").reset();
+            document.getElementById("frmplay5").reset();
+            document.getElementById("frmplay6").reset();            
+            document.getElementById("play1Found").innerHTML = "&nbsp;";
+            document.getElementById("play2Found").innerHTML = "&nbsp;";
+            document.getElementById("play3Found").innerHTML = "&nbsp;";
+            document.getElementById("play4Found").innerHTML = "&nbsp;";
+            document.getElementById("play5Found").innerHTML = "&nbsp;";
+            document.getElementById("play6Found").innerHTML = "&nbsp;";
+            break;
+        case "pool":
+            document.getElementById("frmpool1").reset();
+            document.getElementById("frmpool2").reset();
+            document.getElementById("frmpool3").reset();
+            document.getElementById("frmpool4").reset();
+            document.getElementById("frmpool5").reset();
+            document.getElementById("frmpool6").reset();            
+            document.getElementById("pool1Found").innerHTML = "&nbsp;";
+            document.getElementById("pool2Found").innerHTML = "&nbsp;";
+            document.getElementById("pool3Found").innerHTML = "&nbsp;";
+            document.getElementById("pool4Found").innerHTML = "&nbsp;";
+            document.getElementById("pool5Found").innerHTML = "&nbsp;";
+            document.getElementById("pool6Found").innerHTML = "&nbsp;";
+            break;
+        case "rain":
+            document.getElementById("frmrain1").reset();
+            document.getElementById("frmrain2").reset();
+            document.getElementById("frmrain3").reset();
+            document.getElementById("frmrain4").reset();
+            document.getElementById("frmrain5").reset();
+            document.getElementById("frmrain6").reset();            
+            document.getElementById("rain1Found").innerHTML = "&nbsp;";
+            document.getElementById("rain2Found").innerHTML = "&nbsp;";
+            document.getElementById("rain3Found").innerHTML = "&nbsp;";
+            document.getElementById("rain4Found").innerHTML = "&nbsp;";
+            document.getElementById("rain5Found").innerHTML = "&nbsp;";
+            document.getElementById("rain6Found").innerHTML = "&nbsp;";
+            break;
+        case "school":
+            document.getElementById("frmschool1").reset();
+            document.getElementById("frmschool2").reset();
+            document.getElementById("frmschool3").reset();
+            document.getElementById("frmschool4").reset();
+            document.getElementById("frmschool5").reset();
+            document.getElementById("frmschool6").reset();            
+            document.getElementById("school1Found").innerHTML = "&nbsp;";
+            document.getElementById("school2Found").innerHTML = "&nbsp;";
+            document.getElementById("school3Found").innerHTML = "&nbsp;";
+            document.getElementById("school4Found").innerHTML = "&nbsp;";
+            document.getElementById("school5Found").innerHTML = "&nbsp;";
+            document.getElementById("school6Found").innerHTML = "&nbsp;";
+            break;
+        case "sledge":
+            document.getElementById("frmsledge1").reset();
+            document.getElementById("frmsledge2").reset();
+            document.getElementById("frmsledge3").reset();
+            document.getElementById("frmsledge4").reset();
+            document.getElementById("frmsledge5").reset();
+            document.getElementById("frmsledge6").reset();            
+            document.getElementById("sledge1Found").innerHTML = "&nbsp;";
+            document.getElementById("sledge2Found").innerHTML = "&nbsp;";
+            document.getElementById("sledge3Found").innerHTML = "&nbsp;";
+            document.getElementById("sledge4Found").innerHTML = "&nbsp;";
+            document.getElementById("sledge5Found").innerHTML = "&nbsp;";
+            document.getElementById("sledge6Found").innerHTML = "&nbsp;";
+            break;
+        case "skate":
+            document.getElementById("frmskate1").reset();
+            document.getElementById("frmskate2").reset();
+            document.getElementById("frmskate3").reset();
+            document.getElementById("frmskate4").reset();
+            document.getElementById("frmskate5").reset();
+            document.getElementById("frmskate6").reset();            
+            document.getElementById("skate1Found").innerHTML = "&nbsp;";
+            document.getElementById("skate2Found").innerHTML = "&nbsp;";
+            document.getElementById("skate3Found").innerHTML = "&nbsp;";
+            document.getElementById("skate4Found").innerHTML = "&nbsp;";
+            document.getElementById("skate5Found").innerHTML = "&nbsp;";
+            document.getElementById("skate6Found").innerHTML = "&nbsp;";
+            break;
+        case "snow":
+            document.getElementById("frmsnow1").reset();
+            document.getElementById("frmsnow2").reset();
+            document.getElementById("frmsnow3").reset();
+            document.getElementById("frmsnow4").reset();
+            document.getElementById("frmsnow5").reset();
+            document.getElementById("frmsnow6").reset();            
+            document.getElementById("snow1Found").innerHTML = "&nbsp;";
+            document.getElementById("snow2Found").innerHTML = "&nbsp;";
+            document.getElementById("snow3Found").innerHTML = "&nbsp;";
+            document.getElementById("snow4Found").innerHTML = "&nbsp;";
+            document.getElementById("snow5Found").innerHTML = "&nbsp;";
+            document.getElementById("snow6Found").innerHTML = "&nbsp;";
+            break;
+        default:
+            break;
+    }
+};
+
+function myWordsChange(){
+    var inputname, foundID;
+    inputname = document.activeElement.id;
+    foundID = inputname + "Found";
+    document.getElementById(foundID).innerHTML = "&nbsp;";
+    //farm
+    /* var entries=[]; 
+    var answers=["BLOOM"];
+    var answers=["BLOOM","FARM","GARDEN","NEWS","SEED","VINE"];
+    entries.push(document.getElementById("frmfarm1"));
+    entries.push(document.getElementById("frmfarm2"));
+    entries.push(document.getElementById("frmfarm3"));
+    entries.push(document.getElementById("frmfarm4"));
+    entries.push(document.getElementById("frmfarm5"));
+    entries.push(document.getElementById("frmfarm6"));
+    entries.toUpperCase();
+    var array1 = entries.toString();
+    var array2 = answers.toString();
+    if(array1.sort().join(',')=== array2.sort().join(',')){
+        document.getElementById("farmCongrats").style.display = "block";
+        alert('same members');}
+    else {
+        document.getElementById("farmCongrats").style.display = "none";
+        alert('not a match');} */
+};
+
+function myWordsApple() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "APPLE":
+        case "BARN":
+        case "COW":
+        case "FARM":
+        case "PICK":
+        case "SUN":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsFamily() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "BOOK":
+        case "NOVEL":
+        case "PAGES":
+        case "READ":
+        case "STORY":
+        case "WORDS":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsFarm() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "BLOOM":
+        case "FARM":
+        case "GARDEN":
+        case "DIG":
+        case "SEED":
+        case "VINE":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsFishing() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "BOY":
+        case "FISH":
+        case "HOT":
+        case "NICE":
+        case "TREE":
+        case "WAVE":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsPizza() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "CHEESE":
+        case "HUNGRY":
+        case "MUSIC":
+        case "PARTY":
+        case "RED":
+        case "YUMMY":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsPlay() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "CAT":
+        case "CORD":
+        case "COUCH":
+        case "MIRROR":
+        case "STRAW":
+        case "TILES":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsPool() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "FLOAT":
+        case "POOL":
+        case "SLIDE":
+        case "SWIM":
+        case "WATER":
+        case "WET":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsRain() {
+    var inptxt, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    inptxt = document.getElementById(inpname);
+    filter = inptxt.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "CLOUDS":
+        case "DAMP":
+        case "PUDDLE":
+        case "SHOWERS":
+        case "STORMY":
+        case "WET":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsSchool() {
+    var input, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    input = document.getElementById(inpname);
+    filter = input.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "COW":
+        case "GUITAR":
+        case "IOWA":
+        case "LAUGH":
+        case "ORANGE":
+        case "WOW":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsSkate() {
+    var input, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    input = document.getElementById(inpname);
+    filter = input.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "COOL":
+        case "CUT":
+        case "MAN":
+        case "SEE":
+        case "SNOW":
+        case "TELL":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsSledge() {
+    var input, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    input = document.getElementById(inpname);
+    filter = input.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "CHILL":
+        case "COLD":
+        case "FROST":
+        case "ICE":
+        case "SLED":
+        case "TOBOGGAN":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+function myWordsSnow() {
+    var input, filter, text, inpname, foundID;
+    inpname = document.activeElement.id;
+    input = document.getElementById(inpname);
+    filter = input.value.toUpperCase();
+    switch (filter) {
+        case "":
+            text = "";
+            break;
+        case "BOOT":
+        case "CHILL":
+        case "FROST":
+        case "ICE":
+        case "MITTENS":
+        case "SNOW":
+            text = "Found!";
+            break;
+        default:
+            text = "Not found!";
+    }
+    foundID = inpname + "Found";
+    document.getElementById(foundID).innerHTML = text;
+    if (text === "Found!") {
+        document.getElementById(foundID).style.color = "#091534";
+    } else {
+        document.getElementById(foundID).style.color = "#800000";
+    }
+};
+
+</script>  
+  
+</body>
+</html> 
