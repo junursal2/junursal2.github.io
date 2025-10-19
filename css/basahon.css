@@ -65,7 +65,7 @@ a:hover {
     background-size: 75px; */
     background-color: #ffedcc;
     margin-top: 10px;
-    margin-bottom: -10px;
+    /* margin-bottom: -10px; */
     padding-top: 0.5px;
     padding-bottom: 1px;
 }
@@ -91,7 +91,7 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
     background-size: 100px; */
     background-color: #DCDCDC;
-    padding-top: 1px;
+    padding-top: 0.5px;
     padding-bottom: 1px;
 }
 .divHPOI {
@@ -110,7 +110,7 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/love-marriage-sex.jpg") right bottom no-repeat;
     background-size: 125px; */
     background-color: #ffcccc;
-    padding-top: 1px;
+    padding-top: 0.5px;
     padding-bottom: 1px;		
 }
 .divNature {
@@ -339,6 +339,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
