@@ -73,7 +73,7 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
     background-size: 80px; */
     background-color: #ffdb99;
-    padding-top: 0.5
+    padding-top: 0.5px;
     padding-bottom: 1px;
 }
 .divLifehacks {
@@ -337,4 +337,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
