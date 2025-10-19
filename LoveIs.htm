@@ -118,29 +118,29 @@
           border-radius: 6px;
         }
         
-        /* Navigation buttons (Prev/Next) */
-        .prev, .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%; /* center vertically */
-          transform: translateY(-50%);
-          padding: 8px 16px;
-          color: yellow;
-          font-weight: bold;
-          font-size: 28px;
-          border-radius: 3px;
-          user-select: none;
-          background-color: rgba(0, 0, 0, 0.4);
-          z-index: 10;
-        }
-        
-        .prev { left: 0; }
-        .next { right: 0; }
-        
-        .prev:hover, .next:hover {
-          background-color: rgba(169, 169, 169, 0.8);
-          color: white;
-        }
+/* Navigation buttons (Prev/Next at top) */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 12px;               /* place near top */
+  font-weight: bold;
+  font-size: 24px;
+  padding: 6px 14px;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  user-select: none;
+  z-index: 20;
+  transition: background-color 0.3s;
+}
+
+.prev { left: 12px; }      /* left side */
+.next { right: 12px; }     /* right side */
+
+.prev:hover, .next:hover {
+  background-color: rgba(169, 169, 169, 0.8);
+  color: white;
+}
         
         /* Slide number text (bottom-center) */
         .numbertext {
@@ -318,5 +318,6 @@
 </body>
 
 </html>
+
 
 
