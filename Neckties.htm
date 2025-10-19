@@ -1,94 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-       a { color: white; text-decoration: none; }
-	   div { width: 85%; margin-left: auto; margin-right: auto; }
-       footer { color: black; font-size: 10px; text-align: left; padding-left: 10px; }
-       h1 { font-family: Verdana, sans-serif; font-weight: bold; color: cyan; font-style: italic; text-align: center; }
-       header { color: #fff !important; background-color: #223a5e !important; width: 100%; padding: 10px 0; }
-       nav { color: #fff !important; background-color: #223a5e !important; }
-	   a#source { float: right; color: blue; font-size: 11px; text-decoration: none; }
-	   a#source:hover { text-decoration: underline; }
-       .fa { font-size: 28px; }
-	   .how { font-weight: bold; }
-	   .knot { display: none; }
-       #home { text-align: center; position: relative; }
-       #home:hover { color: yellow; background-color: #223a5e; }
-	   #myTies { display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: auto; }
-	   #posted { font-size: 11px; }
+<style>
+a { color: white; text-decoration: none; display: block; padding: 6px 12px; }
+a:hover { background-color: #1c2e4a; }
+div { width: 85%; margin-left: auto; margin-right: auto; }
+footer { color: black; font-size: 10px; text-align: left; padding-left: 10px; }
+h1 { font-family: Verdana, sans-serif; font-weight: bold; color: cyan; font-style: italic; text-align: center; }
+header { color: #fff !important; background-color: #223a5e !important; width: 100%; padding: 10px 0; }
+nav { color: #fff !important; background-color: #223a5e !important; height: 100%; }
+a#source { float: right; color: blue; font-size: 11px; text-decoration: none; }
+a#source:hover { text-decoration: underline; }
+.fa { font-size: 28px; }
+.how { font-weight: bold; }
+.knot { display: none; }
+#home { text-align: center; position: relative; }
+#home:hover { color: yellow; background-color: #223a5e; }
+#myTies { display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: auto; }
+#posted { font-size: 11px; }
 
-       /* Navigation menu (left side) */
-       .w3-sidenav {
-           width: 15%;
-           position: fixed;
-           left: 0;
-           top: 0;
-           height: 100%;
-           overflow-y: auto;
-       }
+/* --- Left fixed sidenav --- */
+.w3-sidenav {
+  width: 15%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #223a5e;
+  z-index: 1;
+  padding-top: 20px;
+}
 
-       /* Main content shifted to the right */
-       .main-content {
-           margin-left: 15%;
-           padding: 10px;
-       }
+/* --- Shift main content to the right --- */
+.main-content {
+  margin-left: 15%;
+  padding: 10px 16px;
+}
 
-       @media (max-width: 768px) {
-           .w3-sidenav {
-               width: 100%;
-               position: relative;
-           }
-           .main-content {
-               margin-left: 0;
-           }
-       }
-     </style>
+/* --- Responsive adjustments for small screens --- */
+@media (max-width: 768px) {
+  .w3-sidenav {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+</style>
 </head>
 
 <body>
-    <nav class="w3-slim w3-small w3-sidenav w3-card-2">
-        <a id="home" title="Go to Basahon page" href="basahon.html#goLifehacks"><i class="fa fa-home"></i></a>
-        <p style="padding-left:10px; color:cyan;">Click a list below:</p>
-		<a href="#" onclick="showImg(99)">&nbsp;&nbsp;Intro</a>
-        <a href="#" onclick="showImg(1)">&nbsp;&nbsp;1. Four in hand knot</a>
-        <a href="#" onclick="showImg(2)">&nbsp;&nbsp;2. Half Windsor knot</a>
-        <a href="#" onclick="showImg(3)">&nbsp;&nbsp;3. Full Windsor knot</a>
-        <a href="#" onclick="showImg(4)">&nbsp;&nbsp;4. Nicky knot</a>
-        <a href="#" onclick="showImg(5)">&nbsp;&nbsp;5. Bow tie</a>
-        <a href="#" onclick="showImg(6)">&nbsp;&nbsp;6. Kelvin knot</a>
-        <a href="#" onclick="showImg(7)">&nbsp;&nbsp;7. Oriental knot</a>
-        <a href="#" onclick="showImg(8)">&nbsp;&nbsp;8. Pratt knot</a>
-        <a href="#" onclick="showImg(9)">&nbsp;&nbsp;9. St. Andrew knot</a>
-        <a href="#" onclick="showImg(10)">10. Balthus knot</a>
-        <a href="#" onclick="showImg(11)">11. Hanover knot</a>
-        <a href="#" onclick="showImg(12)">12. Plattsburgh knot</a>
-        <a href="#" onclick="showImg(13)">13. Grantchester knot</a>
-        <a href="#" onclick="showImg(14)">14. Victoria knot</a>
-        <a href="#" onclick="showImg(15)">15. Cafe knot</a>
-        <a href="#" onclick="showImg(16)">16. Eldredge knot</a>
-        <a href="#" onclick="showImg(17)">17. Trinity knot</a>
-        <a href="#" onclick="showImg(18)">18. Christensen knot</a>
-    </nav>
 
-    <div class="main-content">
-        <header class="w3-container">
-            <h1 class="w3-text-shadow">18 Ways To Tie a Necktie</h1>
-        </header>
+<!-- Sidebar -->
+<nav class="w3-sidenav w3-card-2">
+  <a id="home" title="Go to Basahon page" href="basahon.html#goLifehacks"><i class="fa fa-home"></i></a>
+  <p style="padding-left:10px; color:cyan;">Click a list below:</p>
+  <a href="#" onclick="showImg(99)">Intro</a>
+  <a href="#" onclick="showImg(1)">1. Four in hand knot</a>
+  <a href="#" onclick="showImg(2)">2. Half Windsor knot</a>
+  <a href="#" onclick="showImg(3)">3. Full Windsor knot</a>
+  <a href="#" onclick="showImg(4)">4. Nicky knot</a>
+  <a href="#" onclick="showImg(5)">5. Bow tie</a>
+  <a href="#" onclick="showImg(6)">6. Kelvin knot</a>
+  <a href="#" onclick="showImg(7)">7. Oriental knot</a>
+  <a href="#" onclick="showImg(8)">8. Pratt knot</a>
+  <a href="#" onclick="showImg(9)">9. St. Andrew knot</a>
+  <a href="#" onclick="showImg(10)">10. Balthus knot</a>
+  <a href="#" onclick="showImg(11)">11. Hanover knot</a>
+  <a href="#" onclick="showImg(12)">12. Plattsburgh knot</a>
+  <a href="#" onclick="showImg(13)">13. Grantchester knot</a>
+  <a href="#" onclick="showImg(14)">14. Victoria knot</a>
+  <a href="#" onclick="showImg(15)">15. Cafe knot</a>
+  <a href="#" onclick="showImg(16)">16. Eldredge knot</a>
+  <a href="#" onclick="showImg(17)">17. Trinity knot</a>
+  <a href="#" onclick="showImg(18)">18. Christensen knot</a>
+</nav>
 
-        <div id="knots" class="w3-container">
-	        <br />
-       	    <img id="myTies" src="files/neckties/necktie, 18 ways.jpg">
-   		    <div id="intro">
-			    <a id="source" href="http://www.realmenrealstyle.com/how-to-tie-a-tie/" target="_blank">www.realmenrealstyle.com/how-to-tie-a-tie/</a> 
-       		    <p id="posted">posted&nbsp;: Jun Ursal II, HPOI 2017 March 7<br />
-       	   	       revised: 2018 October 27</p>
-       		</div>
-        </div>
+<!-- Main content -->
+<div class="main-content">
+  <header class="w3-container">
+    <h1>18 Ways To Tie a Necktie</h1>
+  </header>
+
+  <div id="knots" class="w3-container">
+    <br />
+    <img id="myTies" src="files/neckties/necktie, 18 ways.jpg">
+    <div id="intro">
+      <a id="source" href="http://www.realmenrealstyle.com/how-to-tie-a-tie/" target="_blank">www.realmenrealstyle.com/how-to-tie-a-tie/</a> 
+      <p id="posted">posted: Jun Ursal II, 2017 March 7<br />
+      revised: 2018 October 27</p>
     </div>
+  </div>
+</div>
+
 </body>
 </html>
