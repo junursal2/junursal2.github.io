@@ -94,6 +94,11 @@ a:hover {
     padding-top: 0.5px;
     padding-bottom: 1px;
 }
+.divOthers {
+    background-color: #FFE4E1;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
 .divComputers {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/computer.png") right bottom no-repeat;
     background-size: 75px; */
@@ -341,4 +346,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
