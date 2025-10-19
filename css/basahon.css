@@ -47,18 +47,6 @@ a:hover {
     background-color: orange;
     text-decoration: none;
 }
-.divBiblical {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 110px; */
-    background-color: #ffffb3;
-    padding-bottom: 1px;
-}
-.divComputers {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/computer.png") right bottom no-repeat;
-    background-size: 75px; */
-    background-color: #b3ffb3;
-    padding-bottom: 1px;
-}
 .divDisasters {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
     background-size: 75px; */
@@ -68,6 +56,46 @@ a:hover {
 }
 .divDisasters > p {
     padding-left: 30px;
+}
+.divLMS {
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/love-marriage-sex.jpg") right bottom no-repeat;
+    background-size: 125px; */
+    background-color: #ffcccc;
+    padding-top: 0.1px;
+    padding-bottom: 1px;		
+}
+.divBiblical {
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
+    background-size: 110px; */
+    background-color: #ffffb3;
+    padding-bottom: 1px;
+}
+.divVirtues {
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
+    background-size: 80px; */
+    background-color: #ffdb99;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
+.divLifehacks {
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
+    background-size: 90px; */
+    background-color: #ffffcc;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
+.divFun {
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
+    background-size: 100px; */
+    background-color: #DCDCDC;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
+.divComputers {
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/computer.png") right bottom no-repeat;
+    background-size: 75px; */
+    background-color: #b3ffb3;
+    padding-bottom: 1px;
 }
 .divExcel {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/excel2.png") right center no-repeat, url("https://junursal2.github.io/junursal2.basahon/images/basahon/excel.png") right bottom no-repeat;
@@ -84,32 +112,11 @@ a:hover {
     background-color: #eaccff;
     padding-bottom: 1px;    
 }
-.divFun {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
-    background-size: 100px; */
-    background-color: #DCDCDC;
-    padding-top: 0.5px;
-    padding-bottom: 1px;
-}
 .divHPOI {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px; */
     background-color: #F0E68C;
     padding-bottom: 1px;
-}
-.divLifehacks {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
-    background-size: 90px; */
-    background-color: #ffffcc;
-    padding-top: 0.5px;
-    padding-bottom: 1px;
-}
-.divLMS {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/love-marriage-sex.jpg") right bottom no-repeat;
-    background-size: 125px; */
-    background-color: #ffcccc;
-    padding-top: 0.1px;
-    padding-bottom: 1px;		
 }
 .divNature {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/nature.png") right bottom no-repeat;
@@ -129,13 +136,6 @@ a:hover {
     background-size: 100px; */
     background-color: #99ffcc;
     padding-bottom: 1px; 
-}
-.divVirtues {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
-    background-size: 80px; */
-    background-color: #ffdb99;
-    padding-top: 0.5px;
-    padding-bottom: 1px;
 }
 .row::after {
     content: "";
@@ -337,6 +337,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
