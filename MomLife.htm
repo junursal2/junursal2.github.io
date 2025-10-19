@@ -21,7 +21,15 @@
 <style>
     * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
     header, section, footer, aside, nav, main, article, figure {display:block;}
-    img {display: block; vertical-align: middle; margin: 0 auto; height: 90vh; width: 100%;}
+    /* img {display: block; vertical-align: middle; margin: 0 auto; height: 90vh; width: 100%;} */
+    img {
+          display: block;
+          margin: 0 auto;
+          width: 100%;          /* responsive width */
+          height: auto;         /* keeps natural proportions */
+          max-height: 90vh;     /* optional limit to viewport height */
+          object-fit: contain;  /* keeps full image visible without stretching */
+    }
     .mySlides {display:none;}
     .fa-home {color: blue;}
     /* Next & previous buttons */
@@ -142,5 +150,3 @@
 </body>
 
 </html> 
-
-
