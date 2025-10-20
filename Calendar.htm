@@ -81,6 +81,17 @@
     .reference {font-size: 11px;}
     a.ref, a.source {color: blue; text-decoration:none;}
     a.ref:hover, a.source:hover {text-decoration:underline;}
+
+img.responsive {
+  width: 50%;        /* Default for desktop */
+  max-width: 100%;   /* Prevents overflow */
+}
+
+@media (max-width: 768px) {
+  img.responsive {
+    width: 100%;     /* On mobile screens */
+  }
+}
   </style>
 </head>
 
@@ -200,7 +211,7 @@
     <section class="w3-container">
       <h3 id="menu_Months">Months<a id="ref02" class="ref" href="#ref-02"><sup>[2]</sup></a></h3>
       <p>The original Roman year had 10 named months:
-	  <img id="months" src="files/calendar/months3lines.png" alt="Months of the year">
+	  <img id="months" src="files/calendar/months3lines.png" alt="Months of the year" class="responsive">
       <ol>
         <li><em>Martius</em> "March"</li>
         <li><em>Aprilis</em> "April"</li>
@@ -509,4 +520,5 @@ function w3_close() {
 </body>
 
 </html> 
+
 
