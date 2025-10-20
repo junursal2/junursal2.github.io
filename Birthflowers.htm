@@ -30,12 +30,8 @@
         }
         h1 {font-family:Verdana;font-weight:bold; color:yellow; font-style:italic;}
         header {color:#fff !important; background-color:#20295b !important;}
-        /* img {max-width:100%;height:auto;} */
-		img {width:100%;height:auto;}
-        #imgList {
-            float:right;
-            max-width: 50%;
-        }
+        /* img {max-width:100%;height:auto;}
+
         #imgOrigin {
             float:right;
             margin:0px 10px 5px 20px;
@@ -45,7 +41,33 @@
             float:center;
             margin:0px 10px 5px 20px;
             max-width: 50%;
+        } */
+
+img {
+  width: auto;         /* Don’t scale with screen */
+  height: auto;        /* Keep proportions */
+  max-width: none;     /* Remove responsive limits */
+}
+
+#imgOrigin {
+  float: right;
+  margin: 0px 10px 5px 20px;
+  width: 300px;        /* Fixed width */
+  height: auto;
+}
+
+#imgOrigin2 {
+  display: block;      /* For centering */
+  margin: 10px auto;   /* Centers image horizontally */
+  width: 400px;        /* Fixed width */
+  height: auto;
+}
+		
+		#imgList {
+            float:right;
+            max-width: 50%;
         }
+
         #imgUS {
             position: relative;
             float:right;
@@ -520,4 +542,5 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
 
