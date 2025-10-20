@@ -158,40 +158,36 @@
             padding-right: 10px;
         }
 
-/* Keep links inline and responsive */
-.responsive-bar {
-  display: flex;               /* make items stay in one line */
-  flex-wrap: wrap;             /* allow wrapping if space is tight */
-  /* justify-content: space-around; /* evenly space items */
-  /* align-items: center; */
-  overflow-x: auto;            /* allow scrolling if needed */
-  white-space: nowrap;         /* prevent breaking words */
-  box-sizing: border-box;
-}
-
-/* Prevent links from shrinking too small */
-.responsive-bar .w3-bar-item {
-  flex: 0 0 auto;              /* prevent auto resizing */
-  text-align: left;
-  padding: 8px 12px;
-}
-
-/* Optional: Make scrollbar hidden for a cleaner look */
-.responsive-bar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Optional: Better look on mobile */
-@media (max-width: 600px) {
-  .responsive-bar {
-    font-size: 14px;
-    justify-content: space-between;
-  }
-}
+		/* Keep links inline and responsive */
+		.responsive-bar {
+		  display: flex;               /* make items stay in one line */
+		  flex-wrap: wrap;             /* allow wrapping if space is tight */
+		  /* justify-content: space-around; /* evenly space items */
+		  /* align-items: center; */
+		  overflow-x: auto;            /* allow scrolling if needed */
+		  white-space: nowrap;         /* prevent breaking words */
+		  box-sizing: border-box;
+		}
 		
-/* #locBritish {
-  scroll-margin-top: 80px; /* adjust based on your header height
-} */
+		/* Prevent links from shrinking too small */
+		.responsive-bar .w3-bar-item {
+		  flex: 0 0 auto;              /* prevent auto resizing */
+		  text-align: left;
+		  padding: 8px 12px;
+		}
+		
+		/* Optional: Make scrollbar hidden for a cleaner look */
+		.responsive-bar::-webkit-scrollbar {
+		  display: none;
+		}
+		
+		/* Optional: Better look on mobile */
+		@media (max-width: 600px) {
+		  .responsive-bar {
+		    font-size: 14px;
+		    justify-content: space-between;
+		  }
+		}
      </style>
 </head>
 
@@ -208,7 +204,7 @@
         <a href="#" title="Show Origin section" class="w3-bar-item w3-button w3-hover-yellow">Origin</a>
         <a href="#locBritish" title="Show British section" class="w3-bar-item w3-button w3-hover-yellow">British</a>
         <a href="#locUS" title="Show US section" class="w3-bar-item w3-button w3-hover-yellow">U.S.</a>
-        <a href="#list" title="Show US section" class="w3-bar-item w3-button w3-hover-yellow">List</a>
+        <a href="#locList" title="Show US section" class="w3-bar-item w3-button w3-hover-yellow">List</a>
     </div>
 <!-- </div> -->
   
@@ -315,7 +311,7 @@
 	<br />
 	<br />
     <div class="w3-container">
-        <p style="padding-left:16px"><span>U.S. style</span>
+        <p id="locUS" style="padding-left:16px"><span>U.S. style</span>
             <br />Click a flower to show some images.</p> 
         <img id="imgUS" src="files/birthflowers/roses3.jpg" alt="3 roses">
         <table id="flowers_us">
@@ -418,7 +414,7 @@
 	
     <div class="w3-container" id="list">
  		<img id="imgList" src="files/birthflowers/flowersbirth.png" alt="birth flowers">
-        <p style="padding-left:16px"><span>Alphabetical list</span>
+        <p id="locList" style="padding-left:16px"><span>Alphabetical list</span>
             <br />Click a flower to show some images.</p> 
         <table id="flowers_list">
          <tr>
@@ -578,6 +574,7 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
 
 
 
