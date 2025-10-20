@@ -216,10 +216,10 @@ sup {
 #menu {
     color: white;
     cursor: pointer;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
     margin-left: 10px;
-    margin-top: -4px;
+    margin-top: -2px;
     float: left;
     text-shadow: 1px 1px 4px #000000;
 }
@@ -229,14 +229,14 @@ sup {
     font-family: Verdana, serif;
     font-size: 24px;
     margin-right: 8px;
-    margin-top: 8px;
+    margin-top: 2px;
     float: right;
     text-shadow: 1px 1px 4px #000000;
 }
 #suptxt {
     color: white;
     font-family: Verdana, serif;
-    font-size: 12px;
+    font-size: 10px;
     text-shadow: 1px 1px 4px #000000;
 }
 .header2 {
@@ -346,5 +346,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
