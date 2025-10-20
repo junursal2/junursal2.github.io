@@ -193,20 +193,18 @@
 
 <body>
 
-<!-- <div class="w3-top"> -->
-    <button id="myTopBtn" title="Go to top" onclick="topFunction()">Go to top</button>  
-    <header id="gradHead" class="w3-container">
-        <h1 class="w3-text-shadow">Birth flowers</h1>
-    </header>
- 
-    <div class="w3-bar w3-border w3-small w3-light-grey responsive-bar">
-        <a href="basahon.html#goFunstuff" title="Go to basahon articles main page" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home"></i></a>
-        <a href="#" title="Show Origin section" class="w3-bar-item w3-button w3-hover-yellow">Origin</a>
-        <a href="#locBritish" title="Show British section" class="w3-bar-item w3-button w3-hover-yellow">British</a>
-        <a href="#locUS" title="Show US section" class="w3-bar-item w3-button w3-hover-yellow">U.S.</a>
-        <a href="#locList" title="Show US section" class="w3-bar-item w3-button w3-hover-yellow">List</a>
-    </div>
-<!-- </div> -->
+<button id="myTopBtn" title="Go to top" onclick="topFunction()">Go to top</button>  
+<header id="gradHead" class="w3-container">
+	<h1 class="w3-text-shadow">Birth flowers</h1>
+</header>
+
+<div class="w3-bar w3-border w3-small w3-light-grey responsive-bar">
+	<a href="basahon.html#goFunstuff" title="Go to basahon articles main page" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home"></i></a>
+	<a href="#" title="Show Origin section" class="w3-bar-item w3-button w3-hover-yellow">Origin</a>
+	<a href="#locBritish" title="Show British section" class="w3-bar-item w3-button w3-hover-yellow">British</a>
+	<a href="#locUS" title="Show US section" class="w3-bar-item w3-button w3-hover-yellow">U.S.</a>
+	<a href="#locList" title="Show US section" class="w3-bar-item w3-button w3-hover-yellow">List</a>
+</div>
   
 <div class="w3-container" style="margin-top:0px">
     <div class="w3-container" id="locOrigin">
@@ -226,8 +224,8 @@
 		<img id="imgOrigin2" src="files/birthflowers/flowersgrasses.png" alt="flowers in grasses">
 	</div>
     
-    <div class="w3-container">
-        <p id="locBritish" style="padding-left:16px;"><span>British style</span></b>
+    <div class="w3-container" id="locBritish">
+        <p style="padding-left:16px;"><span>British style</span></b>
             <br />Click a flower to show some images.</p>
         <table id="flowers_british">
         <caption>Source: <a href="https://en.wikipedia.org/wiki/Birth_flower" target="_blank">https://en.wikipedia.org/wiki/Birth_flower</caption>
@@ -310,8 +308,8 @@
 	
 	<br />
 	<br />
-    <div class="w3-container">
-        <p id="locUS" style="padding-left:16px"><span>U.S. style</span>
+    <div class="w3-container" id="locUS">
+        <p style="padding-left:16px"><span>U.S. style</span>
             <br />Click a flower to show some images.</p> 
         <img id="imgUS" src="files/birthflowers/roses3.jpg" alt="3 roses">
         <table id="flowers_us">
@@ -412,9 +410,9 @@
 	</div>
 	<br />
 	
-    <div class="w3-container" id="list">
+    <div class="w3-container" id="locList">
  		<img id="imgList" src="files/birthflowers/flowersbirth.png" alt="birth flowers">
-        <p id="locList" style="padding-left:16px"><span>Alphabetical list</span>
+        <p style="padding-left:16px"><span>Alphabetical list</span>
             <br />Click a flower to show some images.</p> 
         <table id="flowers_list">
          <tr>
@@ -574,6 +572,7 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
 
 
 
