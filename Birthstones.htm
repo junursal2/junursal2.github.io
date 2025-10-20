@@ -85,7 +85,7 @@
             border-collapse: collapse;
             display: none;
             margin: 25px;
-            width: 100%;
+            width: auto;
 			table-layout:auto;
         }
         th, td {
@@ -93,12 +93,14 @@
             border-collapse: collapse;
             font-size: 12px;
             height: 25px;
-        }
-        th {background-color: powderblue;}
-        th, td {
             padding-left: 10px;
             padding-right: 10px;
+	  		/* prevent overflow */
+ 			white-space: normal;       /* allows wrapping */
+ 			word-wrap: break-word;
+  			overflow-wrap: break-word;
         }
+        th {background-color: powderblue;}
      </style>
 </head>
 
@@ -224,7 +226,7 @@
     </table> 
 </div>
 
-<div style="overflow-x:auto;">
+<div style="width:80%; margin:auto;">
     <table id="table_month">
     <caption>Source: <a href="https://en.wikipedia.org/wiki/Birthstone" target="_blank">https://en.wikipedia.org/wiki/Birthstone</caption>
       <tr>
@@ -696,6 +698,7 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
 
 
 
