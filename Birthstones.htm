@@ -85,23 +85,32 @@
             border-collapse: collapse;
             display: none;
             margin: 25px;
-            width: auto;
+            width: 100%;
 			min-width: 400px;
 			table-layout:auto;
         }
         th, td {
             border: 1px solid gray;
-            border-collapse: collapse;
             font-size: 12px;
             height: 25px;
             padding: 8px;
+			text-align: left;
 	  		/* prevent overflow */
  			white-space: normal;       /* allows wrapping */
  			word-wrap: break-word;
   			overflow-wrap: break-word;
-			text-align: left;
         }
         th {background-color: powderblue;}
+		
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;         /* stack table rows vertically */
+  }
+  th, td {
+    width: 100%;            /* take full width of mobile */
+    box-sizing: border-box;
+  }
+}
      </style>
 </head>
 
@@ -699,3 +708,4 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
