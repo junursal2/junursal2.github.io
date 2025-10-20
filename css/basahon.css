@@ -178,6 +178,10 @@ p {
 li {
     font:12px Verdana, sans-serif;
 }
+ul {
+  padding-left: 20px;
+  margin-left: 0;
+}
 sup {
     color: black;
     font-size: 8px;
@@ -346,3 +350,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
