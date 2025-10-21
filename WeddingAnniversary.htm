@@ -449,21 +449,21 @@ var n;
 var anniImg="";
 //Traditional
 function showTra(n) {
-    anniImg="../_images/anniversary/annitra" + n + ".jpg";
+    anniImg="files/anniversary/annitra" + n + ".jpg";
     document.getElementById("anniItem").innerHTML = n;
     document.getElementById("anniImg").src = anniImg;
     document.getElementById("modalDiv").style.display = "block"; 
 }
 //Modern
 function showMod(n) {
-    anniImg="../_images/anniversary/annimod" + n + ".jpg";
+    anniImg="files/anniversary/annimod" + n + ".jpg";
     document.getElementById("anniItem").innerHTML = n;
     document.getElementById("anniImg").src = anniImg;
     document.getElementById("modalDiv").style.display = "block"; 
 }
 //Flowers
 function showFlower(n) {
-    anniImg="../_images/anniversary/anniflow" + n + ".jpg";
+    anniImg="files/anniversary/anniflow" + n + ".jpg";
     document.getElementById("anniItem").innerHTML = n;
     document.getElementById("anniImg").src = anniImg;
     document.getElementById("modalDiv").style.display = "block"; 
@@ -506,3 +506,4 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
