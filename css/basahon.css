@@ -181,6 +181,7 @@ li {
 ul {
   padding-left: 20px;
   margin-left: 0;
+  list-style-position: inside;
 }
 sup {
     color: black;
@@ -362,6 +363,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
