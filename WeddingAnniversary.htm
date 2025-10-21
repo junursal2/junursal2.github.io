@@ -1,0 +1,508 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+    <title>Wedding Anniversary</title>    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Wedding Anniversary" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Basahon,URrsoft,SirURsoft,wedding anniversary" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        header, section, footer, aside, nav, main, article, figure {display:block;}
+        a {color: blue;}
+        a:link {text-decoration: none;}
+        a:hover {text-decoration: underline;}
+        a#home {color:white; }
+        a#home:hover {color: gray;}
+        body {
+          font-family: Verdana, sans-serif;
+          font-size: 14px;
+          text-align: justify;
+        }
+        h1 {
+          font-family: Georgia, serif; 
+          font-style: italic; 
+          font-weight: bold;
+          text-shadow: 1px 2px 0 #444;
+        }
+        .fa {font-size: 28px; text-align: right;}
+        footer {
+            background-color: #e09fbb; 
+            color: black; 
+            font-size: 10px; 
+            text-align: left;
+            padding-left: 10px;
+        }
+        header {
+            background-color: #e09fbb;
+            color: white;  
+            top: 0; 
+            width: 100%;
+        }       
+        #home {float: right; position: relative;}
+        #posted {float: right;}
+        /*pre {font-family: Verdana;font-size: 10px;}*/
+        sup {color: crimson; font-size: 8px; font-weight: normal;}
+        /*Top button*/
+        #myTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: 1px solid;
+            outline: none;
+            background-color: yellow;
+            color: black;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        #myTopBtn:hover {background-color: #bfbfbf;}
+        /* modal */
+        img {
+            margin: auto;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 350px;
+        }
+        #modalDiv {
+            display:none;
+            position:fixed;
+            z-index:100;
+        }
+        #modalContent {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            top: -100px;
+        }
+        /*Table*/
+        caption {
+            caption-side: bottom;
+            text-align: left;
+            font-size: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 25px;
+            width: auto;
+        }
+        th, td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            font-size: 12px;
+            height: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        th {background-color: #f3d8e4; text-align: center;}
+        td {text-align: left;}
+        td[colspan]{text-align: center;}
+        tr:nth-child(odd){background-color: #f2f2f2}
+    </style>
+</head>
+
+<body>
+    <button id="myTopBtn" title="Go to top" onclick="topFunction()">Go to top</button>  
+  
+    <header class="w3-container">
+        <h1>Wedding Anniversary
+        <a id="home" title="Go to basahon articles main page" href="basahon.html#goFunstuff"><i class="fa fa-home"></i></a></h1>
+    </header>
+    
+    <div class="w3-container" style="overflow-x:auto">
+        <p>An <strong>anniversary</strong> is a day that commemorates or celebrates a past event that occurred on the same date of the year as the initial event.<br />
+        A <strong>wedding anniversary</strong> is the anniversary of the date a marriage took place.</p>
+        <p>Click an item in the table to show an image.</p>
+    
+        <table>
+            <caption>
+                <p>References:
+                <a href="https://en.wikipedia.org/wiki/Wedding_anniversary" target="_blank">https://en.wikipedia.org/wiki/Wedding_anniversary</a>
+                </p>     
+            </caption>
+            <tr>
+                <th>Year</th>
+                <th>Traditional (U.K.)</th>
+                <th>Traditional (U.S.)</th>
+                <th>Modern (U.S.)</th>
+                <th>Gemstone</th>
+                <th>Flower</th>
+            </tr>        
+            <tr>
+                <td>1</td>
+                <td><a href="#ng" onclick="showTra('Cotton')">Cotton</a></td>
+                <td><a href="#ng" onclick="showTra('Paper ')">Paper</a></td>
+                <td><a href="#ng" onclick="showMod('Clock')">Clock</a></td>
+                <td><a href="#ng" onclick="showGem('Mother-of-Pearl')">Mother of Pearl</a></td>
+                <td><a href="#ng" onclick="showFlower('Carnation')">Carnation</a></td>
+            </tr>    
+            <tr>
+                <td>2</td>
+                <td><a href="#ng" onclick="showTra('Paper')">Paper</a></td>
+                <td><a href="#ng" onclick="showTra('Cotton ')">Cotton</a></td>
+                <td><a href="#ng" onclick="showMod('China')">China</a></td>
+                <td><a href="#ng" onclick="showGem('Garnet')">Garnet</a></td>
+                <td><a href="#ng" onclick="showFlower('Lily of the Valley')">Lily of the Valley</a></td>
+            </tr>    
+            <tr>
+                <td>3</td>
+                <td colspan="2"><a href="#ng" onclick="showTra('Leather')">Leather</a></td>
+                <td><a href="#ng" onclick="showMod('Crystal')">Crystal</a>, <a href="#ng" onclick="showMod('Glass')">glass</a></td>
+                <td><a href="#ng" onclick="showGem('Moonstone')">Moonstone</a></td>
+                <td><a href="#ng" onclick="showFlower('Sunflower')">Sunflower</a></td>
+            </tr>    
+            <tr>
+                <td>4</td>
+                <td><a href="#ng" onclick="showTra('Fruit')">Fruit and flowers</a></td>
+                <td><a href="#ng" onclick="showTra('Linen')">Linen</a>, <a href="#ng" onclick="showTra('Silk')">silk</a></td>
+                <td><a href="#ng" onclick="showMod('Appliances')">Appliances (electrical)</a></td>
+                <td><a href="#ng" onclick="showGem('Blue Topaz')">Blue Topaz</a></td>
+                <td><a href="#ng" onclick="showFlower('Hydrangea')">Hydrangea</a></td>
+            </tr>    
+            <tr>
+                <td><b>5</b></td>
+                <td colspan="2"><a href="#ng" onclick="showTra('Wood')"><b>Wood</b></a></td>
+                <td><a href="#ng" onclick="showMod('Silverware')">Silverware</a></td>
+                <td><a href="#ng" onclick="showGem('Rose Quartz')">Rose Quartz</a></td>
+                <td><a href="#ng" onclick="showFlower('Daisy')">Daisy</a></td>
+            </tr>    
+            <tr>
+                <td>6</td>
+                <td><a href="#ng" onclick="showTra('Sugar')">Sugar</a></td>
+                <td><a href="#ng" onclick="showTra('Iron')">Iron</a></td>
+                <td><a href="#ng" onclick="showMod('Wood objects')">Wood objects</a></td>
+                <td><a href="#ng" onclick="showGem('Amethyst')">Amethyst</a></td>
+                <td><a href="#ng" onclick="showFlower('Calla')">Calla</a></td>
+            </tr>    
+            <tr>
+                <td>7</td>
+                <td><a href="#ng" onclick="showTra('Woollen')">Woollen</a></td>
+                <td><a href="#ng" onclick="showTra('Wool, copper')">Wool, copper</a></td>
+                <td><a href="#ng" onclick="showMod('Desk set')">Desk sets/pen &amp; pencil sets</a></td>
+                <td><a href="#ng" onclick="showGem('Onyx')">Onyx</a></td>
+                <td><a href="#ng" onclick="showFlower('Freesia')">Freesia</a></td>
+            </tr>    
+            <tr>
+                <td>8</td>
+                <td><a href="#ng" onclick="showTra('Salt')">Salt</a></td>
+                <td><a href="#ng" onclick="showTra('Bronze')">Bronze</a></td>
+                <td><a href="#ng" onclick="showMod('Linens, lace')">Linens, lace</a></td>
+                <td><a href="#ng" onclick="showGem('Tourmaline')">Tourmaline</a></td>
+                <td><a href="#ng" onclick="showFlower('Lilac')">Lilac</a></td>
+            </tr>    
+            <tr>
+                <td>9</td>
+                <td><a href="#ng" onclick="showTra('Copper')">Copper</a></td>
+                <td><a href="#ng" onclick="showTra('Pottery')">Pottery</a></td>
+                <td><a href="#ng" onclick="showMod('Leather goods')">Leather goods</a></td>
+                <td><a href="#ng" onclick="showGem('Lapis Lazuli')">Lapis Lazuli</a></td>
+                <td><a href="#ng" onclick="showFlower('Bird of Paradise')">Bird of Paradise</a></td>
+            </tr>    
+            <tr>
+                <td><b>10</b></td>
+                <td><a href="#ng" onclick="showTra('Tin')"><b>Tin</b></a></td>
+                <td><a href="#ng" onclick="showTra('Tin ')"><b>Tin</b></a>, <a href="#ng" onclick="showTra('Aluminum')">Aluminum</a></td>
+                <td><a href="#ng" onclick="showMod('Diamond jewelry')">Diamond jewelry</a></td>
+                <td><a href="#ng" onclick="showGem('Crystal')">Crystal</a> or <a href="#ng" onclick="showGem('Green Tourmaline')">green Tourmaline</a></td>
+                <td><a href="#ng" onclick="showFlower('Daffodil')">Daffodil</a></td>
+            </tr>    
+            <tr>
+                <td>11</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showTra('Steel')">Steel</a></td>
+                <td><a href="#ng" onclick="showMod('Fashion jewelry, accessories')">Fashion jewelry, accessories</a></td>
+                <td><a href="#ng" onclick="showGem('Turquoise')">Turquoise</a></td>
+                <td><a href="#ng" onclick="showFlower('Tulip')">Tulip</a></td>
+            </tr>    
+            <tr>
+                <td>12</td>
+                <td><a href="#ng" onclick="showTra('Silk & fine linen')">Silk &amp; fine linen</a></td>
+                <td><a href="#ng" onclick="showTra('Silk ')">Silk</a></td>
+                <td><a href="#ng" onclick="showMod('Pearls')">Pearls</a>, <a href="#ng" onclick="showMod('Colored gems')">colored gems</a></td>
+                <td><a href="#ng" onclick="showGem('Jade')">Jade</a></td>
+                <td><a href="#ng" onclick="showFlower('Peony')">Peony</a></td>
+            </tr>    
+            <tr>
+                <td>13</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showTra('Lace')">Lace</a></td>
+                <td><a href="#ng" onclick="showMod('Textiles')">Textiles</a>, <a href="#ng" onclick="showTra('Furs')">furs</a></td>
+                <td><a href="#ng" onclick="showGem('Citrine')">Citrine</a></td>
+                <td><a href="#ng" onclick="showFlower('Chrysanthemum')">Chrysanthemum</a></td>
+            </tr>    
+            <tr>
+                <td>14</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showTra('Ivory')">Ivory</a></td>
+                <td><a href="#ng" onclick="showMod('Gold jewelry')">Gold jewelry</a></td>
+                <td><a href="#ng" onclick="showGem('Opal')">Opal</a></td>
+                <td><a href="#ng" onclick="showFlower('Dahlia')">Dahlia</a></td>
+            </tr>    
+            <tr>
+                <td><b>15</b></td>
+                <td colspan="2"><a href="#ng" onclick="showTra('Crystal')"><b>Crystal</b></a></td>
+                <td><a href="#ng" onclick="showMod('Watches')">Watches</a></td>
+                <td><a href="#ng" onclick="showGem('Rhodolite')">Rhodolite</a></td>
+                <td><a href="#ng" onclick="showFlower('Rose')">Rose</a></td>
+            </tr>    
+            <tr>
+                <td>16</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Silver holloware')">Silver holloware</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td>17</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Furniture')">Furniture</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td>18</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Porcelain')">Porcelain</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td>19</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Bronze')">Bronze</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td><b>20</b></td>
+                <td colspan="2"><a href="#ng" onclick="showTra('China')"><b>China</b></a></td>
+                <td><a href="#ng" onclick="showMod('Platinum')">Platinum</a></td>
+                <td><a href="#ng" onclick="showGem('Emerald')">Emerald</a></td>
+                <td><a href="#ng" onclick="showFlower('Aster')">Aster</a></td>
+            </tr>    
+            <tr>
+                <td>21</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Brass')">Brass</a>, <a href="#ng" onclick="showMod('Nickel')">Nickel</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td>22</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Copper')">Copper</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td>23</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Silver plate')">Silver plate</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td>24</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showTra('Opal')">Opal</a></td>
+                <td><a href="#ng" onclick="showMod('Musical instruments')">Musical instruments</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>    
+            <tr>
+                <td><b>25</b></td>
+                <td colspan="3"><a href="#ng" onclick="showTra('Silver')"><b>Silver</b></a></td>
+                <td><a href="#ng" onclick="showGem('Tsavorite')">Tsavorite</a></td>
+                <td><a href="#ng" onclick="showFlower('Iris')">Iris</a></td>
+            </tr>
+            <tr>
+                <td>28</td><td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showFlower('Orchid')">Orchid</a></td>
+            </tr>
+            <tr>
+                <td><b>30</b></td>
+                <td colspan="2"><a href="#ng" onclick="showTra('Pearl')"><b>Pearl</b></a></td>
+                <td><a href="#ng" onclick="showMod('Diamond')">Diamond</a></td>
+                <td><a href="#ng" onclick="showGem('Pearl')">Pearl</a></td>
+                <td><a href="#ng" onclick="showFlower('Lily')">Lily</a></td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td><a href="#ng" onclick="showTra('Coral')">Coral</a></td>
+                <td><a href="#ng" onclick="showTra('Coral')">Coral</a>, <a href="#ng" onclick="showMod('Jade')">jade</a></td>
+                        <td><a href="#ng" onclick="showMod('Jade')">Jade</a></td>
+                <td></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><b>40</b></td>
+                <td colspan="3"><a href="#ng" onclick="showTra('Ruby')"><b>Ruby</b></a></td>
+                <td><a href="#ng" onclick="showGem('Ruby')">Ruby</a></td>
+                <td><a href="#ng" onclick="showFlower('Gladiolus')">Gladiolus</a></td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td colspan="3"><a href="#ng" onclick="showMod('Sapphire')">Sapphire</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><b>50</b></td>
+                <td colspan="4"><a href="#ng" onclick="showTra('Gold')"><b>Gold</b></a></td>
+                <td><a href="#ng" onclick="showFlower('Yellow Rose')">Yellow rose</a>,<a href="#ng" onclick="showFlower('Violet')"> Violet</a></td>
+            </tr>
+            <tr>
+                <td><b>55</b></td>
+                <td colspan="3"><a href="#ng" onclick="showMod('Emerald')">Emerald</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><b>60</b></td>
+                <td><b><a href="#ng" onclick="showTra('Diamond')">Diamond</a></b></td>
+                <td><b><a href="#ng" onclick="showGem('Yellow Diamond')">Diamond (yellow)</a></b></td>
+                <td colspan="2"><a href="#ng" onclick="showGem('Diamond')"><b>Diamond</b></a></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>65</td>
+                <td><a href="#ng" onclick="showTra('Blue Sapphire')">Blue Sapphire</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showGem('Sapphire')">Sapphire</a></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td><a href="#ng" onclick="showTra('Platinum')">Platinum</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><b>75</b></td>
+                <td colspan="3"><a href="#ng" onclick="showTra('Diamond, Gold')">Diamond, Gold</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>80</td>
+                <td><a href="#ng" onclick="showTra('Oak')">Oak</a></td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Diamond, Pearl')">Diamond, Pearl</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>85</td>
+                <td><a href="#ng" onclick="showTra('Wine')">Wine</a></td>
+                <td><a href="#ng" onclick="showTra('Moonstone')">Moonstone</a></td>
+                <td><a href="Birthstones.htm" target="_blank">Wife's birthstone</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>90</td>
+                <td><a href="#ng" onclick="showTra('Stone')">Stone</a></td>
+                <td>-</td>
+                <td><a href="#ng" onclick="showMod('Engraved marble')">Engraved marble</a>,<a href="#ng" onclick="showTra('Granite')"> granite</a></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="modalDiv" class="w3-modal" onclick="this.style.display='none'">
+        <div id="modalContent" class="w3-modal-content w3-animate-zoom w3-card w3-padding w3-margin-top w3-display-center">
+            <span class="w3-button w3-yellow w3-display-topright">&times;</span>
+            <h5 id="anniItem">&nbsp;</h5>
+            <img id="anniImg" src="" alt="">
+        </div>
+    </div>
+    
+    <footer class="w3-container">
+        <p>Posted by Jun Ursal II<span id="posted">Posted: 2017 April 17</span></p>
+    </footer>
+   
+<script>
+var n;
+var anniImg="";
+//Traditional
+function showTra(n) {
+    anniImg="../_images/anniversary/annitra" + n + ".jpg";
+    document.getElementById("anniItem").innerHTML = n;
+    document.getElementById("anniImg").src = anniImg;
+    document.getElementById("modalDiv").style.display = "block"; 
+}
+//Modern
+function showMod(n) {
+    anniImg="../_images/anniversary/annimod" + n + ".jpg";
+    document.getElementById("anniItem").innerHTML = n;
+    document.getElementById("anniImg").src = anniImg;
+    document.getElementById("modalDiv").style.display = "block"; 
+}
+//Flowers
+function showFlower(n) {
+    anniImg="../_images/anniversary/anniflow" + n + ".jpg";
+    document.getElementById("anniItem").innerHTML = n;
+    document.getElementById("anniImg").src = anniImg;
+    document.getElementById("modalDiv").style.display = "block"; 
+}
+//Gemstones & alternate gems
+function showGem(n){
+    anniImg="../_images/anniversary/annigem" + n + ".jpg";
+    if (n === "DiamondJubilee"){n = "Diamond Jubilee";}
+    if (n === "SapphireJubilee"){n = "Sapphire Jubilee";}
+    if (n === "RubyJubilee"){n = "Ruby Jubilee";}
+    if (n === "Emerald20" || n === "Emerald35"){n = "Emerald";}
+    document.getElementById("anniItem").innerHTML = n;
+    document.getElementById("anniImg").src = anniImg;
+    document.getElementById("modalDiv").style.display = "block";     
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction();};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myTopBtn").style.display = "block";
+    } else {
+        document.getElementById("myTopBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+// Get the modal
+var modal = document.getElementById('modalDiv');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+</script>
+
+</body>
+</html>
