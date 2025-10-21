@@ -21,6 +21,11 @@
 	#basahon {cursor: help;}
 	#owner {color: blue; cursor: help;}
     #emdates {font-size: 10px;}
+	/* Key part ↓ */
+	html {
+  		scroll-behavior: smooth;
+  		scroll-padding-top: 60px; /* equal to header height */
+	}
     </style>
 </head>
 
@@ -69,8 +74,8 @@
 	-->
     <div id="body" class="row">
 		
-		<div class="col-1" id="goLMS">		
-			<div class="divLMS">
+		<div class="col-1">		
+			<div class="divLMS" id="goLMS">
 				<h4><i class="fa fa-heart" aria-hidden="true"></i> Love, Marriage, Sex, and Family</h4>
 				<ul>
 		            <li><a class="new" href="files/Love Marriage and Sex.pdf" target="_blank">Love, marriage &amp; sex <sup>pdf</sup></a></li>
@@ -136,8 +141,8 @@
 			</div>
 		</div>
 		
-		<div class="col-2" id="goBiblical">
-			<div class="divBiblical">
+		<div class="col-2">
+			<div class="divBiblical" id="goBiblical">
 				<h4><i class="fa fa-book" aria-hidden="true"></i> Biblical</h4>
 				<ul>
 					<li><a href="OneSolitaryLife.htm">One Solitary Life</a></li>
@@ -905,6 +910,7 @@ $(document).ready(function() {
 </body>
 
 </html>
+
 
 
 
