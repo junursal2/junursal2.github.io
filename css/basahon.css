@@ -188,12 +188,9 @@ ul {
 ul ul {
   /* list-style-type: circle;  /* optional: a different bullet style */
   margin-left: -0.7em;        /* pulls sublist bullet left */
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: revert;
+  margin-bottom: revert;
 }
-/* h4 + ul {
-  margin-top: 0.5em; /* controls space between the h3 and ul
-} */
 sup {
     color: black;
     font-size: 8px;
@@ -374,5 +371,6 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
