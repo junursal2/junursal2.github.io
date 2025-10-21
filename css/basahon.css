@@ -181,7 +181,10 @@ li {
 ul {
   padding-left: 20px;
   margin-left: 0;
-  list-style-position: inside;
+}
+ul ul {
+  /* list-style-type: circle;  /* optional: a different bullet style */
+  margin-left: -1em;        /* pulls sublist bullet left */
 }
 sup {
     color: black;
@@ -363,3 +366,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
