@@ -17,7 +17,7 @@
     <![endif]-->
     <style>
 	* {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
-        header, section, footer, aside, nav, main, article, figure {display: block;}
+    header, section, footer, aside, nav, main, article, figure {display: block;}
 	#basahon {cursor: help;}
 	#owner {color: blue; cursor: help;}
     #emdates {font-size: 10px;}
@@ -26,12 +26,15 @@
 
 <body>
     <div id="header">
-	<h1 id="main"><a id="basahon" title="In the Visayan dialect (Cebuano/Bisaya) means reading materials (as a noun) or to read (as a verb)">Basahon</a><span id="menu" class="fa" title="Click to open menu."  onclick="openNav()">&equiv;</span>
-            <span id="supscript" class="fa" title="Click to open superscript meanings.">x<sup id="suptxt">s</sup></span></h1>
+		<h1 id="main">
+			<a id="basahon" title="In the Visayan dialect (Cebuano/Bisaya) means reading materials (as a noun) or to read (as a verb)">Basahon</a>
+			<span id="menu" class="fa" title="Click to open menu."  onclick="openNav()">&equiv;</span>
+            <span id="supscript" class="fa" title="Click to open superscript meanings.">x<sup id="suptxt">s</sup></span>
+		</h1>
     </div>
-    <!-- <br id="goTop" /> -->
-    <div id="goTop" class="header2">
-	<a id="noteNew" href="#0">&nbsp;New/additional or updated items are in <span id="newinred">&nbsp;red&nbsp;</span> font!&nbsp;</a>
+
+	<div id="goTop" class="header2">
+		<a id="noteNew" href="#0">&nbsp;New/additional or updated items are in <span id="newinred">&nbsp;red&nbsp;</span> font!&nbsp;</a>
         <a id="noteUpdate" href="#0">&nbsp;last update: 2025 October 21&nbsp;</a>
     </div>
 
@@ -747,8 +750,10 @@
     <footer>
         <!-- <p id="bottom">&nbsp; Maintained by <a id="owner" class="image-link" href="images/pic-JunU.png" title="aka Climaco C. Ursal II, Sir U, Jun Ursal 2, Jun-jun, Junix, Jun, C. Ursal II, Climax, Ursing" target="_blank">Climaco C. Ursal Jr.</a>, 
             <span id="emdates">2025 October 16 ~ </span><span>&nbsp;&nbsp;&#9993;&nbsp;<a href="mailto:junursal2@yahoo.com" title="Click to send email.">junursal2@yahoo.com</a></span></p> -->
-        <p id="bottom">&nbsp; Maintained by <a id="owner" title="aka Climaco C. Ursal Jr., Climaco C. Ursal II, Sir U, Jun Ursal 2, Jun-jun, Junix, Jun, C. Ursal II, Climax, Ursing">Jun Ursal II</a>, 
-            <span id="emdates">2025 October 16 ~ </span></p>
+        <p id="bottom">&nbsp; Maintained by 
+			<a id="owner" title="aka Climaco C. Ursal Jr., Climaco C. Ursal II, Sir U, Jun Ursal 2, Jun-jun, Junix, Jun, C. Ursal II, Climax, Ursing">Jun Ursal II</a>, 
+            <span id="emdates">2025 October 16 ~ </span>
+		</p>
 	</footer>
 
     <!-- The Modal -->
@@ -900,6 +905,7 @@ $(document).ready(function() {
 </body>
 
 </html>
+
 
 
 
