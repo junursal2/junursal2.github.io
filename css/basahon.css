@@ -187,7 +187,7 @@ ul ul {
   margin-left: -0.7em;        /* pulls sublist bullet left */
 }
 h4 + ul {
-  margin-top: 0.2em; /* controls space between the h3 and ul */
+  margin-top: 0.5em; /* controls space between the h3 and ul */
 }
 sup {
     color: black;
@@ -369,3 +369,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
