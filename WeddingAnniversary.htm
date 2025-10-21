@@ -73,6 +73,7 @@
             width: 100%;
             max-width: 350px;
         }
+		/*
         #modalDiv {
             display:none;
             position:fixed;
@@ -82,8 +83,29 @@
             width: 100%;
             max-width: 400px;
             text-align: center;
-            top: 100px;
-        }
+            top: -100px;
+        } */
+		#modalDiv {
+		    display: none; /* hidden by default */
+		    position: fixed;
+		    z-index: 100;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-color: rgba(0,0,0,0.5); /* optional overlay */
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+		#modalContent {
+		    width: 90%;
+		    max-width: 400px;
+		    background: white;
+		    padding: 20px;
+		    border-radius: 10px;
+		    text-align: center;
+		}
         /*Table*/
         caption {
             caption-side: bottom;
@@ -506,5 +528,6 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
 
 
