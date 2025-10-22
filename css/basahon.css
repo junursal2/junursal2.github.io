@@ -114,11 +114,12 @@ a:hover {
 .divExcel > p {
     padding-left: 30px;
 }
-.divFinances {
+.divMoney {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/coins.png") right bottom no-repeat;
     background-size: 80px; */
     background-color: #eaccff;
-    padding-bottom: 1px;    
+    padding-top: 0.5px;
+    padding-bottom: 1px;
 }
 .divHPOI {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/hpoilogo2.png") right bottom no-repeat;
@@ -371,6 +372,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
