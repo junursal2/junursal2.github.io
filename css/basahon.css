@@ -64,7 +64,7 @@ a:hover {
 }
 .divLMS {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/love-marriage-sex.jpg") right bottom no-repeat;
-    background-size: 125px;
+    background-size: 100px;
     background-color: #ffcccc;
     margin-top: 55px;
     padding-top: 0.5px;
@@ -94,7 +94,7 @@ a:hover {
 }
 .divFun {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
-    background-size: 100px;
+    background-size: 110px;
     background-color: #DCDCDC;
     padding-top: 0.5px;
     padding-bottom: 1px;
@@ -369,6 +369,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
