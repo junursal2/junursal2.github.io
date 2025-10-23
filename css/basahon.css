@@ -105,7 +105,7 @@ a:hover {
 }
 .divMoney {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/coins.png") right bottom no-repeat;
-    background-size: 80px; */
+    background-size: 60px; */
     background-color: #eaccff;
     padding-top: 0.5px;
     padding-bottom: 1px;
@@ -369,4 +369,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
