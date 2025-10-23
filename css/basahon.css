@@ -38,7 +38,12 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 12px;}
 }
-
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  * {
+    background-image: none !important;
+  }
+}
 /* body */
 a {
     text-decoration: none;
@@ -370,4 +375,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
