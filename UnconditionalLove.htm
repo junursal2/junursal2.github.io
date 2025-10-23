@@ -11,45 +11,33 @@
     <meta name="description" content="Unconditional Love">
     <meta name="author" content="Jun Ursal II">
     <meta name="keywords" content="Basahon,URrsoft,SirURsoft,love">
-    <link rel="icon" type="image/png" href="images/ursoft.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <style>
-    #author {
-        font-style: italic;
-    }
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
     body {
-        background-color: white;
+      background-color: white;
     }
-    .btn:hover {
-        color: yellow;
-    }
-    .btn {
-      position: absolute;
-      right: 8px; /* distance from the right edge */
-      top: 70%;
-      transform: translateY(-50%); /* perfect vertical centering */
-      color: #5CFF5C;
-      background: transparent;
-      border: none;
-      text-shadow: 1px 1px 1px crimson, 0 0 5px red;
-    }
+
     header {
-        background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
-        background-size: cover;
-        background-repeat: repeat;
-        position: relative;
+      background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
+      background-size: cover;
+      background-repeat: repeat;
+      position: relative;
     }
+
     footer {
-        background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
-        background-size: cover;
-        background-repeat: repeat;
-        color: white;
-        font-family: "Trebuchet MS", sans-serif;
-        font-size: 11px;
-        text-align: center;
+      background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
+      background-size: cover;
+      background-repeat: repeat;
+      color: white;
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 11px;
+      text-align: center;
+      padding: 1px 0;
     }
+
     h1 {
       color: white;
       font-family: "Georgia", serif;
@@ -57,41 +45,75 @@
       font-size: 36px;
       text-shadow: 1px 1px 1px crimson, 0 0 5px red, 2px 2px 2px darkred;
       margin: 0;
-      line-height: 56px; /* vertically centers text */
-      text-align: center; /* centers the title */
+      line-height: 56px;
+      text-align: center;
     }
-    img {
-        float: center;
-        /* height: 100px; */
-        height: auto;
-        max-width:100%;
-        width: 300px;
 
+    /* home button */
+    .btn-home {
+      position: absolute;
+      right: 6px;
+      top:45%;
+      color: #5CFF5C;
+      background: transparent;
+      border: none;
+      text-shadow: 1px 1px 1px crimson, 0 0 5px red;
+      font-size: 1.8em;
+      cursor: pointer;
     }
+
+    /* Float-right image with border and shadow */
+    .float-right {
+      float: right;
+      margin-left: 15px;
+      margin-bottom: 10px;
+      width: 400px;
+      height: auto;
+      border: 3px solid #f2f2f2;         /* subtle border */
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2); /* soft shadow */
+      border-radius: 6px;                /* rounded corners */
+    }
+
+    /* Make image full width on mobile */
+    @media (max-width: 768px) {
+      .float-right {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+        width: 100%;
+      }
+    }
+
+    #author {
+      font-style: italic;
+    }
+
     #paraend {
-        font-style: italic;
+      font-style: italic;
+      font-size: 90%;
     }
     #startletter {
-        float: left;
-        width: 0.6em;
-        font-size: 500%;
-        font-family: Georgia, serif;
-        line-height: 90%;
-        color: darkred;
+      float: left;
+      width: 0.6em;
+      font-size: 500%;
+      font-family: Georgia, serif;
+      line-height: 90%;
+      color: darkred;
+      margin-right: 4px;
     }
-    </style>
+  </style>
 </head>
-<body class="container-fluid text-justify">
-    <header>
-      <h1>
-        <span class="title-text">Unconditional Love</span>
-        <a href="basahon.html#goLMS" class="btn btn-lg home-btn" title="Go to basahon main page">
-          <span class="glyphicon glyphicon-home"></span>
-        </a>
-      </h1>
+<body class="w3-container w3-justify">
+
+    <header class="w3-padding">
+    <h1>
+      Unconditional Love
+      <a href="basahon.html#goLMS" class="btn-home w3-large" title="Go to basahon main page">
+        <i class="fa-solid fa-home"></i></a>
+    </h1>
     </header>
-    <div class="row">
-        <div class="col-sm-6">
+    <div class="w3-row-padding w3-small"> <!-- w3-margin-top"> -->
+        <div class="w3-half">
             <p ><span id="startletter">J</span>ohn Blanchard stood up from the bench, straightened his army uniform, and studied the crowd of people
             making their way through Waterloo Station. He looked for the girl whose heart he knew, but whose face he didn't -
             the girl with the rose.</p>
@@ -104,17 +126,23 @@
             year and a month the two grew to know each other through the post. Each letter was a seed failing on fertile heart.
             A romance was budding... Blanchard requested a photograph, but she refused. She felt that if he really cared, it
             wouldn't matter what she looked like.</p>
+
+      	    <img src="../_images/roses.jpg" alt="roses" class="float-right">
+
             <p>When the day finally came for him to return to England, they scheduled their first meeting - 7pm by the big
             clock in Waterloo Station. You'll recognize me, she wrote, by the red rose I'll be wearing on my lapel. So at 7
             he was in the station looking for a girl whose heart he loved, but whose face he had never seen. I'll let Mr
             Blanchard tell you what happened.</p>
-            <p>"A young lady was coming towards me, her figure long and slim. Her blond hair lay back in curls from her
+	</div>
+
+	 <div class="w3-half">
+           <p>"A young lady was coming towards me, her figure long and slim. Her blond hair lay back in curls from her
             delicate ears - her eyes were as blue as flowers. Her lips and chin had a gentle firmness, and in her pale green suit
             she was like springtime come alive. I started toward her, entirely forgetting to notice that she was not wearing a
             rose. As I moved, a small provocative smile curved her lips.  Going my way soldier? she murmured. Almost
             uncontrollably, I made one step closer to her, and then I saw Hollis Maynell.</p>
-        </div>
-        <div class="col-sm-6">
+      
+       
             <p>She was standing almost directly behind the girl. A woman well past 40, she had greying hair tucked under a
             worn hat. She was more than plump; her thick-ankled feet thrust into low-heeled shoes. The girl in the green suit
             was walking quickly away. I felt as though I was split in two, so keen was my desire to follow her, and yet so deep
@@ -128,24 +156,16 @@
             Miss Maynell. I'm so glad you could meet me - may I take you to dinner?  The woman's face broadened into a
             tolerant smile.  I don't know what this is about son, she answered, but the young lady in the green suit who just
             went by - she begged me to wear this rose on my coat, And she said if you were to ask me out to dinner, I should
-            tell you that she is waiting for you in the big restaurant across the street. She said it was some kind of test." -<span id="author">unknown</span></p>
-            <p id="paraend">It's not difficult to understand and admire Miss Maynell's wisdom. The true nature of the heart is seen in its
+            tell you that she is waiting for you in the big restaurant across the street. She said it was some kind of test." -<span id="author">author unknown</span></p>
+            
+	    <p id="paraend">It's not difficult to understand and admire Miss Maynell's wisdom. The true nature of the heart is seen in its
             response to the unattractive.  Tell me whom you love, <a title="Arsene Houssaye (28 March 1815 - 26 February 1896) was a French novelist, poet and man of letters.">Houssaye</a> wrote, And I will tell you who you are.</p>
-        </div>
-        <div style="text-align: center">
-            <img src="files/roses.jpg" alt="roses">
         </div>
     </div>
     
     <footer>
-         <p>posted by Jun Ursal II,&nbsp;&nbsp;HPOI 2016 February 16</p>
+         <p>posted by Jun Ursal II,&nbsp;&nbsp;2016 February 16</p>
     </footer>
 
 </body>
 </html>
-
-
-
-
-
-
