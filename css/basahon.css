@@ -334,12 +334,6 @@ footer {
     overflow-x: auto;   /* if something inside is wide, allow scroll */
     border-radius: 8px; /* optional, just looks better */
 }
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  * {
-    background-image: none !important;
-  }
-}
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -375,5 +369,6 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
