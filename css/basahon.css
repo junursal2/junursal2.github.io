@@ -53,8 +53,8 @@ a:hover {
     text-decoration: none;
 }
 .divDisasters {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
-    background-size: 75px; */
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
+    background-size: 75px;
     background-color: #ffedcc;
     padding-top: 1px;
     padding-bottom: 1px;
@@ -71,30 +71,30 @@ a:hover {
     padding-bottom: 1px;		
 }
 .divBiblical {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 110px; */
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
+    background-size: 110px;
     background-color: #ffffb3;
     margin-top: 55px;
     padding-top: 1px;
     padding-bottom: 1px;
 }
 .divVirtues {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
-    background-size: 80px; */
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
+    background-size: 80px;
     background-color: #ffdb99;
     padding-top: 0.5px;
     padding-bottom: 1px;
 }
 .divLifehacks {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
-    background-size: 90px; */
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
+    background-size: 90px;
     background-color: #ffffcc;
     padding-top: 0.5px;
     padding-bottom: 1px;
 }
 .divFun {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
-    background-size: 100px; */
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
+    background-size: 100px;
     background-color: #DCDCDC;
     padding-top: 0.5px;
     padding-bottom: 1px;
@@ -369,6 +369,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
