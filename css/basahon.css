@@ -58,8 +58,8 @@ a:hover {
     padding-left: 30px;
 }
 .divLMS {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/love-marriage-sex.jpg") right bottom no-repeat;
-    background-size: 125px; */
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/love-marriage-sex.jpg") right bottom no-repeat;
+    background-size: 125px;
     background-color: #ffcccc;
     margin-top: 55px;
     padding-top: 0.5px;
@@ -329,12 +329,10 @@ footer {
     overflow-x: auto;   /* if something inside is wide, allow scroll */
     border-radius: 8px; /* optional, just looks better */
 }
-/* Mobile Responsive Fix */
-@media (max-width: 600px) {
-  .modal-content {
-    width: 90%;        /* fill most of the screen */
-    max-width: none;   /* remove desktop limit */
-    padding: 15px;     /* smaller padding on mobile */
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  * {
+    background-image: none !important;
   }
 }
 /* The Close Button */
@@ -372,7 +370,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
-
-
