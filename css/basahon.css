@@ -72,7 +72,7 @@ a:hover {
 }
 .divBiblical {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 110px;
+    background-size: 100px;
     background-color: #ffffb3;
     margin-top: 55px;
     padding-top: 1px;
@@ -80,7 +80,7 @@ a:hover {
 }
 .divVirtues {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
-    background-size: 80px;
+    background-size: 100px;
     background-color: #ffdb99;
     padding-top: 0.5px;
     padding-bottom: 1px;
@@ -369,6 +369,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
