@@ -34,16 +34,6 @@
     font-size: 12px;
     font-weight: normal;
 }
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 12px;}
-}
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  *:not(#header) {
-    background-image: none !important;
-  }
-}
 /* body */
 a {
     text-decoration: none;
@@ -51,6 +41,20 @@ a {
 a:hover {
     background-color: orange;
     text-decoration: none;
+}
+.divBiblical {
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
+    background-size: 100px;
+    background-color: #ffffb3;
+    margin-top: 55px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.divComputers {
+    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/computer.png") right bottom no-repeat;
+    background-size: 75px; */
+    background-color: #b3ffb3;
+    padding-bottom: 1px;
 }
 .divDisasters {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
@@ -62,54 +66,6 @@ a:hover {
 .divDisasters > p {
     padding-left: 30px;
 }
-.divLMS {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/love-marriage-sex.jpg") right bottom no-repeat;
-    background-size: 100px;
-    background-color: #ffcccc;
-    margin-top: 55px;
-    padding-top: 0.5px;
-    padding-bottom: 1px;		
-}
-.divBiblical {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/biblical.png") right bottom no-repeat;
-    background-size: 100px;
-    background-color: #ffffb3;
-    margin-top: 55px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-}
-.divVirtues {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
-    background-size: 100px;
-    background-color: #ffdb99;
-    padding-top: 0.5px;
-    padding-bottom: 1px;
-}
-.divLifehacks {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
-    background-size: 90px;
-    background-color: #ffffcc;
-    padding-top: 0.5px;
-    padding-bottom: 1px;
-}
-.divFun {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
-    background-size: 110px;
-    background-color: #DCDCDC;
-    padding-top: 0.5px;
-    padding-bottom: 1px;
-}
-.divOthers {
-    background-color: #FFE4E1;
-    padding-top: 0.5px;
-    padding-bottom: 1px;
-}
-.divComputers {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/computer.png") right bottom no-repeat;
-    background-size: 75px; */
-    background-color: #b3ffb3;
-    padding-bottom: 1px;
-}
 .divExcel {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/excel2.png") right center no-repeat, url("https://junursal2.github.io/junursal2.basahon/images/basahon/excel.png") right bottom no-repeat;
     background-size: 75px, 100px; */
@@ -119,10 +75,10 @@ a:hover {
 .divExcel > p {
     padding-left: 30px;
 }
-.divMoney {
-    /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/coins.png") right bottom no-repeat;
-    background-size: 80px; */
-    background-color: #eaccff;
+.divFun {
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
+    background-size: 110px;
+    background-color: #DCDCDC;
     padding-top: 0.5px;
     padding-bottom: 1px;
 }
@@ -130,6 +86,28 @@ a:hover {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/hpoilogo2.png") right bottom no-repeat;
     background-size: 100px; */
     background-color: #F0E68C;
+    padding-bottom: 1px;
+}
+.divLifehacks {
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/lifehacks.jpg") right bottom no-repeat;
+    background-size: 90px;
+    background-color: #ffffcc;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
+.divLMS {
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/love-marriage-sex.jpg") right bottom no-repeat;
+    background-size: 100px;
+    background-color: #ffcccc;
+    margin-top: 55px;
+    padding-top: 0.5px;
+    padding-bottom: 1px;		
+}
+.divMoney {
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/coins.png") right bottom no-repeat;
+    background-size: 80px; */
+    background-color: #eaccff;
+    padding-top: 0.5px;
     padding-bottom: 1px;
 }
 .divNature {
@@ -145,11 +123,33 @@ a:hover {
     background-color: #f9d2f9;
     padding-bottom: 1px;  
 }
+.divOthers {
+    background-color: #FFE4E1;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
 .divQuality {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahonn/quality.png") right bottom no-repeat;
     background-size: 100px; */
     background-color: #99ffcc;
     padding-bottom: 1px; 
+}
+.divVirtues {
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
+    background-size: 100px;
+    background-color: #ffdb99;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 12px;}
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  *:not(#header) {
+    background-image: none !important;
+  }
 }
 .row::after {
     content: "";
@@ -369,11 +369,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
-
-
-
-
-
-
