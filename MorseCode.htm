@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html  lang="en-US">
+<head>
+    <title>Morse Code</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Morse code" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Morse, code" />
+
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+    in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+        header, section, footer, aside, nav, main, article, figure {display:block;}
+
+        a {text-decoration: none;}
+        a:hover {color: yellow;}
+        body {font-family: Verdana, serif;}
+        p {text-align: justify;}
+        div {overflow-x:auto; margin: auto; font-size: 14px;}
+        /*images*/
+        #Morse_code {
+            float: right;
+            margin: 15px 10px 15px 20px;
+            max-width: 50%;
+            height: auto;
+        }
+        #Morse_key {
+            position: relative;
+            margin: auto;
+            max-width: 30%;
+            height: auto;
+            margin-top: 100px;
+            margin-left: 80px;
+        }
+        figcaption {
+            margin: auto;
+            margin-left: 80px;
+            font-size: 10px;
+        }
+        /*header & footer*/
+        header, footer {color:#fff !important; background-color:#ff5722 !important}
+        .fa-home {position: relative; float: right; top: 5px; font-size: 24px;}
+        h2 {font: bold 32px Georgia, serif;}
+        footer {font-size: 10px;}
+        #posted {float: right;}
+    </style>
+</head>
+<body>
+
+<header class="w3-container">
+    <h2 class="w3-text-shadow">Morse Code
+        <a id="home" title="Go to Charts page" href="basahon.html#goLifehacks">
+        <i class="fa fa-home"></i></a>
+    </h2>
+</header>
+
+<div class="w3-container w3-mobile">
+    <img id="Morse_code" class="w3-border" src="../_files/charts/Morse code.svg.png" alt="Morse code">
+    <p><b>Morse code</b> is a method of transmitting text information as a series of on-off tones, lights, 
+        or clicks that can be directly understood by a skilled listener or observer without special equipment. 
+        It is named for <i>Samuel F. B. Morse</i>, an inventor of the telegraph.</p>
+    <figure class="w3-mobile">
+        <img id="Morse_key" src="../_files/charts/Morse_telegraph_key.gif" alt="Morse telegraph key">
+        <figcaption class="w3-mobile">Samuel Morse's telegraph key.</figcaption>
+    </figure>
+</div>
+
+<footer class="w3-container">
+    <p>posted by: C. Ursal Jr. <span id="posted">posted: 2017 April 23</span></p>
+</footer>
+
+</body>
+</html> 
